@@ -1,0 +1,30 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import Navbar from './components/Navbar'
+import Landing from './pages/Landing'
+import About from './pages/About'
+import Services from './pages/Services'
+import Investors from './pages/Investors'
+import Circulars from './pages/Circulars'
+import Compliance from './pages/Compliance'
+import Contact from './pages/Contact'
+
+function App() {
+  return (
+    <Router>
+      <div className="min-h-screen bg-gray-50">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Landing />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/services" element={<Services />} />
+          <Route path="/investors" element={<Investors />} />
+          <Route path="/circulars" element={<Circulars />} />
+          <Route path="/compliance" element={<Compliance />} />
+          <Route path="/contact" element={<Contact />} />
+        </Routes>
+      </div>
+    </Router>
+  )
+}
+
+export default App
