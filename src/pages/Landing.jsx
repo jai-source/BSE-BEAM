@@ -1,49 +1,57 @@
+import heroImage from "../Assets/main.png"
+import Navbar from "../components/Navbar"
+
 function Landing() {
   return (
-    <div className="container mx-auto px-4 py-12">
-      {/* Hero Section */}
-      <div className="text-center mb-16">
-        <h1 className="text-5xl font-bold text-gray-900 mb-4">
-          Welcome to BSE BEAM
-        </h1>
-        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-          Your trusted partner for comprehensive business solutions and services
-        </p>
-      </div>
+    <div className="relative w-full min-h-screen overflow-hidden bg-[#071b14] text-white">
 
-      {/* Features Section */}
-      <div className="grid md:grid-cols-3 gap-8 mb-16">
-        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-          <div className="text-4xl mb-4">🎯</div>
-          <h3 className="text-xl font-semibold mb-2">Our Mission</h3>
-          <p className="text-gray-600">
-            Delivering excellence in every service we provide
-          </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-          <div className="text-4xl mb-4">💼</div>
-          <h3 className="text-xl font-semibold mb-2">Professional Services</h3>
-          <p className="text-gray-600">
-            Comprehensive solutions tailored to your needs
-          </p>
-        </div>
-        <div className="bg-white p-6 rounded-lg shadow-md hover:shadow-xl transition">
-          <div className="text-4xl mb-4">🤝</div>
-          <h3 className="text-xl font-semibold mb-2">Client First</h3>
-          <p className="text-gray-600">
-            Building lasting relationships through trust and quality
-          </p>
-        </div>
-      </div>
+      {/* NAVBAR */}
+      <Navbar />
 
-      {/* CTA Section */}
-      <div className="bg-blue-600 text-white rounded-lg p-12 text-center">
-        <h2 className="text-3xl font-bold mb-4">Ready to Get Started?</h2>
-        <p className="text-xl mb-6">Contact us today to learn more about our services</p>
-        <button className="bg-white text-blue-600 px-8 py-3 rounded-lg font-semibold hover:bg-gray-100 transition">
-          Get in Touch
-        </button>
-      </div>
+      {/* HERO SECTION */}
+      <section className="relative w-full min-h-screen flex items-end">
+
+        {/* BACKGROUND IMAGE */}
+        <img
+          src={heroImage}
+          alt="Agricultural fields"
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+
+        {/* OVERLAY */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#071b14] via-[#0b2a1e]/70 to-transparent" />
+
+        {/* CONTENT */}
+        <div className="relative z-10 max-w-6xl px-12 pb-24">
+         
+          <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-4xl">
+            Reinventing <span className="font-semibold">Agri Trade</span>
+            <br />
+            Smarter Supply Chains, Smarter Capital
+          </h1>
+
+          <p className="mt-6 max-w-2xl text-white/80 text-base">
+            Empowering agricultural stakeholders with satellite imagery,
+            market intelligence, and advanced analytics to optimize yield,
+            mitigate risk, and drive informed decisions at scale.
+          </p>
+
+          <div className="mt-8 flex gap-4">
+            <button className="bg-white text-[#071b14] px-7 py-3 rounded-full text-sm font-semibold hover:bg-white/90 transition">
+              Become a Member
+            </button>
+
+            <button className="border border-white/50 px-7 py-3 rounded-full text-sm font-medium hover:border-white transition">
+              E-Auction Live
+            </button>
+          </div>
+
+          <div className="mt-12 text-sm text-white/60 flex items-center gap-2">
+            <span>Explore More</span>
+            <span className="text-lg">↓</span>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
