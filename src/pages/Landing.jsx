@@ -1,12 +1,8 @@
 import heroImage from "../Assets/main.png"
-import Navbar from "../components/Navbar"
 
 function Landing() {
   return (
     <div className="relative w-full min-h-screen overflow-hidden bg-[#071b14] text-white">
-
-      {/* NAVBAR */}
-      <Navbar />
 
       {/* HERO SECTION */}
       <section className="relative w-full min-h-screen flex items-end">
