@@ -1,3 +1,50 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+.offerings-scroll::-webkit-scrollbar {
+  height: 6px;
+}
+.offerings-scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+.offerings-scroll::-webkit-scrollbar-thumb {
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+}
+@keyframes partners-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-partners-scroll {
+  animation: partners-scroll 40s linear infinite;
+}
+@keyframes floatSlow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(12px); }
+  100% { transform: translateY(0); }
+}
+
+.float-slow {
+  animation: floatSlow 18s ease-in-out infinite;
+}
+.torn-paper {
+  background: #fdfcf8;
+  padding-top: 18px; /* creates space for spiral */
+}
+@keyframes offerings-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.animate-offerings-scroll {
+  animation: offerings-scroll 40s linear infinite;
+}
