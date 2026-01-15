@@ -90,11 +90,6 @@ function Landing() {
               E-Auction Live
             </button>
           </div>
-
-          <div className="mt-12 text-sm text-white/60 flex items-center gap-2">
-            <span>Explore More</span>
-            <span className="text-lg">↓</span>
-          </div>
         </div>
       </section>
      {/* TRANSITION DIVIDER */}

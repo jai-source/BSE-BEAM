@@ -91,12 +91,6 @@ export default function AboutUs() {
               We are building the definitive digital infrastructure for a transparent, efficient Bharat.
             </p>
           </FadeIn>
-
-          {/* New Scroll Mouse Animation */}
-          <div className="absolute bottom-12 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50">
-            <div className="w-[1px] h-12 bg-gradient-to-b from-transparent via-lime-400 to-transparent animate-scrolldown" />
-            <span className="text-[10px] tracking-[0.2em] uppercase">Scroll</span>
-          </div>
         </div>
       </section>
 
