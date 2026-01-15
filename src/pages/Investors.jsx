@@ -1,5 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Building2 } from 'lucide-react';
+import heroImage from "../public/img-slider-01.jpg";
+import statutoryImage from "../public/img-callback.png";
 
 // --- Utility Component for Scroll Animations ---
 const FadeIn = ({ children, delay = 0, className = "" }) => {
@@ -253,30 +255,40 @@ function Investors() {
       </div>
 
       {/* ================= HERO SECTION ================= */}
-      <section className="relative min-h-screen flex items-center justify-center overflow-hidden z-10 pt-20">
-        <div className="relative z-30 max-w-7xl mx-auto px-6 text-center">
+      <section className="relative min-h-screen flex items-end overflow-hidden z-10">
+
+        {/* Parallax Background */}
+        <div className="absolute inset-0 z-0 select-none">
+          <div className="absolute inset-0 bg-gradient-to-t from-[#061712] via-[#061712]/70 to-transparent z-20" />
+          <img
+            src={heroImage}
+            alt="Investors Relations"
+            className="w-full h-full object-cover scale-110 animate-[pan_30s_linear_infinite_alternate] opacity-80 mix-blend-overlay"
+          />
+        </div>
+
+        <div className="relative z-30 max-w-6xl px-12 pb-24">
           <FadeIn>
-            <div className="inline-flex items-center gap-3 px-5 py-2 bg-lime-500/10 border-2 border-lime-500/30 text-lime-400 text-sm font-semibold tracking-wide uppercase hover:border-lime-500 transition-colors cursor-default">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md text-lime-400 text-sm font-semibold tracking-wide uppercase hover:bg-white/10 transition-colors cursor-default mb-6">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-lime-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-lime-500"></span>
               </span>
-              Investor Relations
+              Investors Relations
             </div>
           </FadeIn>
 
           <FadeIn delay={200}>
-            <h1 className="mt-8 text-6xl md:text-8xl lg:text-9xl font-light tracking-tighter leading-[0.9]">
-              Transforming Indian<br />
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-lime-300 via-white to-lime-300 bg-[length:200%_auto] animate-[shimmer_5s_linear_infinite]">
-                Agriculture, Together 
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight max-w-4xl">
+              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-lime-400 via-emerald-300 to-white bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite]">
+                Investor Relations
               </span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={400}>
-            <p className="mt-10 text-lg md:text-2xl text-white/70 max-w-3xl mx-auto font-light leading-relaxed">
-              India is a dynamic <span className="text-white font-medium">agricultural and commodity trading landscape.</span> Our platform combines technology, supply chain efficiency, and financial services to create a transparent, high-growth environment for investments.
+            <p className="mt-6 max-w-2xl text-white/80 text-base">
+              Transparent information and engagement with our valued investors
             </p>
           </FadeIn>
         </div>
@@ -365,7 +377,7 @@ function Investors() {
                     Credibility Rooted in Trust
                   </h3>
                   <p className="text-white/60 leading-relaxed flex-grow text-sm">
-                    Promoted by BSE, Asia's oldest stock exchange, BeAM inherits a legacy of governance, reliability, and regulatory discipline � making it a trusted partner for governments, corporates, and investors alike.
+                    Promoted by BSE, Asia's oldest stock exchange, BeAM inherits a legacy of governance, reliability, and regulatory discipline making it a trusted partner for governments, corporates, and investors alike.
                   </p>
                   <div className="mt-6 pt-4 border-t-2 border-lime-500/20">
                     <div className="text-xs font-bold text-lime-500 uppercase tracking-wider">BSE Legacy</div>
@@ -522,12 +534,14 @@ function Investors() {
                 </div>
                 
                 {/* Large geometric accent */}
-                <div className="hidden lg:block relative w-48 h-48">
-                  <div className="absolute top-0 right-0 w-32 h-32 border-2 border-lime-500/30" />
-                  <div className="absolute top-4 right-4 w-32 h-32 border-2 border-lime-500/20" />
-                  <div className="absolute top-8 right-8 w-32 h-32 bg-lime-500/5" />
-                  <div className="absolute bottom-0 left-0 w-24 h-24 border-l-2 border-b-2 border-lime-500" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-6xl font-black text-lime-500/10">01</div>
+                <div className="hidden lg:block relative w-96 h-96">
+                  <div className="absolute inset-0 overflow-hidden">
+                    <img 
+                      src={statutoryImage} 
+                      alt="Statutory Disclosures" 
+                      className="w-full h-full object-cover opacity-70"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
@@ -720,8 +734,17 @@ function Investors() {
           <FadeIn delay={200}>
             <div className="relative group">
               <div className="absolute inset-0 bg-lime-500/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
-              <div className="relative bg-[#081f18] p-8 md:p-12 border-2 border-lime-500/20 hover:border-lime-500 transition-colors duration-300">
-                <div className="space-y-6">
+              <div className="relative bg-[#081f18] border-2 border-lime-500/20 hover:border-lime-500 transition-colors duration-300 overflow-hidden">
+                {/* Background Image */}
+                <div className="absolute inset-0 opacity-20">
+                  <img 
+                    src={statutoryImage} 
+                    alt="RTA Background" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                
+                <div className="relative p-8 md:p-12 space-y-6">
                   {/* Company Name */}
                   <div className="text-center pb-6 border-b border-white/10">
                     <h3 className="text-2xl md:text-3xl font-bold text-white mb-2">
