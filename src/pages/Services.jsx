@@ -1,6 +1,8 @@
 
 import nine from "../Assets/image-9-scaled.jpg";
 import ten from "../Assets/image-10-scaled.jpg";
+import { motion } from "framer-motion";
+
 import React from "react";
 import { Building, Users, Landmark, Handshake } from "lucide-react";
 import { Globe, Leaf, Globe2, Truck,Zap, Layers, TrendingUp, FileText } from "lucide-react";
@@ -32,78 +34,178 @@ const Services = () => {
     <>
       {/* HERO SECTION */}
       <section className="relative bg-[#071B14] py-32 overflow-hidden">
-        {/* subtle texture for depth */}
-        <div
-          className="absolute inset-0 bg-[radial-gradient(#0e3b2e_1px,transparent_1px)]
-                     [background-size:22px_22px] opacity-30"
-        />
+  {/* subtle texture for depth */}
+  <div
+    className="absolute inset-0 bg-[radial-gradient(#0e3b2e_1px,transparent_1px)]
+               [background-size:22px_22px] opacity-30"
+  />
 
-        <div className="relative max-w-7xl mx-auto px-12 grid lg:grid-cols-2 gap-20 items-center">
-          {/* LEFT CONTENT */}
-          <div>
-            <div className="flex items-center gap-4 mb-6">
-              <span className="w-12 h-[1px] bg-[#6FAE9C]" />
-              <p className="text-sm tracking-widest text-[#9FD6C6] font-medium">
-                SUPPLY CHAINS
-              </p>
-            </div>
-
-            <h1 className="text-6xl font-bold leading-tight text-white">
-              Unlocking Value <br />
-              Across India’s{" "}
-              <span className="text-[#E24A3B]">Agri</span> <br />
-              <span className="text-[#E24A3B]">and Allied Markets</span>
-            </h1>
-
-            <p className="mt-8 max-w-xl text-lg text-[#CFE7DE] leading-relaxed">
-              At BSE E-Agricultural Markets (BEAM), our suite of business
-              verticals reflects our commitment to building a transparent,
-              efficient, and tech-powered agri-trade ecosystem. From digital
-              procurement to financing and consulting, each vertical is
-              tailored to serve a unique need within the agricultural and
-              allied sectors.
-            </p>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="relative">
-            <div className="absolute -inset-4 bg-[#0E3B2E] rounded-2xl" />
-            <img
-              src={nine}
-              alt="Agricultural Supply Chain"
-              className="relative rounded-2xl object-cover shadow-2xl"
-            />
-          </div>
-        </div>
-      </section>
-
-      {/* DIRECT PROCUREMENT SECTION */}
-     <section className="bg-white py-32">
-  <div className="max-w-7xl mx-auto px-12 grid lg:grid-cols-12 gap-20">
+  <div className="relative max-w-7xl mx-auto px-12 grid lg:grid-cols-2 gap-20 items-center">
 
     {/* LEFT CONTENT */}
-    <div className="lg:col-span-7">
-      <h2 className="text-5xl font-bold mb-8">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true }}
+      variants={{
+        hidden: {},
+        visible: {
+          transition: { staggerChildren: 0.15 }
+        }
+      }}
+    >
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut" }
+          }
+        }}
+        className="flex items-center gap-4 mb-6"
+      >
+        <span className="w-12 h-[1px] bg-[#6FAE9C]" />
+        <p className="text-sm tracking-widest text-[#9FD6C6] font-medium">
+          SUPPLY CHAINS
+        </p>
+      </motion.div>
+
+      <motion.h1
+        variants={{
+          hidden: { opacity: 0, y: 30 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.8, ease: "easeOut" }
+          }
+        }}
+        className="text-6xl font-bold leading-tight text-white"
+      >
+        Unlocking Value <br />
+        Across India’s{" "}
+        <span className="text-[#E24A3B]">Agri</span> <br />
+        <span className="text-[#E24A3B]">and Allied Markets</span>
+      </motion.h1>
+
+      <motion.p
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, ease: "easeOut", delay: 0.1 }
+          }
+        }}
+        className="mt-8 max-w-xl text-lg text-[#CFE7DE] leading-relaxed"
+      >
+        At BSE E-Agricultural Markets (BEAM), our suite of business
+        verticals reflects our commitment to building a transparent,
+        efficient, and tech-powered agri-trade ecosystem. From digital
+        procurement to financing and consulting, each vertical is
+        tailored to serve a unique need within the agricultural and
+        allied sectors.
+      </motion.p>
+    </motion.div>
+
+    {/* RIGHT IMAGE */}
+    <motion.div
+      initial={{ opacity: 0, scale: 0.96, y: 20 }}
+      whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      whileHover={{ y: -6 }}
+      className="relative"
+    >
+      <div className="absolute -inset-4 bg-[#0E3B2E] rounded-2xl" />
+      <img
+        src={nine}
+        alt="Agricultural Supply Chain"
+        className="relative rounded-2xl object-cover shadow-2xl"
+      />
+    </motion.div>
+
+  </div>
+</section>
+
+
+      {/* DIRECT PROCUREMENT SECTION */}
+    <section className="bg-white py-32">
+  <motion.div
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    variants={{
+      hidden: {},
+      visible: { transition: { staggerChildren: 0.15 } }
+    }}
+    className="max-w-7xl mx-auto px-12 grid lg:grid-cols-12 gap-20"
+  >
+
+    {/* LEFT CONTENT */}
+    <motion.div
+      variants={{
+        hidden: { opacity: 0, y: 40 },
+        visible: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.8, ease: "easeOut" }
+        }
+      }}
+      className="lg:col-span-7"
+    >
+      <motion.h2
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6 }
+          }
+        }}
+        className="text-5xl font-bold mb-8"
+      >
         <span className="text-[#143D2B]">Direct </span>
         <span className="text-[#C62828]">Procurement</span>
-      </h2>
+      </motion.h2>
 
-      <p className="text-[#2F4F43] text-lg leading-relaxed max-w-2xl mb-16">
+      <motion.p
+        variants={{
+          hidden: { opacity: 0, y: 20 },
+          visible: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6, delay: 0.1 }
+          }
+        }}
+        className="text-[#2F4F43] text-lg leading-relaxed max-w-2xl mb-16"
+      >
         BeAM brings the Bharat’s farmlands closer to the India’s largest buyers —
         delivering traceable, compliant, and farmer-first procurement at scale.
         Through strong technology infrastructure, it brings verified access to
         over a million farmers and simplifies procurement for public agencies and
         private agri-enterprises alike. From digital onboarding to DBT-enabled
         payments, our platform ensures trust, speed, and scale at the grassroots.
-      </p>
+      </motion.p>
 
-      <h4 className="text-xl font-semibold mb-10">
-        <span className="text-[#143D2B] text-xl">Our </span>
+      <motion.h4
+        variants={{
+          hidden: { opacity: 0, y: 15 },
+          visible: { opacity: 1, y: 0 }
+        }}
+        className="text-xl font-semibold mb-10"
+      >
+        <span className="text-[#143D2B]">Our </span>
         <span className="text-[#C62828]">Offerings</span>
-      </h4>
+      </motion.h4>
 
-      <div className="space-y-10 max-w-2xl">
-
+      <motion.div
+        variants={{
+          hidden: {},
+          visible: { transition: { staggerChildren: 0.12 } }
+        }}
+        className="space-y-10 max-w-2xl"
+      >
         {[
           {
             title: "Verified Farmer Access at Scale",
@@ -131,8 +233,16 @@ const Services = () => {
               "Auto-generated POs, receipts, payment orders, and compliance reports — eliminating manual bottlenecks.",
           },
         ].map((item, i) => (
-          <div
+          <motion.div
             key={i}
+            variants={{
+              hidden: { opacity: 0, x: -20 },
+              visible: {
+                opacity: 1,
+                x: 0,
+                transition: { duration: 0.4 }
+              }
+            }}
             className="relative pl-8 border-l border-[#D6E5DE]"
           >
             <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#143D2B]" />
@@ -142,19 +252,27 @@ const Services = () => {
             <p className="text-sm text-[#4A6B5F] leading-relaxed">
               {item.desc}
             </p>
-          </div>
+          </motion.div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
 
     {/* RIGHT SIDE CARD */}
-    <div className="lg:col-span-5">
+    <motion.div
+      initial={{ opacity: 0, x: 40 }}
+      whileInView={{ opacity: 1, x: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+      className="lg:col-span-5"
+    >
       <div className="sticky top-32 bg-[#0F3B2E] rounded-2xl overflow-hidden shadow-2xl">
-
-        <img
+        <motion.img
           src={ten}
           alt="Direct Procurement"
           className="w-full h-56 object-cover"
+          initial={{ scale: 1.05 }}
+          whileInView={{ scale: 1 }}
+          transition={{ duration: 0.8 }}
         />
 
         <div className="p-10">
@@ -178,97 +296,160 @@ const Services = () => {
           </ul>
         </div>
       </div>
-    </div>
+    </motion.div>
 
-  </div>
+  </motion.div>
 </section>
 
-    <section className="relative bg-[#0B3B2E] text-white py-36 px-8 overflow-hidden">
-      {/* Optional subtle background image */}
-      <img
-        src={ten}
-        alt=""
-        className="absolute inset-0 w-full h-full object-cover opacity-10 pointer-events-none"
-      />
 
-      {/* Section Header */}
-      <div className="max-w-6xl mx-auto text-center relative z-10">
-        <h2 className="text-5xl font-bold">
-          Public Sector <span className="text-white/90">Auctions</span>
-        </h2>
-        <p className="mt-6 text-lg max-w-3xl mx-auto text-white/80 leading-relaxed">
-          BeAM’s auction platform is purpose-built to serve government bodies, PSUs, and cooperatives — delivering compliant,
-          transparent, and audit-ready digital auctions for both sale and procurement. Our platform ensures regulatory alignment, operational
-          efficiency, and maximum bidder participation.
-        </p>
-      </div>
+   <section className="relative bg-[#0B3B2E] text-white py-36 px-8 overflow-hidden">
+  {/* Background texture */}
+  <img
+    src={ten}
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover opacity-[0.08] pointer-events-none"
+  />
 
-      {/* Features Cards */}
-      <div className="max-w-6xl mx-auto mt-16 flex flex-col md:flex-row justify-between gap-8 relative z-10">
-        {[
-          {
-            title: "Robust Stakeholder Engagement",
-            desc: "Active onboarding and handholding of bidders, suppliers, and government users across states.",
-          },
-          {
-            title: "Govt-Grade Auction Infrastructure",
-            desc: "Configurable workflows aligned with regulatory mandates, audit protocols, and SOPs.",
-          },
-          {
-            title: "End-to-End Auction Support",
-            desc: "From lot setup to award issuance — seamless execution with zero bottlenecks.",
-          },
-        ].map((item, idx) => (
-          <div
-            key={idx}
-            className="bg-white/10 p-8 rounded-2xl flex-1 hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
-          >
-            <h3 className="text-xl font-semibold text-white">{item.title}</h3>
-            <p className="mt-3 text-white/80 leading-relaxed">{item.desc}</p>
-          </div>
-        ))}
-      </div>
+  {/* Soft gradient + pattern */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.06),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.05),transparent_40%)]" />
 
-      {/* Who We Serve */}
-      <div className="max-w-6xl mx-auto mt-24 relative z-10">
-        <h3 className="text-4xl font-bold text-center mb-12">
-          Who We <span className="text-white/90">Serve</span>
+  {/* Header */}
+  <motion.div
+    className="max-w-6xl mx-auto text-center relative z-10"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+  >
+    <h2 className="text-5xl font-bold tracking-tight">
+      Public Sector <span className="text-white/90">Auctions</span>
+    </h2>
+
+    <p className="mt-6 text-lg max-w-3xl mx-auto text-white/80 leading-relaxed">
+      BeAM’s auction platform is purpose-built to serve government bodies, PSUs, and cooperatives — delivering compliant,
+      transparent, and audit-ready digital auctions for both sale and procurement. Our platform ensures regulatory alignment,
+      operational efficiency, and maximum bidder participation.
+    </p>
+  </motion.div>
+
+  {/* Feature cards */}
+  <motion.div
+    className="max-w-6xl mx-auto mt-20 flex flex-col md:flex-row gap-8 relative z-10"
+    initial="hidden"
+    whileInView="visible"
+    viewport={{ once: true }}
+    transition={{ staggerChildren: 0.15 }}
+  >
+    {[
+      {
+        title: "Robust Stakeholder Engagement",
+        desc: "Active onboarding and handholding of bidders, suppliers, and government users across states.",
+      },
+      {
+        title: "Govt-Grade Auction Infrastructure",
+        desc: "Configurable workflows aligned with regulatory mandates, audit protocols, and SOPs.",
+      },
+      {
+        title: "End-to-End Auction Support",
+        desc: "From lot setup to award issuance — seamless execution with zero bottlenecks.",
+      },
+    ].map((item, idx) => (
+      <motion.div
+        key={idx}
+        initial={{ opacity: 0, y: 30 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        whileHover={{ y: -6 }}
+        className="group flex-1 bg-white/10 backdrop-blur-xl p-8 rounded-2xl
+                   border border-white/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+                   hover:bg-white/15 hover:border-white/20 transition-all"
+      >
+        <h3 className="text-xl font-semibold text-white">
+          {item.title}
         </h3>
+        <p className="mt-3 text-white/80 leading-relaxed">
+          {item.desc}
+        </p>
+        <div className="mt-6 h-[2px] w-0 bg-white/40 group-hover:w-12 transition-all duration-500" />
+      </motion.div>
+    ))}
+  </motion.div>
 
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 text-center">
-          {[
-            { icon: Building, title: "State Marketing Federations" },
-            { icon: Users, title: "PSU Procurement & Disposal Divisions" },
-            { icon: Landmark, title: "Government Departments & State Agencies" },
-            { icon: Handshake, title: "Cooperatives & Public Institutions" },
-          ].map((item, idx) => {
-            const Icon = item.icon;
-            return (
-              <div
-                key={idx}
-                className="flex flex-col items-center p-8 bg-white/10 rounded-2xl hover:bg-white/20 transition-all duration-300 shadow-lg hover:shadow-xl"
-              >
-                <Icon className="w-12 h-12 mb-4 text-white" />
-                <p className="text-white font-medium text-lg">{item.title}</p>
-              </div>
-            );
-          })}
-        </div>
-      </div>
-    </section>
-    <section className="relative bg-white py-28">
+  {/* Who we serve */}
+  <motion.div
+    className="max-w-6xl mx-auto mt-28 relative z-10"
+    initial={{ opacity: 0, y: 40 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.8 }}
+  >
+    <h3 className="text-4xl font-bold text-center mb-14">
+      Who We <span className="text-white/90">Serve</span>
+    </h3>
 
-  {/* subtle background accents */}
-  <div className="absolute inset-0 pointer-events-none">
-    <div className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-green-900/5 blur-3xl" />
-    <div className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-green-700/5 blur-3xl" />
-  </div>
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+      {[
+        { icon: Building, title: "State Marketing Federations" },
+        { icon: Users, title: "PSU Procurement & Disposal Divisions" },
+        { icon: Landmark, title: "Government Departments & State Agencies" },
+        { icon: Handshake, title: "Cooperatives & Public Institutions" },
+      ].map((item, idx) => {
+        const Icon = item.icon;
+        return (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5 }}
+            whileHover={{ scale: 1.04 }}
+            className="flex flex-col items-center p-8 rounded-2xl
+                       bg-white/10 backdrop-blur-xl border border-white/10
+                       shadow-[0_20px_60px_rgba(0,0,0,0.35)]
+                       hover:bg-white/15 hover:border-white/20 transition-all"
+          >
+            <Icon className="w-12 h-12 mb-4 text-white" />
+            <p className="text-white font-medium text-lg text-center">
+              {item.title}
+            </p>
+          </motion.div>
+        );
+      })}
+    </div>
+  </motion.div>
+</section>
+
+   <section className="relative bg-white py-28 overflow-hidden">
+  {/* subtle animated background accents */}
+  <motion.div
+    className="absolute inset-0 pointer-events-none"
+    initial={{ opacity: 0 }}
+    whileInView={{ opacity: 1 }}
+    viewport={{ once: true }}
+    transition={{ duration: 1 }}
+  >
+    <motion.div
+      className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-green-900/5 blur-3xl"
+      animate={{ scale: [1, 1.08, 1] }}
+      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+    />
+    <motion.div
+      className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-green-700/5 blur-3xl"
+      animate={{ scale: [1, 1.1, 1] }}
+      transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
+    />
+  </motion.div>
 
   <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-20">
-
     {/* LEFT */}
-    <div className="lg:col-span-7">
-
+    <motion.div
+      className="lg:col-span-7"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
+    >
       <h1 className="text-5xl font-bold leading-tight text-green-900">
         Trade <br />
         <span className="text-green-700">Connect</span>
@@ -295,83 +476,84 @@ const Services = () => {
           Key <span className="text-green-700">Features</span>
         </h3>
 
-        <div className="space-y-6">
-
-          <div className="flex gap-5 p-5 rounded-xl bg-green-50/60 border border-green-100 transition-all duration-300 hover:bg-green-100/60 hover:translate-x-1">
-            <div className="text-green-700">
-              <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2"><circle cx="11" cy="11" r="9" /></svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-green-900">Zero-Lag Bidding Engine</h4>
-              <p className="text-sm text-gray-700 mt-1">
-                Real-time, high-speed auction interface with nanosecond-level timestamp traceability
-              </p>
-            </div>
-          </div>
-
-          <div className="flex gap-5 p-5 rounded-xl bg-green-50/60 border border-green-100 transition-all duration-300 hover:bg-green-100/60 hover:translate-x-1">
-            <div className="text-green-700">
-              <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2"><rect x="3" y="3" width="16" height="16" /></svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-green-900">Custom Auction Frameworks</h4>
-              <p className="text-sm text-gray-700 mt-1">
-                Forward and reverse-bid formats tailored for multi-sector use
-              </p>
-            </div>
-          </div>
-
-          <div className="flex gap-5 p-5 rounded-xl bg-green-50/60 border border-green-100 transition-all duration-300 hover:bg-green-100/60 hover:translate-x-1">
-            <div className="text-green-700">
-              <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2"><path d="M3 19h18M6 17V7m6 10V7m6 10V7" /></svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-green-900">Robust Supplier Ecosystem</h4>
-              <p className="text-sm text-gray-700 mt-1">
-                Deep network of verified sellers across agri, dairy, packaging, metals, and services
-              </p>
-            </div>
-          </div>
-
-          <div className="flex gap-5 p-5 rounded-xl bg-green-50/60 border border-green-100 transition-all duration-300 hover:bg-green-100/60 hover:translate-x-1">
-            <div className="text-green-700">
-              <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M2 12h20" /></svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-green-900">Proactive Partner Onboarding</h4>
-              <p className="text-sm text-gray-700 mt-1">
-                Dedicated teams driving seller mobilization to boost competition and trade volumes
-              </p>
-            </div>
-          </div>
-
-          <div className="flex gap-5 p-5 rounded-xl bg-green-50/60 border border-green-100 transition-all duration-300 hover:bg-green-100/60 hover:translate-x-1">
-            <div className="text-green-700">
-              <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2"><path d="M4 4h16v16H4z" /></svg>
-            </div>
-            <div>
-              <h4 className="font-semibold text-green-900">Smart Docs & Insights</h4>
-              <p className="text-sm text-gray-700 mt-1">
-                Auto-generated contracts, audit-ready reports, and performance analytics for every auction
-              </p>
-            </div>
-          </div>
-
-        </div>
+        <motion.div
+          className="space-y-6"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          transition={{ staggerChildren: 0.12 }}
+        >
+          {[
+            {
+              title: "Zero-Lag Bidding Engine",
+              desc:
+                "Real-time, high-speed auction interface with nanosecond-level timestamp traceability",
+              icon: <circle cx="11" cy="11" r="9" />,
+            },
+            {
+              title: "Custom Auction Frameworks",
+              desc:
+                "Forward and reverse-bid formats tailored for multi-sector use",
+              icon: <rect x="3" y="3" width="16" height="16" />,
+            },
+            {
+              title: "Robust Supplier Ecosystem",
+              desc:
+                "Deep network of verified sellers across agri, dairy, packaging, metals, and services",
+              icon: <path d="M3 19h18M6 17V7m6 10V7m6 10V7" />,
+            },
+            {
+              title: "Proactive Partner Onboarding",
+              desc:
+                "Dedicated teams driving seller mobilization to boost competition and trade volumes",
+              icon: <path d="M12 2v20M2 12h20" />,
+            },
+            {
+              title: "Smart Docs & Insights",
+              desc:
+                "Auto-generated contracts, audit-ready reports, and performance analytics for every auction",
+              icon: <path d="M4 4h16v16H4z" />,
+            },
+          ].map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: -30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, ease: "easeOut" }}
+              whileHover={{ x: 6 }}
+              className="flex gap-5 p-5 rounded-xl bg-green-50/60 border border-green-100
+                         hover:bg-green-100/60 transition-all"
+            >
+              <div className="text-green-700 mt-1">
+                <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
+                  {item.icon}
+                </svg>
+              </div>
+              <div>
+                <h4 className="font-semibold text-green-900">{item.title}</h4>
+                <p className="text-sm text-gray-700 mt-1">{item.desc}</p>
+              </div>
+            </motion.div>
+          ))}
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
 
     {/* RIGHT */}
-    
-     <div className="lg:col-span-5">
-  <div className="sticky top-28 rounded-2xl overflow-hidden shadow-xl bg-green-900 text-white">
-
-
-        <img
-          src={nine}
-          alt=""
-          className="w-full h-[260px] object-cover"
-        />
+    <motion.div
+      className="lg:col-span-5"
+      initial={{ opacity: 0, y: 60 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.9, ease: "easeOut" }}
+    >
+      <motion.div
+        className="sticky top-28 rounded-2xl overflow-hidden shadow-xl bg-green-900 text-white"
+        whileHover={{ y: -8 }}
+        transition={{ type: "spring", stiffness: 120 }}
+      >
+        <img src={nine} alt="" className="w-full h-[260px] object-cover" />
 
         <div className="p-10">
           <h4 className="text-lg font-semibold mb-8">
@@ -379,17 +561,31 @@ const Services = () => {
           </h4>
 
           <ul className="space-y-6 text-sm">
-            <li className="flex gap-4"><span className="text-green-300">●</span>Agri & Food Processing Firms</li>
-            <li className="flex gap-4"><span className="text-green-300">●</span>Dairy Cooperatives and Allied Sector Players</li>
-            <li className="flex gap-4"><span className="text-green-300">●</span>Institutional Buyers and Procurement Agencies</li>
-            <li className="flex gap-4"><span className="text-green-300">●</span>FPOs, Aggregators, and Exporters</li>
+            {[
+              "Agri & Food Processing Firms",
+              "Dairy Cooperatives and Allied Sector Players",
+              "Institutional Buyers and Procurement Agencies",
+              "FPOs, Aggregators, and Exporters",
+            ].map((item, i) => (
+              <motion.li
+                key={i}
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="flex gap-4"
+              >
+                <span className="text-green-300">●</span>
+                {item}
+              </motion.li>
+            ))}
           </ul>
         </div>
-      </div>
-    </div>
-
+      </motion.div>
+    </motion.div>
   </div>
 </section>
+
 <section className="relative pt-36 pb-36 pl-32 pr-24 bg-[#071B14] overflow-hidden text-white">
   {/* CONTENT WRAPPER */}
   <div className="relative z-10 max-w-7xl mx-auto">
