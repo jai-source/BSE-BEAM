@@ -9,6 +9,7 @@ import torn from "../Assets/Image-7-Banner-Image-scaled.jpg"
 import Coil from "../components/Coil";
 import heroVideo from "../Assets/VIDEO.mp4";
 import backgroundimage from "../Assets/backgroundimage.png";
+import { motion } from "framer-motion";
 import {
   Factory,
   Leaf,
@@ -239,145 +240,191 @@ function Landing() {
 </section>
 
       {/* PILLARS SECTION */}
-<section className="relative bg-white pt-36 pb-36 overflow-hidden">
+<section className="relative bg-white py-40 overflow-hidden">
 
-  {/* LEFT cluster */}
-  <img
+  {/* SOFT NEON AMBIENCE */}
+  <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-emerald-300/20 blur-[160px]" />
+  <div className="absolute top-1/2 -right-40 w-[520px] h-[520px] rounded-full bg-emerald-200/20 blur-[160px]" />
+
+  {/* FLOATING GEOMETRY */}
+  <motion.img
     src={hexagon}
-    alt=""
-    className="absolute top-[-180px] left-[-200px] w-[520px] opacity-[0.04] pointer-events-none"
+    className="absolute top-[-160px] left-[-200px] w-[520px] opacity-[0.05]"
+    animate={{ y: [0, 30, 0], rotate: [0, 6, 0] }}
+    transition={{ duration: 14, repeat: Infinity }}
   />
 
-  <img
-    src={triangleOutline}
-    alt=""
-    className="absolute top-[120px] left-[80px] w-[220px] opacity-[0.035] pointer-events-none rotate-6"
-  />
-
-  {/* RIGHT cluster */}
-  <img
+  <motion.img
     src={triangleLarge}
-    alt=""
-    className="absolute top-[-140px] right-[-160px] w-[520px] opacity-[0.035] pointer-events-none rotate-[-10deg]"
+    className="absolute top-[-140px] right-[-180px] w-[520px] opacity-[0.04]"
+    animate={{ y: [0, -40, 0], rotate: [0, -8, 0] }}
+    transition={{ duration: 18, repeat: Infinity }}
   />
 
-  <img
-    src={hexagon}
-    alt=""
-    className="absolute top-[260px] right-[120px] w-[300px] opacity-[0.03] pointer-events-none rotate-12"
-  />
-
-  {/* CENTER depth */}
-  <img
+  <motion.img
     src={triangleOutline}
-    alt=""
-    className="absolute top-[48%] left-[45%] w-[260px] opacity-[0.025] pointer-events-none"
+    className="absolute bottom-[-220px] left-[35%] w-[480px] opacity-[0.035]"
+    animate={{ y: [0, 35, 0] }}
+    transition={{ duration: 16, repeat: Infinity }}
   />
 
-  <img
-    src={triangleLarge}
-    alt=""
-    className="absolute bottom-[-220px] left-[35%] w-[480px] opacity-[0.035] pointer-events-none rotate-3"
-  />
-
-  {/* content */}
+  {/* CONTENT */}
   <div className="relative z-10 max-w-6xl mx-auto px-12">
 
-    <h2 className="text-6xl font-bold text-[#071b14] mb-16">
+    {/* HEADER */}
+    <motion.h2
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="text-6xl text-center font-bold text-[#071b14] mb-20 tracking-tight"
+    >
       Our Pillars
-    </h2>
+    </motion.h2>
 
-    <div className="grid md:grid-cols-3 gap-12">
+    {/* GRID */}
+    <div className="grid md:grid-cols-3 gap-14">
 
-      <div className="space-y-4">
-        <img src={tech} className="rounded-xl" />
-        <h3 className="text-xl font-medium text-[#071b14]">Technology</h3>
-        <p className="text-sm text-[#5f6f64]">
-          Robust and transparent platforms for increasing market efficiency.
-        </p>
-      </div>
+      {/* CARD */}
+      {[
+        {
+          img: tech,
+          title: "Technology",
+          desc: "Robust and transparent platforms for increasing market efficiency."
+        },
+        {
+          img: supply,
+          title: "Supply Chain",
+          desc: "Seamless linkages from farmers to industries and exporters."
+        },
+        {
+          img: finance,
+          title: "Finance",
+          desc: "Secure payments and trade-support financial instruments."
+        }
+      ].map((item, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: i * 0.15 }}
+          viewport={{ once: true }}
+          whileHover={{ y: -12 }}
+          className="group relative rounded-2xl bg-white p-6 border border-emerald-900/10 
+                     shadow-[0_20px_40px_-20px_rgba(6,95,70,0.35)]
+                     hover:shadow-[0_30px_80px_-20px_rgba(16,185,129,0.45)]
+                     transition-all duration-500"
+        >
 
-      <div className="space-y-4">
-        <img src={supply} className="rounded-xl" />
-        <h3 className="text-xl font-medium text-[#071b14]">Supply Chain</h3>
-        <p className="text-sm text-[#5f6f64]">
-          Seamless linkages from farmers to industries and exporters.
-        </p>
-      </div>
+          {/* NEON OUTLINE */}
+          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 
+                          shadow-[0_0_40px_rgba(16,185,129,0.25)] transition-opacity duration-500" />
 
-      <div className="space-y-4">
-        <img src={finance} className="rounded-xl" />
-        <h3 className="text-xl font-medium text-[#071b14]">Finance</h3>
-        <p className="text-sm text-[#5f6f64]">
-          Secure payments and trade-support financial instruments.
-        </p>
-      </div>
+          <img
+            src={item.img}
+            alt=""
+            className="rounded-xl mb-6 relative z-10"
+          />
+
+          <h3 className="text-xl font-semibold text-[#071b14] mb-2 relative z-10">
+            {item.title}
+          </h3>
+
+          <p className="text-sm text-[#5f6f64] leading-relaxed relative z-10">
+            {item.desc}
+          </p>
+        </motion.div>
+      ))}
 
     </div>
   </div>
 </section>
-<section className="relative py-36 overflow-hidden bg-[#F9FBFA]">
+<section className="relative py-24 overflow-hidden bg-[#061410]">
 
-  {/* soft diagonal gradient wash */}
-  {/* BACKGROUND IMAGE */}
-<img
-  src={backgroundimage}
-  alt=""
-  className="absolute inset-0 w-full h-full object-cover pointer-events-none"
-/>
-
-{/* OPTIONAL: subtle white overlay for readability */}
-<div className="absolute inset-0 bg-white/70" />
+  {/* RICH MULTI-COLOR BACKGROUND */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(34,197,94,0.18),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(20,184,166,0.16),transparent_45%),radial-gradient(circle_at_50%_80%,rgba(163,230,53,0.10),transparent_50%)]" />
+  <div className="absolute inset-0 bg-[#061410]/85" />
 
   <div className="relative z-10 max-w-7xl mx-auto px-12">
-    <div className="max-w-3xl mb-20">
-      <p className="text-xs tracking-[0.3em] text-[#6B7F78] mb-4">
+
+    {/* HEADER */}
+    <div className="max-w-3xl mb-28">
+      <p className="text-xs tracking-[0.35em] text-emerald-300 mb-4">
         WHERE CAN WE HELP YOU
       </p>
-      <h2 className="text-4xl md:text-5xl font-bold text-[#071b14]">
+
+      <h2 className="text-5xl font-bold text-white mb-6">
         Our Offerings
       </h2>
-      <p className="mt-6 text-[#4F5F59] text-lg leading-relaxed">
+
+      <p className="text-lg text-emerald-100/80 leading-relaxed">
         Integrated, technology-driven services enabling transparency,
         efficiency, and scale across the agricultural value chain.
       </p>
     </div>
+
+    {/* SCROLLER — VISUALLY BROKEN PLANE */}
     <div className="relative overflow-hidden">
-      <div className="flex gap-10 animate-offerings-scroll">
+      <div className="flex gap-16 animate-offerings-scroll items-start">
+
         {[
-          { title: "Metals", icon: Factory, desc: "Efficient procurement and disposal of steel, scrap, and industrial metals." },
-          { title: "Bioenergy", icon: Leaf, desc: "Biomass sourcing enabled through verified farm-gate networks." },
-          { title: "Farm Gate", icon: Wheat, desc: "Direct access to farmers with transparent pricing and logistics." },
-          { title: "Trade Connect", icon: Shuffle, desc: "Digitally facilitated auctions and agri-commodity trade services." },
-          { title: "Market Intelligence", icon: BarChart3, desc: "Data-backed insights powered by analytics and research." }
+          { title: "Bioenergy", offset: "mt-10", accent: "from-emerald-500/20" },
+          { title: "Farm Gate", offset: "mt-10", accent: "from-teal-400/20" },
+          { title: "Trade Connect", offset: "mt-10", accent: "from-lime-400/20" },
+          { title: "Market Intelligence", offset: "mt-1", accent: "from-green-400/20" },
         ].concat([
-          { title: "Metals", icon: Factory, desc: "Efficient procurement and disposal of steel, scrap, and industrial metals." },
-          { title: "Bioenergy", icon: Leaf, desc: "Biomass sourcing enabled through verified farm-gate networks." }
+          { title: "Bioenergy", offset: "mt-6", accent: "from-emerald-500/20" }
         ]).map((item, i) => (
+
           <div
             key={i}
-            className="min-w-[340px] bg-white
-                       border border-[#E3ECE8]
-                       rounded-2xl p-8
-                       shadow-[0_20px_50px_rgba(0,0,0,0.08)]
-                       hover:-translate-y-2 transition-transform duration-300"
+            className={`group relative min-w-[340px] ${item.offset}`}
           >
-            <h3 className="text-xl font-medium text-[#071b14] mb-3">
-              {item.title}
-            </h3>
-            <p className="text-sm text-[#5E6F68] leading-relaxed">
-              {item.desc}
-            </p>
-            <div className="mt-6 text-sm text-[#8AA79C] flex items-center gap-2">
-              <span>Explore</span>
-              <span>→</span>
+            {/* FLOATING CARD */}
+            <div
+              className="
+                relative rounded-3xl p-8
+                bg-gradient-to-br from-[#0b2a20] to-[#071b14]
+                border border-white/10
+                transition-all duration-500 ease-out
+                hover:-translate-y-6
+              "
+              style={{
+                boxShadow:
+                  "0 40px 90px -45px rgba(0,0,0,0.8)"
+              }}
+            >
+              {/* COLOR ACCENT WASH */}
+              <div
+                className={`
+                  absolute inset-0 rounded-3xl opacity-0
+                  bg-gradient-to-br ${item.accent} to-transparent
+                  group-hover:opacity-100
+                  transition-opacity duration-500
+                `}
+              />
+
+              <h3 className="text-xl font-semibold text-white mb-3 relative z-10">
+                {item.title}
+              </h3>
+
+              <p className="text-sm text-emerald-100/75 leading-relaxed relative z-10">
+                Direct access to farmers with transparent pricing and logistics.
+              </p>
+
+              <div className="mt-8 text-sm text-emerald-300 relative z-10">
+                Explore →
+              </div>
             </div>
           </div>
+
         ))}
       </div>
     </div>
+
   </div>
 </section>
+
 
 <section className="relative bg-[#081f18] py-28  overflow-hidden">
 
