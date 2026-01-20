@@ -289,10 +289,54 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
                 { title: 'Data-driven insights', image: vision5 }
               ].map((item, i) => (
                 <div key={i} className="flex flex-col items-center text-center group">
-                  <div className="w-32 h-32 mb-8 rounded-3xl overflow-hidden bg-white/10 flex items-center justify-center group-hover:scale-110 transition-transform duration-300 shadow-lg">
-                    <img src={item.image} alt={item.title} className="w-full h-full object-cover" />
+                  <div className="relative w-40 h-40 mb-12">
+                    {/* Main Image with Enhanced Effects */}
+                    <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl shadow-lime-500/20 group-hover:shadow-3xl group-hover:shadow-lime-500/40 transition-all duration-700 transform group-hover:-translate-y-2 group-hover:scale-105">
+                      {/* Image */}
+                      <img 
+                        src={item.image} 
+                        alt={item.title} 
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
+                      />
+                      
+                      {/* Gradient Overlay on Hover */}
+                      <div className="absolute inset-0 bg-gradient-to-t from-lime-400/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      
+                      {/* Shine Effect */}
+                      <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/60 to-transparent skew-x-12" />
+                      </div>
+                    </div>
+                    
+                    {/* Mirror Reflection */}
+                    <div 
+                      className="absolute left-0 w-full h-40 overflow-hidden opacity-0 group-hover:opacity-100 transition-all duration-700"
+                      style={{ 
+                        top: 'calc(100% + 8px)',
+                        WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 100%)',
+                        maskImage: 'linear-gradient(to bottom, rgba(0,0,0,0.6) 0%, rgba(0,0,0,0.3) 40%, transparent 100%)'
+                      }}
+                    >
+                      <div 
+                        className="w-full h-full rounded-3xl overflow-hidden"
+                        style={{ 
+                          transform: 'scaleY(-1) translateY(-8px)',
+                          filter: 'blur(1px) brightness(0.8)'
+                        }}
+                      >
+                        <img 
+                          src={item.image} 
+                          alt="" 
+                          className="w-full h-full object-cover transition-all duration-700 group-hover:scale-110" 
+                        />
+                      </div>
+                    </div>
+                    
+                    {/* Glow Ring */}
+                    <div className="absolute inset-0 rounded-3xl ring-2 ring-lime-400/0 group-hover:ring-lime-400/60 group-hover:scale-110 transition-all duration-700" />
                   </div>
-                  <h3 className="text-xl font-semibold text-white/90 group-hover:text-white transition-colors leading-snug">
+                  
+                  <h3 className="text-xl font-semibold text-white/90 group-hover:text-lime-300 transition-all duration-500 leading-snug px-4">
                     {item.title}
                   </h3>
                 </div>
