@@ -10,6 +10,8 @@ import Coil from "../components/Coil";
 import heroVideo from "../Assets/VIDEO.mp4";
 import backgroundimage from "../Assets/backgroundimage.png";
 import { motion } from "framer-motion";
+import { useScroll, useTransform } from "framer-motion";
+
 import {
   Factory,
   Leaf,
@@ -50,67 +52,106 @@ function Landing() {
     <div className="relative w-full min-h-screen overflow-hidden bg-theme-bg-main text-theme-text-primary">
 
       {/* HERO SECTION */}
-      <section className="relative w-full min-h-screen flex items-end">
+     <section className="relative w-full min-h-screen flex items-end overflow-hidden">
 
-        {/* BACKGROUND IMAGE */}
-       <video
-  src={heroVideo}
-  autoPlay
-  loop
-  muted
-  playsInline
-  className="absolute inset-0 w-full h-full object-cover"
->
-</video>
+  {/* BACKGROUND VIDEO WITH PARALLAX ZOOM */}
+  <motion.video
+    src={heroVideo}
+    autoPlay
+    loop
+    muted
+    playsInline
+    className="absolute inset-0 w-full h-full object-cover"
+    initial={{ scale: 1.05 }}
+    animate={{ scale: 1 }}
+    transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
+  />
 
+  {/* OVERLAY */}
+  <div className="absolute inset-0 bg-gradient-to-t from-[#071b14] via-[#0b2a1e]/70 to-transparent" />
 
-        {/* OVERLAY */}
-        <div className="absolute inset-0 bg-gradient-to-t from-[var(--color-bg-main)] via-[var(--color-primary-light)]/70 to-transparent" />
+  {/* CONTENT */}
+  <motion.div
+    className="relative z-10 max-w-6xl px-12 pb-24"
+    initial={{ y: 40, opacity: 0 }}
+    animate={{ y: 0, opacity: 1 }}
+    transition={{ delay: 0.6, duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+  >
+    <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-4xl">
+      Reinventing <span className="font-semibold">Agri Trade</span>
+      <br />
+      Smarter Supply Chains, Smarter Capital
+    </h1>
 
-        {/* CONTENT */}
-        <div className="relative z-10 max-w-6xl px-12 pb-24">
-         
-          <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-4xl">
-            Reinventing <span className="font-semibold">Agri Trade</span>
-            <br />
-            Smarter Supply Chains, Smarter Capital
-          </h1>
+    <p className="mt-6 max-w-2xl text-white/80 text-base">
+      Empowering agricultural stakeholders with satellite imagery,
+      market intelligence, and advanced analytics to optimize yield,
+      mitigate risk, and drive informed decisions at scale.
+    </p>
 
-          <p className="mt-6 max-w-2xl text-theme-text-primary/80 text-base">
-            Empowering agricultural stakeholders with satellite imagery,
-            market intelligence, and advanced analytics to optimize yield,
-            mitigate risk, and drive informed decisions at scale.
-          </p>
+    <motion.div
+      className="mt-8 flex gap-4"
+      initial="hidden"
+      animate="visible"
+      variants={{
+        hidden: {},
+        visible: {
+          transition: { staggerChildren: 0.12 }
+        }
+      }}
+    >
+      {[
+        "Become a Member",
+        "E-Auction Live"
+      ].map((label, i) => (
+        <motion.button
+          key={i}
+          className={
+            i === 0
+              ? "bg-white text-[#071b14] px-7 py-3 rounded-full text-sm font-semibold"
+              : "border border-white/50 px-7 py-3 rounded-full text-sm font-medium"
+          }
+          variants={{
+            hidden: { y: 20, opacity: 0 },
+            visible: { y: 0, opacity: 1 }
+          }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          whileHover={{ y: -2 }}
+        >
+          {label}
+        </motion.button>
+      ))}
+    </motion.div>
+  </motion.div>
+</section>
 
-          <div className="mt-8 flex gap-4">
-            <button className="bg-theme-button-bg text-theme-button-text px-7 py-3 rounded-full text-sm font-semibold hover:opacity-90 transition">
-              Become a Member
-            </button>
-
-            <button className="border border-theme-text-primary/50 px-7 py-3 rounded-full text-sm font-medium hover:border-theme-text-primary transition">
-              E-Auction Live
-            </button>
-          </div>
-        </div>
-      </section>
      {/* TRANSITION DIVIDER */}
 <div className="relative w-full h-8 bg-gradient-to-b from-[var(--color-gradient-from)] to-[var(--color-gradient-to)]" />
 {/* DRIBBBLE-STYLE AGRI INSIGHTS SECTION */}
 <section className="w-full bg-theme-bg-secondary py-32 overflow-hidden">
   <div className="max-w-6xl mx-auto px-12">
 
-    {/* top label */}
-    <div className="text-xl text-theme-text-muted mb-2">
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+      className="text-xl text-[#5f6f64] mb-2"
+    >
       Empowering Farmers with <br />
       Precision Agriculture
-    </div>
+    </motion.div>
 
-    {/* main grid */}
     <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
 
       {/* LEFT TEXT */}
-      <div>
-        <h2 className="text-4xl md:text-5xl leading-tight font-medium text-theme-text-secondary">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 0.2, duration: 1.2 }}
+      >
+        <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#0b2a1e]">
           <span className="italic font-normal">Transforming India's</span>{" "}
           Agricultural Market with <br />
           <span className="text-theme-accent">Technology</span>{" "}
@@ -120,124 +161,69 @@ function Landing() {
 
         <p className="mt-6 text-theme-text-muted max-w-xl">
           At the forefront of agricultural innovation, offering
-          precision farming solutions that empower farmers worldwide. By
-          leveraging advanced technologies such as satellite imagery,
-          analytics, and AI-driven insights.
+          precision farming solutions that empower farmers worldwide.
         </p>
 
         {/* STATS */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-16">
-          <div>
-            <p className="text-5xl font-semibold text-theme-text-secondary">25.9+</p>
-            <p className="text-sm text-theme-text-muted">Created Fields</p>
-          </div>
-          <div>
-            <p className="text-5xl font-semibold text-theme-text-secondary">4.85+</p>
-            <p className="text-sm text-theme-text-muted">Acres processed</p>
-          </div>
-          <div>
-            <p className="text-5xl font-semibold text-theme-text-secondary">11M+</p>
-            <p className="text-sm text-theme-text-muted">Registered users</p>
-          </div>
-          <div>
-            <p className="text-5xl font-semibold text-theme-text-secondary">27,000+</p>
-            <p className="text-sm text-theme-text-muted">Counted plants</p>
-          </div>
-        </div>
-      </div>
-
-{/* RIGHT IMAGE — COIL BOUND PAPER */}
-<div className="relative w-[420px] mx-auto rotate-[-5deg] origin-top-left">
-
-  {/* BACK COIL (behind paper) */}
-  <Coil className="absolute top-[6px] left-1/2 -translate-x-1/2 z-0 opacity-30" />
-
-  {/* PAPER */}
-  <div
-    className="relative bg-[#fdfcf8] pt-10 px-3 rounded-md z-10"
-    style={{
-      boxShadow: "0 28px 45px rgba(0,0,0,0.18)"
-    }}
-  >
-    {/* PUNCHED HOLES */}
-    <div className="absolute top-[14px] left-1/2 -translate-x-1/2 flex gap-7 z-20">
-      {Array.from({ length: 9 }).map((_, i) => (
-        <div
-          key={i}
-          className="w-3 h-5 bg-[#fdfcf8] rounded-full -mt-2"
-          style={{
-            boxShadow: "inset 0 1px 3px rgba(0,0,0,0.28)"
+        <motion.div
+          className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-16"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={{
+            visible: { transition: { staggerChildren: 0.15 } }
           }}
-        />
-      ))}
-    </div>
+        >
+          {[
+            ["25.9+", "Created Fields"],
+            ["4.85+", "Acres processed"],
+            ["11M+", "Registered users"],
+            ["27,000+", "Counted plants"]
+          ].map(([value, label], i) => (
+            <motion.div
+              key={i}
+              variants={{
+                hidden: { y: 20, opacity: 0 },
+                visible: { y: 0, opacity: 1 }
+              }}
+              transition={{ duration: 0.8 }}
+            >
+              <p className="text-5xl font-semibold text-[#0b2a1e]">{value}</p>
+              <p className="text-sm text-[#5f6f64]">{label}</p>
+            </motion.div>
+          ))}
+        </motion.div>
+      </motion.div>
 
-    <img
-      src={torn}
-      alt="visual"
-      className="w-[420px] h-[560px] object-cover rounded-sm"
-    />
-  </div>
+      {/* RIGHT FLOATING PAPER */}
+      <motion.div
+        className="relative w-[420px] mx-auto rotate-[-5deg]"
+        initial={{ opacity: 0, y: 60 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
+        whileHover={{ rotate: -3, y: -6 }}
+      >
+        <Coil className="absolute top-[6px] left-1/2 -translate-x-1/2 z-0 opacity-30" />
 
-  {/* FRONT COIL */}
-  <Coil className="absolute top-[6px] left-1/2 -translate-x-1/2 z-30" />
+        <div
+          className="relative bg-[#fdfcf8] pt-10 px-3 rounded-md z-10"
+          style={{ boxShadow: "0 28px 45px rgba(0,0,0,0.18)" }}
+        >
+          <img
+            src={torn}
+            alt="visual"
+            className="w-[420px] h-[560px] object-cover rounded-sm"
+          />
+        </div>
 
-</div>
+        <Coil className="absolute top-[6px] left-1/2 -translate-x-1/2 z-30" />
+      </motion.div>
+
     </div>
   </div>
 </section>
 
-    {/* PARTNERS */}
- <section className="relative w-full mt-16 mb-16 overflow-hidden bg-[#081f18]">
-
-  {/* background SVGs */}
-  <img
-    src={hexagon}
-    alt=""
-    className="absolute top-[-120px] right-[-180px] w-[520px] opacity-[0.1] pointer-events-none"
-  />
-
-  <img
-    src={triangleLarge}
-    alt=""
-    className="absolute bottom-[-140px] left-[-160px] w-[460px] opacity-[0.1] pointer-events-none rotate-12"
-  />
-
-  <img
-    src={triangleOutline}
-    alt=""
-    className="absolute top-[80%] left-[55%] w-[480px] opacity-[0.1] pointer-events-none"
-  />
-
-  {/* content */}
-  <div className="relative z-10 max-w-6xl mx-auto px-6">
-
-
- 
-<h3 className="text-center pt-16 text-6xl font-medium text-theme-text-primary mb-12">
-  Our Partners
-</h3>
-
-<div className="relative w-full overflow-hidden pb-16">
-  <div className="flex w-max animate-partners-scroll gap-20 items-center text-[#9fb3a8]">
-
-    {/* SET 1 */}
-    <span className="text-xl font-medium tracking-wide">DROPRISE</span>
-    <span className="text-xl font-medium tracking-wide">DroneDeploy</span>
-    <span className="text-xl font-medium tracking-wide">FarmTogether</span>
-    <span className="text-xl font-medium tracking-wide">AgriTechX</span>
-
-    {/* SET 2 */}
-    <span className="text-xl font-medium tracking-wide">DROPRISE</span>
-    <span className="text-xl font-medium tracking-wide">DroneDeploy</span>
-    <span className="text-xl font-medium tracking-wide">FarmTogether</span>
-    <span className="text-xl font-medium tracking-wide">AgriTechX</span>
-
-  </div>
-</div>
-
-</div>
-</section>
 
       {/* PILLARS SECTION */}
 <section className="relative bg-theme-bg-secondary py-40 overflow-hidden">
@@ -537,80 +523,8 @@ function Landing() {
     </div>
   </div>
 </section>
-<section className="bg-theme-bg-secondary py-28">
-  <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-2 gap-20 items-start">
 
-    {/* Left */}
-    <div>
-      <h2 className="text-4xl font-semibold text-theme-text-secondary mb-6">
-        Get in Touch
-      </h2>
-      <p className="text-theme-text-muted max-w-md mb-10 leading-relaxed">
-        Connect with BSE E-Agricultural Markets Limited to explore partnerships,
-        platform access, or institutional participation.
-      </p>
-
-      <div className="space-y-6 text-sm text-theme-text-secondary">
-        <div>
-          <p className="font-medium">Registered Office</p>
-          <p className="text-theme-text-muted">
-            25th Floor, P.J. Towers, Dalal Street,<br />
-            Fort, Mumbai – 400001
-          </p>
-        </div>
-
-        <div>
-          <p className="font-medium">Corporate Office</p>
-          <p className="text-theme-text-muted">
-            Unit No. 319, Suncity Success Towers,<br />
-            Sector 65, Golf Course Extension Road,<br />
-            Gurugram – 122018
-          </p>
-        </div>
-
-        <div>
-          <p className="font-medium">Email</p>
-          <p className="text-theme-text-muted">inquiry@bsebeam.com</p>
-        </div>
-      </div>
-    </div>
-
-    {/* Right – Contact Form */}
-    <div className="bg-theme-button-bg rounded-2xl shadow-sm p-10">
-      <form className="space-y-6">
-        <input
-          type="text"
-          placeholder="Full Name"
-          className="w-full border border-[#dfe7e3] rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#081f18]"
-        />
-        <input
-          type="email"
-          placeholder="Email Address"
-          className="w-full border border-[#dfe7e3] rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#081f18]"
-        />
-        <input
-          type="text"
-          placeholder="Organization"
-          className="w-full border border-[#dfe7e3] rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#081f18]"
-        />
-        <textarea
-          placeholder="Message"
-          rows={4}
-          className="w-full border border-[#dfe7e3] rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-[#081f18]"
-        />
-
-        <button
-          type="submit"
-          className="bg-theme-primary text-theme-text-primary px-6 py-3 rounded-lg text-sm font-medium hover:bg-theme-primary-light transition"
-        >
-          Submit Enquiry
-        </button>
-      </form>
-    </div>
-
-  </div>
-</section>
-<footer className="bg-theme-primary text-theme-text-primary pt-20">
+<footer className="bg-[#081f18] text-white pt-20">
 
   <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 
