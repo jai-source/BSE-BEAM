@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ThemeProvider } from './context/ThemeContext'
 import Navbar from './components/Navbar'
 import Landing from './pages/Landing'
 import About from './pages/About'
@@ -10,20 +11,22 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <Router>
-      <div className="min-h-screen bg-gray-50">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/services" element={<Services />} />
-          <Route path="/investors" element={<Investors />} />
-          <Route path="/circulars" element={<Circulars />} />
-          <Route path="/compliance" element={<Compliance />} />
-          <Route path="/contact" element={<Contact />} />
-        </Routes>
-      </div>
-    </Router>
+    <ThemeProvider>
+      <Router>
+        <div className="min-h-screen bg-gray-50">
+          <Navbar />
+          <Routes>
+            <Route path="/" element={<Landing />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/services" element={<Services />} />
+            <Route path="/investors" element={<Investors />} />
+            <Route path="/circulars" element={<Circulars />} />
+            <Route path="/compliance" element={<Compliance />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </div>
+      </Router>
+    </ThemeProvider>
   )
 }
 

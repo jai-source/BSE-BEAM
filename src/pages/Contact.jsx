@@ -4,7 +4,7 @@ import { MapPin, Mail } from "lucide-react";
 export default function Contact() {
   return (
     <>
-    <section className="relative bg-[#07130f] text-white overflow-hidden">
+    <section className="relative bg-theme-page-bg text-theme-text-primary overflow-hidden">
 
       {/* subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.04]
@@ -25,15 +25,15 @@ export default function Contact() {
           transition={{ duration: 0.8 }}
           className="text-center max-w-3xl mx-auto"
         >
-          <p className="text-sm tracking-widest text-emerald-400 mb-3">
+          <p className="text-sm tracking-widest text-theme-highlight mb-3">
             CONTACT US WITH EASE
           </p>
 
           <h1 className="text-5xl font-semibold">
-            Get in <span className="text-emerald-400">touch</span>
+            Get in <span className="text-theme-highlight">touch</span>
           </h1>
 
-          <p className="mt-6 text-emerald-100/70">
+          <p className="mt-6 text-theme-text-primary/70">
             Visit our office or simply send us an email anytime you want.
             If you have any questions, please feel free to contact us.
           </p>
@@ -170,7 +170,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
-    <footer className="bg-[#081f18] text-white pt-20">
+    <footer className="bg-theme-primary text-theme-text-primary pt-20">
 
   <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 

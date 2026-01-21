@@ -8,15 +8,15 @@ function Compliance() {
   return (
     <>
       {/* EPIC HERO SECTION - FULL VIEWPORT */}
-      <section className="relative min-h-screen bg-gradient-to-br from-[#071B14] via-[#0B2820] to-[#143D2B] flex items-center overflow-hidden">
+      <section className="relative min-h-screen bg-gradient-to-br from-theme-bg-main via-theme-primary-light to-theme-primary flex items-center overflow-hidden">
         {/* Animated Background Elements */}
         <div className="absolute inset-0 overflow-hidden">
           {/* Radial gradient circles */}
-          <div className="absolute bottom-20 right-10 w-[600px] h-[600px] bg-[#6FAE9C] rounded-full blur-[140px] opacity-10 animate-pulse" />
+          <div className="absolute bottom-20 right-10 w-[600px] h-[600px] bg-theme-accent rounded-full blur-[140px] opacity-10 animate-pulse" />
           
           {/* Grid pattern overlay */}
           <div
-            className="absolute inset-0 bg-[radial-gradient(#0e3b2e_1px,transparent_1px)]
+            className="absolute inset-0 bg-[radial-gradient(var(--color-primary-light)_1px,transparent_1px)]
                        [background-size:40px_40px] opacity-20"
           />
         </div>
@@ -25,26 +25,26 @@ function Compliance() {
           {/* LEFT - CONTENT */}
           <div className="space-y-10">
             {/* Badge */}
-            <div className="inline-flex items-center gap-4 px-6 py-3 bg-white/5 backdrop-blur-md rounded-full border border-[#6FAE9C]/30">
-              <div className="w-2 h-2 bg-[#6FAE9C] rounded-full animate-pulse" />
-              <span className="text-xs tracking-[0.3em] text-[#9FD6C6] font-semibold uppercase">
+            <div className="inline-flex items-center gap-4 px-6 py-3 bg-theme-text-primary/5 backdrop-blur-md rounded-full border border-theme-accent/30">
+              <div className="w-2 h-2 bg-theme-accent rounded-full animate-pulse" />
+              <span className="text-xs tracking-[0.3em] text-theme-highlight font-semibold uppercase">
                 Governance & Transparency
               </span>
             </div>
 
             {/* Title */}
             <h1 className="text-7xl lg:text-8xl font-black leading-[0.95] tracking-tight">
-              <span className="text-white block mb-2">Downloads</span>
-              <span className="text-white block mb-2">and</span>
-              <span className="text-[#E24A3B] block">
+              <span className="text-theme-text-primary block mb-2">Downloads</span>
+              <span className="text-theme-text-primary block mb-2">and</span>
+              <span className="text-theme-accent block">
                 Compliance
               </span>
             </h1>
 
             {/* Decorative line */}
             <div className="flex items-center gap-4">
-              <div className="h-[2px] w-20 bg-gradient-to-r from-[#6FAE9C] to-transparent" />
-              <ShieldCheck className="text-[#6FAE9C]" size={24} />
+              <div className="h-[2px] w-20 bg-gradient-to-r from-theme-accent to-transparent" />
+              <ShieldCheck className="text-theme-accent" size={24} />
             </div>
           </div>
 

@@ -2,6 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Theme Variables */
+:root[data-theme="green-white"] {
+  --color-primary: #071b14;
+  --color-primary-light: #0b2a1e;
+  --color-primary-dark: #041009;
+  --color-accent: #1f7a5c;
+  --color-accent-hover: #1a6b4f;
+  --color-bg-main: #071b14;
+  --color-bg-secondary: #ffffff;
+  --color-text-primary: #ffffff;
+  --color-text-secondary: #0b2a1e;
+  --color-text-muted: #5f6f64;
+  --color-button-bg: #ffffff;
+  --color-button-text: #071b14;
+  --color-gradient-from: #071b14;
+  --color-gradient-to: #081f18;
+  
+  /* For About page and dynamic pages */
+  --color-page-bg: #061712;
+  --color-highlight: #84cc16; /* lime-500 */
+  --color-highlight-dim: rgba(132, 204, 22, 0.1);
+}
+
+:root[data-theme="blue-red-yellow"] {
+  --color-primary: #0a1f3d;
+  --color-primary-light: #1a3a5f;
+  --color-primary-dark: #050f1d;
+  --color-accent: #dc2626;
+  --color-accent-hover: #b91c1c;
+  --color-bg-main: #0a1f3d;
+  --color-bg-secondary: #fef3c7;
+  --color-text-primary: #fef3c7;
+  --color-text-secondary: #0a1f3d;
+  --color-text-muted: #64748b;
+  --color-button-bg: #eab308;
+  --color-button-text: #0a1f3d;
+  --color-gradient-from: #0a1f3d;
+  --color-gradient-to: #1e3a5f;
+  
+  /* For About page and dynamic pages */
+  --color-page-bg: #0f1e3a;
+  --color-highlight: #eab308; /* yellow-500 */
+  --color-highlight-dim: rgba(234, 179, 8, 0.1);
+}
+
 /* 3D Perspective for image animations */
 .perspective-1000 {
   perspective: 1000px;

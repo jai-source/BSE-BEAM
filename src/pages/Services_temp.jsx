@@ -276,7 +276,7 @@ const Services = () => {
         />
 
         <div className="p-10">
-          <h4 className="text-white text-lg font-semibold mb-8">
+          <h4 className="text-theme-text-primary text-lg font-semibold mb-8">
             Who <span className="text-[#C62828]">We Serve</span>
           </h4>
 
@@ -549,7 +549,7 @@ const Services = () => {
       transition={{ duration: 0.9, ease: "easeOut" }}
     >
       <motion.div
-        className="sticky top-28 rounded-2xl overflow-hidden shadow-xl bg-green-900 text-white"
+        className="sticky top-28 rounded-2xl overflow-hidden shadow-xl bg-green-900 text-theme-text-primary"
         whileHover={{ y: -8 }}
         transition={{ type: "spring", stiffness: 120 }}
       >
@@ -673,7 +673,7 @@ const Services = () => {
           return (
             <div
               key={i}
-              className="group p-8 rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 text-center"
+              className="group p-8 rounded-2xl bg-theme-bg-secondary shadow-md hover:shadow-xl transition-all duration-300 text-center"
             >
               <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EAF4F1] text-[#1F7A5A]">
                 <Icon size={28} />
@@ -688,7 +688,7 @@ const Services = () => {
     </div>
   </div>
 </section>
-<section className="relative bg-white py-40 ">
+<section className="relative bg-theme-bg-secondary py-40 ">
 
       {/* playful background shapes */}
       <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-[#E6F4EE] blur-3xl" />
@@ -743,7 +743,7 @@ const Services = () => {
               return (
                 <div
                   key={i}
-                  className="flex gap-5 p-6 rounded-2xl bg-white shadow-[0_12px_32px_rgba(0,0,0,0.06)] border border-[#E4F1EC] hover:-translate-y-1 transition"
+                  className="flex gap-5 p-6 rounded-2xl bg-theme-bg-secondary shadow-[0_12px_32px_rgba(0,0,0,0.06)] border border-[#E4F1EC] hover:-translate-y-1 transition"
                 >
                   <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#E6F4EE] text-[#1E8E6E]">
                     <Icon size={26} />
@@ -766,7 +766,7 @@ const Services = () => {
         <div className="relative">
           <div className="absolute -inset-8 rounded-[32px] bg-gradient-to-br from-[#E6F4EE] to-transparent blur-xl" />
 
-          <div className="sticky top-32 bg-white rounded-[28px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] border border-[#E4F1EC]">
+          <div className="sticky top-32 bg-theme-bg-secondary rounded-[28px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] border border-[#E4F1EC]">
             <img
               src={ten}
               alt="Trade Finance"
@@ -848,11 +848,11 @@ const Services = () => {
 
           {/* LEFT */}
           <div>
-            <h1 className="text-6xl font-bold text-white leading-tight">
+            <h1 className="text-6xl font-bold text-theme-text-primary leading-tight">
               Metals
             </h1>
 
-            <p className="mt-6 text-lg text-white max-w-xl">
+            <p className="mt-6 text-lg text-theme-text-primary max-w-xl">
               BeAM brings transparency, speed, and efficiency to the industrial
               metals trade. Whether you’re buying or selling steel, scrap, or
               alloys — our digital platforms simplify every step with trust,
@@ -865,10 +865,10 @@ const Services = () => {
               <div className="flex gap-5">
                 <BarChart3 className="w-7 h-7 text-green-700 mt-1" />
                 <div>
-                  <h4 className="font-semibold text-lg text-white">
+                  <h4 className="font-semibold text-lg text-theme-text-primary">
                     Market Intelligence & Analytics
                   </h4>
-                  <p className="text-white">
+                  <p className="text-theme-text-primary">
                     Price trends, bidder behavior, and trade data that empower
                     smarter, faster decisions.
                   </p>
@@ -876,12 +876,12 @@ const Services = () => {
               </div>
 
               <div className="flex gap-5">
-                <ShieldCheck className="w-7 h-7 text-white mt-1" />
+                <ShieldCheck className="w-7 h-7 text-theme-text-primary mt-1" />
                 <div>
-                  <h4 className="font-semibold text-lg text-white">
+                  <h4 className="font-semibold text-lg text-theme-text-primary">
                     Quality & Compliance Assurance
                   </h4>
-                  <p className="text-white">
+                  <p className="text-theme-text-primary">
                     Audit trails, certifications, and digital documentation for
                     risk-free trading.
                   </p>
@@ -889,12 +889,12 @@ const Services = () => {
               </div>
 
               <div className="flex gap-5">
-                <Settings className="w-7 h-7 text-white mt-1" />
+                <Settings className="w-7 h-7 text-theme-text-primary mt-1" />
                 <div>
-                  <h4 className="font-semibold text-lg text-white">
+                  <h4 className="font-semibold text-lg text-theme-text-primary">
                     Seamless Execution Support
                   </h4>
-                  <p className="text-white">
+                  <p className="text-theme-text-primary">
                     Logistics coordination, delivery tracking, and contract
                     lifecycle management.
                   </p>
@@ -924,13 +924,13 @@ const Services = () => {
 
         {/* WHO WE SERVE */}
         <div className="mt-40 text-center">
-          <h2 className="text-6xl font-bold text-white">
+          <h2 className="text-6xl font-bold text-theme-text-primary">
             Who We <span className="text-red-600">Serve</span>
           </h2>
 
           <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+            <div className="bg-theme-bg-secondary rounded-2xl p-8 shadow-md hover:shadow-xl transition">
               <Factory className="w-8 h-8 text-green-700 mx-auto mb-4" />
               <h4 className="font-semibold text-black">
                 Steel Manufacturers & Processors
@@ -940,7 +940,7 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+            <div className="bg-theme-bg-secondary rounded-2xl p-8 shadow-md hover:shadow-xl transition">
               <Recycle className="w-8 h-8 text-green-700 mx-auto mb-4" />
               <h4 className="font-semibold text-black">
                 Scrap Aggregators & Dealers
@@ -950,7 +950,7 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+            <div className="bg-theme-bg-secondary rounded-2xl p-8 shadow-md hover:shadow-xl transition">
               <Building2 className="w-8 h-8 text-green-700 mx-auto mb-4" />
               <h4 className="font-semibold text-black">
                 Infrastructure & Construction
@@ -960,7 +960,7 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition">
+            <div className="bg-theme-bg-secondary rounded-2xl p-8 shadow-md hover:shadow-xl transition">
               <Landmark className="w-8 h-8 text-green-700 mx-auto mb-4" />
               <h4 className="font-semibold text-black">
                 Public Sector & Institutions
@@ -976,7 +976,7 @@ const Services = () => {
       </div>
     </section>
 
-<section className="relative bg-white py-32 overflow-hidden">
+<section className="relative bg-theme-bg-secondary py-32 overflow-hidden">
 
   {/* soft decorative geometry */}
   <div className="absolute -top-48 -left-48 w-[520px] h-[520px] bg-emerald-400/10 rounded-full blur-[140px]" />
@@ -995,7 +995,7 @@ const Services = () => {
 
     {/* LEFT CONTENT */}
     <div className="lg:col-span-7">
-      <h2 className="text-5xl font-bold tracking-tight text-theme-text-secondary">
+      <h2 className="text-5xl font-semibold font-bold tracking-tight text-[#0b2f24]">
         Bioenergy
       </h2>
 
@@ -1084,7 +1084,7 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f3b2e]/90 via-transparent to-transparent" />
         </div>
 
-        <div className="p-10 text-white">
+        <div className="p-10 text-theme-text-primary">
           <h3 className="text-xl font-semibold mb-8">Who We Serve</h3>
 
           <div className="space-y-6 text-sm">

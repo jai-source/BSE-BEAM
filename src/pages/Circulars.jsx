@@ -12,14 +12,14 @@ export default function Circulars() {
     <>
 
       {/* ───────────────── NAVBAR CONTRAST BAND ───────────────── */}
-      <div className="h-32 bg-[#081f18]" />
+      <div className="h-32 bg-theme-primary" />
 
       {/* ───────────────── CIRCULARS SECTION ───────────────── */}
-      <section className="relative bg-[#07130f] py-32 overflow-hidden text-white">
+      <section className="relative bg-theme-page-bg py-32 overflow-hidden text-theme-text-primary">
 
         {/* BACKGROUND FX */}
-        <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-emerald-900/40 blur-[160px]" />
-        <div className="absolute top-1/2 -right-40 w-[460px] h-[460px] rounded-full bg-emerald-800/20 blur-[160px]" />
+        <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-theme-accent/40 blur-[160px]" />
+        <div className="absolute top-1/2 -right-40 w-[460px] h-[460px] rounded-full bg-theme-accent/20 blur-[160px]" />
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,rgba(16,185,129,0.12),transparent_60%)]" />
 
         <div className="relative max-w-7xl mx-auto px-6">
@@ -31,18 +31,18 @@ export default function Circulars() {
             transition={{ duration: 0.8 }}
             className="text-center mb-20"
           >
-            <p className="uppercase tracking-widest text-emerald-400 font-semibold text-sm">
+            <p className="uppercase tracking-widest text-theme-highlight font-semibold text-sm">
               Circulars Overview
             </p>
 
             <h1 className="text-5xl md:text-6xl font-extrabold mt-4">
               Latest{" "}
-              <span className="text-emerald-400 drop-shadow-[0_0_18px_rgba(16,185,129,0.5)]">
+              <span className="text-theme-highlight drop-shadow-[0_0_18px_var(--color-highlight)]">
                 Circulars
               </span>
             </h1>
 
-            <p className="mt-6 max-w-3xl mx-auto text-emerald-100/70 text-lg">
+            <p className="mt-6 max-w-3xl mx-auto text-theme-text-primary/70 text-lg">
               Stay informed with official notifications, compliance updates,
               and policy circulars issued by BSE E-Agricultural Markets Limited.
             </p>
@@ -73,7 +73,7 @@ export default function Circulars() {
 
               <div className="flex items-end gap-4">
                 <button className="flex items-center gap-2
-                                   bg-emerald-600 hover:bg-emerald-500
+                                   bg-theme-accent hover:bg-theme-accent-hover
                                    text-black px-6 py-3 rounded-xl
                                    shadow-[0_0_25px_rgba(16,185,129,0.4)]
                                    transition">
@@ -121,16 +121,16 @@ export default function Circulars() {
                 </tr>
               </thead>
 
-              <tbody className="bg-white text-gray-800">
+              <tbody className="bg-theme-bg-secondary text-gray-800">
                 {[1, 2, 3, 4, 5].map((_, i) => (
                   <motion.tr
                     key={i}
                     initial={{ opacity: 0, x: -20 }}
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: i * 0.05 }}
-                    className="border-b hover:bg-emerald-50 transition"
+                    className="border-b hover:bg-theme-highlight/10 transition"
                   >
-                    <td className="px-6 py-4 font-medium text-emerald-800">
+                    <td className="px-6 py-4 font-medium text-theme-text-secondary">
                       CIR-2026-000{i + 1}
                     </td>
 
@@ -145,7 +145,7 @@ export default function Circulars() {
 
                     <td className="px-6 py-4">
                       <button className="flex items-center gap-2
-                                         text-emerald-700 hover:text-emerald-900
+                                         text-theme-accent hover:text-theme-accent-hover
                                          font-semibold">
                         <Download size={18} />
                         Download
@@ -161,7 +161,7 @@ export default function Circulars() {
       </section>
 
       {/* ───────────────── FOOTER ───────────────── */}
-      <footer className="bg-[#081f18] text-white pt-20">
+      <footer className="bg-theme-primary text-theme-text-primary pt-20">
 
         <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 
