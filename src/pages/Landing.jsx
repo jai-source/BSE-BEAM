@@ -128,51 +128,61 @@ function Landing() {
      {/* TRANSITION DIVIDER */}
 <div className="relative w-full h-8 bg-gradient-to-b from-[var(--color-gradient-from)] to-[var(--color-gradient-to)]" />
 {/* DRIBBBLE-STYLE AGRI INSIGHTS SECTION */}
-<section className="w-full bg-theme-bg-secondary py-32 overflow-hidden">
-  <div className="max-w-6xl mx-auto px-12">
+<section className="relative w-full min-h-screen overflow-hidden bg-white">
+  {/* BACKGROUND BLOBS */}
+  <div className="absolute -top-40 -left-32 w-[520px] h-[520px] bg-yellow-300/30 rounded-full blur-[140px]" />
+  <div className="absolute top-1/3 -right-40 w-[620px] h-[620px] bg-emerald-400/30 rounded-full blur-[160px]" />
+  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-blue-400/20 rounded-full blur-[160px]" />
 
+  <div className="relative max-w-7xl mx-auto  pl-12 mr-0  ">
+    {/* EYEBROW */}
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
-      className="text-xl text-[#5f6f64] mb-2"
+      transition={{ duration: 1, ease: "easeOut" }}
+      className="text-lg text-emerald-700"
     >
-      Empowering Farmers with <br />
-      Precision Agriculture
+     
     </motion.div>
 
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-start">
-
-      {/* LEFT TEXT */}
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ delay: 0.2, duration: 1.2 }}
-      >
-        <h2 className="text-4xl md:text-5xl leading-tight font-medium text-[#0b2a1e]">
-          <span className="italic font-normal">Transforming India's</span>{" "}
-          Agricultural Market with <br />
-          <span className="text-theme-accent">Technology</span>{" "}
-          and Supply <br />
+    {/* GRID */}
+    <div className="grid grid-cols-1 lg:grid-cols-[1.2fr_0.8fr] gap-24 items-stretch min-h-[80vh]">
+      {/* LEFT CONTENT */}
+     <motion.div
+  className="pt-44 mb-44"
+  initial={{ opacity: 0, x: -40 }}
+  whileInView={{ opacity: 1, x: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1.2, ease: [0.22, 1, 0.36, 1] }}
+>
+  Empowering Farmers with <br />
+      Precision Agriculture
+        <h2 className="text-5xl md:text-6xl leading-tight font-medium text-[#0b2a1e]">
+          <span className="italic font-normal text-blue-600">
+            Transforming India's
+          </span>{" "}
+          Agricultural Market with{" "}
+          <span className="relative inline-block text-emerald-600">
+            Technology
+            <span className="absolute -bottom-2 left-0 w-full h-[6px] bg-yellow-300/70 blur-sm" />
+          </span>{" "}
+          & Supply <br />
           Chain Finance
         </h2>
 
-        <p className="mt-6 text-theme-text-muted max-w-xl">
-          At the forefront of agricultural innovation, offering
-          precision farming solutions that empower farmers worldwide.
+        <p className="mt-8 text-[#4b6357] max-w-xl">
+          At the forefront of agricultural innovation, offering precision
+          farming solutions that empower farmers worldwide.
         </p>
 
         {/* STATS */}
         <motion.div
-          className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-16"
+          className="mt-16 grid grid-cols-2 sm:grid-cols-4 gap-14"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          variants={{
-            visible: { transition: { staggerChildren: 0.15 } }
-          }}
+          variants={{ visible: { transition: { staggerChildren: 0.18 } } }}
         >
           {[
             ["25.9+", "Created Fields"],
@@ -183,262 +193,447 @@ function Landing() {
             <motion.div
               key={i}
               variants={{
-                hidden: { y: 20, opacity: 0 },
-                visible: { y: 0, opacity: 1 }
+                hidden: { opacity: 0, y: 30 },
+                visible: { opacity: 1, y: 0 }
               }}
+              whileHover={{ y: -8, scale: 1.05 }}
               transition={{ duration: 0.8 }}
+              className="relative"
             >
-              <p className="text-5xl font-semibold text-[#0b2a1e]">{value}</p>
-              <p className="text-sm text-[#5f6f64]">{label}</p>
+              <div className="absolute -inset-2 bg-gradient-to-r from-emerald-400/30 via-blue-400/30 to-yellow-300/30 blur-xl opacity-0 hover:opacity-100 transition-opacity" />
+              <p className="relative text-5xl font-semibold text-[#0b2a1e]">
+                {value}
+              </p>
+              <p className="relative text-sm text-[#5f6f64]">{label}</p>
             </motion.div>
           ))}
         </motion.div>
       </motion.div>
 
-      {/* RIGHT FLOATING PAPER */}
-      <motion.div
-        className="relative w-[420px] mx-auto rotate-[-5deg]"
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1.4, ease: [0.22, 1, 0.36, 1] }}
-        whileHover={{ rotate: -3, y: -6 }}
-      >
-        <Coil className="absolute top-[6px] left-1/2 -translate-x-1/2 z-0 opacity-30" />
+      {/* RIGHT – FULL HEIGHT LEFT-TORN IMAGE */}
+      <div className="relative ml-auto w-full max-w-[520px] h-full self-start">
+
+
+        {/* SOFT EDGE GLOW */}
+        <div className="absolute inset-y-0 -left-10 w-32 bg-emerald-200/20 blur-3xl pointer-events-none" />
 
         <div
-          className="relative bg-[#fdfcf8] pt-10 px-3 rounded-md z-10"
-          style={{ boxShadow: "0 28px 45px rgba(0,0,0,0.18)" }}
+          className="relative h-full bg-white"
+          style={{
+            clipPath: `polygon(
+              5% 0%,
+              1% 3%,
+              4% 7%,
+              1% 12%,
+              5% 18%,
+              2% 25%,
+              6% 33%,
+              2% 41%,
+              5% 50%,
+              2% 58%,
+              6% 66%,
+              2% 74%,
+              5% 82%,
+              2% 90%,
+              5% 96%,
+              2% 100%,
+              100% 100%,
+              100% 0%
+            )`,
+            boxShadow: "0 25px 55px rgba(0,0,0,0.18)"
+          }}
         >
+          {/* WHITE PAPER BORDER (TORN EDGE) */}
+          <div
+            className="absolute left-[2px] top-0 h-full w-[8px] pointer-events-none"
+            style={{
+              clipPath: `polygon(
+                60% 0%,
+                20% 3%,
+                55% 7%,
+                15% 12%,
+                60% 18%,
+                25% 25%,
+                65% 33%,
+                20% 41%,
+                60% 50%,
+                25% 58%,
+                65% 66%,
+                20% 74%,
+                60% 82%,
+                25% 90%,
+                60% 96%,
+                30% 100%,
+                100% 100%,
+                100% 0%
+              )`,
+              background: "white",
+              boxShadow: "2px 0 6px rgba(0,0,0,0.15)"
+            }}
+          />
+
           <img
             src={torn}
             alt="visual"
-            className="w-[420px] h-[560px] object-cover rounded-sm"
+            className="w-full h-full object-cover saturate-[0.95] contrast-[0.96]"
           />
         </div>
-
-        <Coil className="absolute top-[6px] left-1/2 -translate-x-1/2 z-30" />
-      </motion.div>
-
+      </div>
     </div>
   </div>
 </section>
 
 
-      {/* PILLARS SECTION */}
-<section className="relative bg-theme-bg-secondary py-40 overflow-hidden">
 
-  {/* SOFT NEON AMBIENCE */}
-  <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-emerald-300/20 blur-[160px]" />
-  <div className="absolute top-1/2 -right-40 w-[520px] h-[520px] rounded-full bg-emerald-200/20 blur-[160px]" />
 
-  {/* FLOATING GEOMETRY */}
-  <motion.img
-    src={hexagon}
-    className="absolute top-[-160px] left-[-200px] w-[520px] opacity-[0.05]"
-    animate={{ y: [0, 30, 0], rotate: [0, 6, 0] }}
-    transition={{ duration: 14, repeat: Infinity }}
-  />
+{/* PILLARS – DARK MODE */}
+{/* PILLARS SECTION */}
+<section className="relative py-24 overflow-hidden bg-[#071b14]">
 
-  <motion.img
-    src={triangleLarge}
-    className="absolute top-[-140px] right-[-180px] w-[520px] opacity-[0.04]"
-    animate={{ y: [0, -40, 0], rotate: [0, -8, 0] }}
-    transition={{ duration: 18, repeat: Infinity }}
-  />
+  {/* ================= GEOMETRIC BACKGROUND ================= */}
+  <div className="absolute inset-0 pointer-events-none overflow-hidden">
 
-  <motion.img
-    src={triangleOutline}
-    className="absolute bottom-[-220px] left-[35%] w-[480px] opacity-[0.035]"
-    animate={{ y: [0, 35, 0] }}
-    transition={{ duration: 16, repeat: Infinity }}
-  />
+    {/* RADIAL DOT GRID */}
+    <div
+      className="absolute inset-0 opacity-[0.06]"
+      style={{
+        backgroundImage:
+          "radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)",
+        backgroundSize: "48px 48px"
+      }}
+    />
 
-  {/* CONTENT */}
-  <div className="relative z-10 max-w-6xl mx-auto px-12">
+    {/* AMBIENT BLOBS */}
+    <div className="absolute -top-60 -left-60 w-[700px] h-[700px] bg-emerald-500/20 rounded-full blur-[220px]" />
+    <div className="absolute bottom-[-300px] right-[-300px] w-[800px] h-[800px] bg-blue-500/15 rounded-full blur-[240px]" />
+
+    {/* ROTATING WIREFRAME RINGS */}
+    <motion.div
+      className="absolute -top-[35%] -left-[25%] w-[900px] h-[900px] rounded-full border border-emerald-400/20"
+      animate={{ rotate: 360 }}
+      transition={{ duration: 140, repeat: Infinity, ease: "linear" }}
+    />
+
+    <motion.div
+      className="absolute -top-[20%] -left-[10%] w-[600px] h-[600px] rounded-full border border-blue-400/20"
+      animate={{ rotate: -360 }}
+      transition={{ duration: 180, repeat: Infinity, ease: "linear" }}
+    />
+
+    {/* ANGLED LIGHT PANEL */}
+    <div className="absolute top-1/4 -right-[20%] w-[720px] h-[420px] 
+                    bg-gradient-to-br from-emerald-500/10 to-transparent 
+                    rotate-[-18deg] rounded-3xl blur-xl" />
+
+    {/* FLOATING HEX */}
+    <motion.svg
+      width="420"
+      height="420"
+      viewBox="0 0 100 100"
+      className="absolute bottom-[12%] left-[14%] opacity-[0.06]"
+      animate={{ y: [0, 30, 0], rotate: [0, 6, 0] }}
+      transition={{ duration: 24, repeat: Infinity, ease: "easeInOut" }}
+    >
+      <polygon
+        points="50,5 93,27 93,73 50,95 7,73 7,27"
+        fill="none"
+        stroke="white"
+        strokeWidth="0.6"
+      />
+    </motion.svg>
+
+    {/* FLOATING TRIANGLE */}
+    <motion.svg
+      width="360"
+      height="360"
+      viewBox="0 0 100 100"
+      className="absolute top-[20%] right-[12%] opacity-[0.05]"
+      animate={{ y: [0, -25, 0], rotate: [0, -8, 0] }}
+      transition={{ duration: 28, repeat: Infinity, ease: "easeInOut" }}
+    >
+      <polygon
+        points="50,8 92,92 8,92"
+        fill="none"
+        stroke="white"
+        strokeWidth="0.6"
+      />
+    </motion.svg>
+  </div>
+
+  {/* ================= CONTENT ================= */}
+  <div className="relative z-10 max-w-7xl mx-auto px-12">
 
     {/* HEADER */}
-    <motion.h2
+    <motion.div
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
       viewport={{ once: true }}
-      className="text-6xl text-center font-bold text-theme-text-secondary mb-20 tracking-tight"
+      transition={{ duration: 1 }}
+      className="text-center mb-28"
     >
-      Our Pillars
-    </motion.h2>
+      <h2 className="text-7xl font-semibold tracking-tight text-white">
+        Our Pillars
+      </h2>
+      <div className="mt-6 h-[3px] w-32 mx-auto bg-gradient-to-r from-emerald-400 via-blue-400 to-emerald-400 rounded-full" />
+    </motion.div>
 
-    {/* GRID */}
-    <div className="grid md:grid-cols-3 gap-14">
+    {/* PILLARS GRID */}
+    <div className="grid md:grid-cols-3 gap-20 items-start">
 
-      {/* CARD */}
       {[
         {
           img: tech,
           title: "Technology",
-          desc: "Robust and transparent platforms for increasing market efficiency."
+          desc: "Robust and transparent platforms for increasing market efficiency.",
+          offset: "md:mt-12"
         },
         {
           img: supply,
           title: "Supply Chain",
-          desc: "Seamless linkages from farmers to industries and exporters."
+          desc: "Seamless linkages from farmers to industries and exporters.",
+          offset: "md:mt-12"
         },
         {
           img: finance,
           title: "Finance",
-          desc: "Secure payments and trade-support financial instruments."
+          desc: "Secure payments and trade-support financial instruments.",
+          offset: "md:mt-12"
         }
       ].map((item, i) => (
         <motion.div
           key={i}
-          initial={{ opacity: 0, y: 60 }}
+          initial={{ opacity: 0, y: 80 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: i * 0.15 }}
           viewport={{ once: true }}
-          whileHover={{ y: -12 }}
-          className="group relative rounded-2xl bg-theme-button-bg p-6 border border-theme-accent/10 
-                     shadow-[0_20px_40px_-20px_rgba(6,95,70,0.35)]
-                     hover:shadow-[0_30px_80px_-20px_rgba(16,185,129,0.45)]
-                     transition-all duration-500"
+          transition={{ duration: 1, delay: i * 0.2 }}
+          whileHover={{ y: -14 }}
+          className={`relative group ${item.offset}`}
         >
 
-          {/* NEON OUTLINE */}
-          <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 
-                          shadow-[0_0_40px_rgba(16,185,129,0.25)] transition-opacity duration-500" />
+          {/* NEON AURA */}
+          <div className="absolute -inset-6 rounded-3xl 
+                          bg-gradient-to-br from-emerald-400/30 via-blue-400/30 to-emerald-400/30 
+                          blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
-          <img
-            src={item.img}
-            alt=""
-            className="rounded-xl mb-6 relative z-10"
-          />
+          {/* CARD */}
+          <div className="relative rounded-3xl bg-white-600 p-6
+                          border border-white/5
+                          shadow-[0_40px_80px_-30px_rgba(0,0,0,0.9)]
+                          transition-all duration-700">
 
-          <h3 className="text-xl font-semibold text-[#071b14] mb-2 relative z-10">
-            {item.title}
-          </h3>
+            {/* IMAGE */}
+            <div className="relative overflow-hidden rounded-2xl mb-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-[#071b14] via-transparent to-transparent z-10" />
+              <motion.img
+                src={item.img}
+                alt=""
+                className="w-full h-[220px] object-cover"
+                whileHover={{ scale: 1.08 }}
+                transition={{ duration: 0.8 }}
+              />
+            </div>
 
-          <p className="text-sm text-[#5f6f64] leading-relaxed relative z-10">
-            {item.desc}
-          </p>
+            {/* TEXT */}
+            <h3 className="text-2xl font-semibold text-white mb-3">
+              {item.title}
+            </h3>
+
+            <p className="text-sm text-emerald-200/70 leading-relaxed">
+              {item.desc}
+            </p>
+          </div>
         </motion.div>
       ))}
-
     </div>
   </div>
 </section>
-<section className="relative py-24 overflow-hidden bg-[#061410]">
 
-  {/* RICH MULTI-COLOR BACKGROUND */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_20%,rgba(34,197,94,0.18),transparent_40%),radial-gradient(circle_at_80%_30%,rgba(20,184,166,0.16),transparent_45%),radial-gradient(circle_at_50%_80%,rgba(163,230,53,0.10),transparent_50%)]" />
-  <div className="absolute inset-0 bg-[#061410]/85" />
+<section className="relative overflow-hidden bg-[#F4FAF7] py-4">
 
-  <div className="relative z-10 max-w-7xl mx-auto px-12">
+  {/* ───────────── TOP SEMI-CIRCLE ───────────── */}
+ <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[130%] h-[300px] rounded-b-[100%] overflow-hidden z-0">
 
-    {/* HEADER */}
-    <div className="max-w-3xl mb-28">
-      <p className="text-xs tracking-[0.35em] text-emerald-300 mb-4">
-        WHERE CAN WE HELP YOU
-      </p>
+  {/* background image */}
+  <img
+    src={heroImage} // import this at the top
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover"
+  />
 
-      <h2 className="text-5xl font-bold text-theme-text-primary mb-6">
-        Our Offerings
-      </h2>
+  {/* optional dark overlay for contrast */}
+  <div className="absolute inset-0 bg-[#0B3B2E]/70" />
 
-      <p className="text-lg text-emerald-100/80 leading-relaxed">
-        Integrated, technology-driven services enabling transparency,
-        efficiency, and scale across the agricultural value chain.
-      </p>
-    </div>
+  {/* subtle dotted grid */}
+  <div
+    className="absolute inset-0 opacity-[0.12]"
+    style={{
+      backgroundImage:
+        "radial-gradient(rgba(255,255,255,0.4) 1px, transparent 1px)",
+      backgroundSize: "28px 28px",
+    }}
+  />
 
-    {/* SCROLLER — VISUALLY BROKEN PLANE */}
-    <div className="relative overflow-hidden">
-      <div className="flex gap-16 animate-offerings-scroll items-start">
+</div>
 
-        {[
-          { title: "Bioenergy", offset: "mt-10", accent: "from-emerald-500/20" },
-          { title: "Farm Gate", offset: "mt-10", accent: "from-teal-400/20" },
-          { title: "Trade Connect", offset: "mt-10", accent: "from-lime-400/20" },
-          { title: "Market Intelligence", offset: "mt-1", accent: "from-green-400/20" },
-        ].concat([
-          { title: "Bioenergy", offset: "mt-6", accent: "from-emerald-500/20" }
-        ]).map((item, i) => (
+  {/* ───────────── HEADER INSIDE ARC ───────────── */}
+  <div className="relative z-10 max-w-6xl mx-auto px-12 text-center pt-16 mb-20">
+    <p className="text-xs tracking-[0.4em] text-emerald-200 mb-3">
+      WHERE CAN WE HELP YOU
+    </p>
 
-          <div
-            key={i}
-            className={`group relative min-w-[340px] ${item.offset}`}
-          >
-            {/* FLOATING CARD */}
-            <div
-              className="
-                relative rounded-3xl p-8
-                bg-gradient-to-br from-[var(--color-primary-light)] to-[var(--color-primary)]
-                border border-theme-text-primary/10
-                transition-all duration-500 ease-out
-                hover:-translate-y-6
-              "
-              style={{
-                boxShadow:
-                  "0 40px 90px -45px rgba(0,0,0,0.8)"
-              }}
-            >
-              {/* COLOR ACCENT WASH */}
-              <div
-                className={`
-                  absolute inset-0 rounded-3xl opacity-0
-                  bg-gradient-to-br ${item.accent} to-transparent
-                  group-hover:opacity-100
-                  transition-opacity duration-500
-                `}
-              />
+    <h2 className="text-6xl font-bold text-white mt-0">
+      Our Offerings
+    </h2>
 
-              <h3 className="text-xl font-semibold text-theme-text-primary mb-3 relative z-10">
-                {item.title}
-              </h3>
+    <p className="max-w-3xl mx-auto text-emerald-100/80 text-lg leading-relaxed">
+      Integrated, technology-driven services enabling transparency,
+      efficiency, and scale across the agricultural value chain.
+    </p>
+  </div>
 
-              <p className="text-sm text-emerald-100/75 leading-relaxed relative z-10">
-                Direct access to farmers with transparent pricing and logistics.
-              </p>
+  {/* ───────────── LIGHT SECTION BACKGROUND DETAILS ───────────── */}
+  <div className="absolute inset-0 pointer-events-none">
+    {/* soft color fields */}
+    <div className="absolute top-[55%] left-20 w-[360px] h-[360px] bg-blue-200/30 rounded-full blur-[120px]" />
+    <div className="absolute bottom-24 right-28 w-[420px] h-[420px] bg-yellow-100/40 rounded-full blur-[140px]" />
 
-              <div className="mt-8 text-sm text-emerald-300 relative z-10">
-                Explore →
-              </div>
-            </div>
-          </div>
+    {/* faint diagonal line */}
+    <div
+      className="absolute top-[50%] left-[-20%] w-[140%] h-[1px] opacity-[0.05]"
+      style={{
+        background:
+          "linear-gradient(90deg, transparent, #0B3B2E, transparent)",
+      }}
+    />
+  </div>
 
-        ))}
+  {/* ───────────── CARDS (OUTSIDE ARC) ───────────── */}
+  {/* ───────────── CARDS (OUTSIDE ARC) ───────────── */}
+<div className="relative z-10 max-w-6xl mx-auto px- mt-52 mb-28">
+
+  <div className="carousel-track flex gap-14 w-max">
+
+    {[
+      "Farm Gate",
+      "Trade Connect",
+      "Market Intelligence",
+      "Bioenergy",
+      "Farm Gate",
+      "Trade Connect",
+      "Market Intelligence",
+      "Bioenergy",
+    ].map((title, i) => (
+      <div key={i} className="min-w-[320px] group"> <div className=" relative rounded-3xl p-8 bg-white border border-[#0B3B2E]/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_70px_-30px_rgba(11,59,46,0.35)] " >
+          {/* neon accent strip */}
+          <div className="absolute top-0 left-6 w-14 h-[3px] bg-emerald-500 rounded-full shadow-[0_0_12px_rgba(16,185,129,0.6)]" />
+
+          <h3 className="text-xl font-semibold text-[#0B3B2E] mb-3 mt-2">
+            {title}
+          </h3>
+
+          <p className="text-sm text-[#5F7F75] leading-relaxed mb-6">
+            Direct access to farmers with transparent pricing and logistics.
+          </p>
+
+          <span className="text-sm font-medium text-emerald-600">
+            Explore →
+          </span>
+        </div>
       </div>
-    </div>
+    ))}
 
   </div>
+</div>
+
 </section>
 
 
-<section className="relative bg-[#081f18] py-28  overflow-hidden">
+<section className="relative bg-[#081f18] py-28 overflow-hidden">
 
   {/* subtle grid */}
   <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(#ffffff33_1px,transparent_1px),linear-gradient(90deg,#ffffff33_1px,transparent_1px)] bg-[size:48px_48px]" />
 
-  <div className="relative max-w-7xl mx-auto px-8 text-theme-text-primary">
-    <h2 className="text-5xl font-semibold mb-6">
+  <motion.div
+    className="relative max-w-7xl mx-auto px-8 text-theme-text-primary"
+    initial="hidden"
+    whileInView="show"
+    viewport={{ once: true, margin: "-120px" }}
+    variants={{
+      show: { transition: { staggerChildren: 0.18 } }
+    }}
+  >
+
+    {/* typewriter heading */}
+    <motion.h2
+      className="text-5xl font-semibold mb-6 overflow-hidden whitespace-nowrap"
+      initial={{ width: 0 }}
+      whileInView={{ width: "fit-content" }}
+      transition={{ duration: 1.2, ease: "easeInOut" }}
+    >
       Technology <span className="text-[#7ccf9a]">Platforms</span>
-    </h2>
-    <p className="text-theme-text-primary/70 max-w-2xl mb-20">
+    </motion.h2>
+
+    <motion.p
+      className="text-theme-text-primary/70 max-w-2xl mb-20"
+      variants={{
+        hidden: { opacity: 0, y: 30 },
+        show: {
+          opacity: 1,
+          y: 0,
+          transition: { duration: 0.6 }
+        }
+      }}
+    >
       Modular, scalable platforms powering procurement, auctions, and settlement
       across agricultural markets.
-    </p>
+    </motion.p>
 
-    <div className="grid md:grid-cols-3 gap-10">
-      
-      {/* Card */}
-      <div className="group bg-theme-text-primary/5 backdrop-blur rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
-        <h3 className="text-xl font-semibold mb-3">E-Procurement of Crops</h3>
+    <motion.div
+      className="grid md:grid-cols-3 gap-10"
+      variants={{
+        show: { transition: { staggerChildren: 0.2 } }
+      }}
+    >
+
+      {/* card */}
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 40 },
+          show: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6 }
+          }
+        }}
+        className="group bg-theme-text-primary/5 backdrop-blur rounded-2xl p-8
+                   hover:-translate-y-3
+                   hover:shadow-[0_20px_60px_-20px_rgba(124,207,154,0.35)]
+                   transition-all duration-300"
+      >
+        <h3 className="text-xl font-semibold mb-3">
+          E-Procurement of Crops
+        </h3>
         <p className="text-theme-text-primary/70 text-sm leading-relaxed">
           Digitized procurement workflows for government and private buyers,
           enabling transparency and scale.
         </p>
-      </div>
+      </motion.div>
 
-      {/* Featured */}
-      <div className="group bg-theme-button-bg text-theme-text-secondary rounded-2xl p-10 scale-[1.02] shadow-xl hover:-translate-y-2 transition-all duration-300">
+      {/* featured */}
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 40 },
+          show: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6 }
+          }
+        }}
+        className="group bg-theme-button-bg text-theme-text-secondary rounded-2xl p-10
+                   scale-[1.04] shadow-2xl
+                   hover:-translate-y-3
+                   transition-all duration-300"
+      >
         <h3 className="text-2xl font-semibold mb-4">
           E-Auction of Commodities
         </h3>
@@ -446,19 +641,36 @@ function Landing() {
           High-volume electronic auctions across grains, dairy, oilseeds,
           and agri-derivatives with real-time discovery.
         </p>
-      </div>
+      </motion.div>
 
-      <div className="group bg-theme-text-primary/5 backdrop-blur rounded-2xl p-8 hover:-translate-y-2 transition-all duration-300">
-        <h3 className="text-xl font-semibold mb-3">Clearing & Settlement</h3>
+      {/* card */}
+      <motion.div
+        variants={{
+          hidden: { opacity: 0, y: 40 },
+          show: {
+            opacity: 1,
+            y: 0,
+            transition: { duration: 0.6 }
+          }
+        }}
+        className="group bg-theme-text-primary/5 backdrop-blur rounded-2xl p-8
+                   hover:-translate-y-3
+                   hover:shadow-[0_20px_60px_-20px_rgba(124,207,154,0.35)]
+                   transition-all duration-300"
+      >
+        <h3 className="text-xl font-semibold mb-3">
+          Clearing & Settlement
+        </h3>
         <p className="text-theme-text-primary/70 text-sm leading-relaxed">
           Secure settlement rails integrating banks, clearing corporations,
           and market participants.
         </p>
-      </div>
+      </motion.div>
 
-    </div>
-  </div>
+    </motion.div>
+  </motion.div>
 </section>
+
 <section className="bg-theme-bg-secondary py-28">
   <div className="max-w-7xl mx-auto px-8 text-center">
 
