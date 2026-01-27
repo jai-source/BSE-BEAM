@@ -476,7 +476,7 @@ function Landing() {
 </div>
 
   {/* ───────────── HEADER INSIDE ARC ───────────── */}
-  <div className="relative z-10 max-w-6xl mx-auto px-12 text-center pt-16 mb-20">
+  <div className="relative z-10 max-w-6xl mx-auto px-12 text-center pt-16 mb-44">
     <p className="text-xs tracking-[0.4em] text-emerald-200 mb-3">
       WHERE CAN WE HELP YOU
     </p>
@@ -507,9 +507,9 @@ function Landing() {
     />
   </div>
 
+  
   {/* ───────────── CARDS (OUTSIDE ARC) ───────────── */}
-  {/* ───────────── CARDS (OUTSIDE ARC) ───────────── */}
-<div className="relative z-10 max-w-6xl mx-auto px- mt-52 mb-28">
+<div className="relative z-10 max-w-6xl mx-auto px- mt-64 mb-44">
 
   <div className="carousel-track flex gap-14 w-max">
 
