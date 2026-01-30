@@ -33,14 +33,19 @@ const Services = () => {
   return (
     <>
       {/* HERO SECTION */}
-      <section className="relative bg-theme-bg-main py-32 overflow-hidden">
-  {/* subtle texture for depth */}
-  <div
-    className="absolute inset-0 bg-[radial-gradient(var(--color-primary-light)_1px,transparent_1px)]
-               [background-size:22px_22px] opacity-30"
-  />
+     <section className="relative bg-[#EEF3F8] py-48 overflow-hidden">
 
-  <div className="relative max-w-7xl mx-auto px-12 grid lg:grid-cols-2 gap-20 items-center">
+  {/* neon dot texture */}
+  <div className="absolute inset-0 bg-[radial-gradient(#4DA3FF_0.8px,transparent_1px)]
+                  [background-size:26px_26px] opacity-20" />
+
+  {/* asymmetric glow blobs */}
+  <div className="absolute -top-40 -left-40 w-[520px] h-[520px]
+                  bg-[#4DA3FF]/20 blur-[160px] rounded-full" />
+  <div className="absolute bottom-0 right-0 w-[420px] h-[420px]
+                  bg-[#F4C430]/20 blur-[140px] rounded-full" />
+
+  <div className="relative max-w-7xl mx-auto px-12 grid lg:grid-cols-2 gap-24 items-center">
 
     {/* LEFT CONTENT */}
     <motion.div
@@ -49,79 +54,101 @@ const Services = () => {
       viewport={{ once: true }}
       variants={{
         hidden: {},
-        visible: {
-          transition: { staggerChildren: 0.15 }
-        }
+        visible: { transition: { staggerChildren: 0.2 } },
       }}
     >
+      {/* label */}
       <motion.div
         variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6, ease: "easeOut" }
-          }
+          hidden: { opacity: 0, x: -20 },
+          visible: { opacity: 1, x: 0 },
         }}
-        className="flex items-center gap-4 mb-6"
+        className="flex items-center gap-4 mb-10"
       >
-        <span className="w-12 h-[1px] bg-[#6FAE9C]" />
-        <p className="text-sm tracking-widest text-[#9FD6C6] font-medium">
+        <span className="w-14 h-[2px] bg-[#F4C430]" />
+        <p className="text-xs tracking-[0.35em] text-black font-semibold">
           SUPPLY CHAINS
         </p>
       </motion.div>
 
+      {/* headline with inline typewriter */}
       <motion.h1
-        variants={{
-          hidden: { opacity: 0, y: 30 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.8, ease: "easeOut" }
-          }
-        }}
-        className="text-6xl font-bold leading-tight text-theme-text-primary"
+        className="text-6xl font-extrabold leading-tight text-green-900"
       >
-        Unlocking Value <br />
-        Across India’s{" "}
-        <span className="text-[#E24A3B]">Agri</span> <br />
-        <span className="text-[#E24A3B]">and Allied Markets</span>
+        {"Unlocking Value".split("").map((c, i) => (
+          <motion.span
+            key={i}
+            initial={{ opacity: 0, y: 12 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: i * 0.04 }}
+          >
+            {c === " " ? "\u00A0" : c}
+          </motion.span>
+        ))}
+        <br />
+
+        <span className="text-[#4DA3FF] [text-shadow:0_0_14px_#4DA3FF66]">
+          {"Across India’s".split("").map((c, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 0.6 + i * 0.04 }}
+            >
+              {c === " " ? "\u00A0" : c}
+            </motion.span>
+          ))}
+        </span>
+        <br />
+
+        <span className="text-[#F4C430] [text-shadow:0_0_16px_#F4C43066]">
+          {"Agri & Allied Markets".split("").map((c, i) => (
+            <motion.span
+              key={i}
+              initial={{ opacity: 0, y: 12 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: 1.2 + i * 0.04 }}
+            >
+              {c === " " ? "\u00A0" : c}
+            </motion.span>
+          ))}
+        </span>
       </motion.h1>
 
+      {/* description */}
       <motion.p
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6, ease: "easeOut", delay: 0.1 }
-          }
-        }}
-        className="mt-8 max-w-xl text-lg text-[#CFE7DE] leading-relaxed"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ delay: 1.8 }}
+        className="mt-12 max-w-xl text-lg text-black leading-relaxed"
       >
-        At BSE E-Agricultural Markets (BEAM), our suite of business
-        verticals reflects our commitment to building a transparent,
-        efficient, and tech-powered agri-trade ecosystem. From digital
-        procurement to financing and consulting, each vertical is
-        tailored to serve a unique need within the agricultural and
-        allied sectors.
+        Building a transparent, efficient, and tech-powered
+        agricultural ecosystem — connecting Bharat’s farms
+        directly with India’s most trusted institutions.
       </motion.p>
     </motion.div>
 
     {/* RIGHT IMAGE */}
     <motion.div
-      initial={{ opacity: 0, scale: 0.96, y: 20 }}
+      initial={{ opacity: 0, scale: 0.95, y: 30 }}
       whileInView={{ opacity: 1, scale: 1, y: 0 }}
+      whileHover={{ y: -10 }}
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      whileHover={{ y: -6 }}
       className="relative"
     >
-      <div className="absolute -inset-4 bg-theme-primary-light rounded-2xl" />
+      <div className="absolute -inset-6 rotate-3 bg-[#123E32] opacity-60 rounded-[28px]" />
+      <div className="absolute -inset-6 -rotate-2 border border-[#4DA3FF]/40 rounded-[28px]" />
+
       <img
         src={nine}
-        alt="Agricultural Supply Chain"
-        className="relative rounded-2xl object-cover shadow-2xl"
+        alt="Agri Supply Chain"
+        className="relative rounded-[24px] object-cover
+                   shadow-[0_0_70px_#4DA3FF33]"
       />
     </motion.div>
 
@@ -129,287 +156,139 @@ const Services = () => {
 </section>
 
 
-      {/* DIRECT PROCUREMENT SECTION */}
-    <section className="bg-theme-bg-secondary py-32">
+   <section className="relative bg-theme-primary-light text-theme-text-primary py-40 px-8 overflow-hidden">
+
+  {/* grain + image texture */}
+  <img
+    src={ten}
+    alt=""
+    className="absolute inset-0 w-full h-full object-cover opacity-[0.06] pointer-events-none mix-blend-overlay"
+  />
+
+  {/* asymmetric gradients */}
+  <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(255,255,255,0.08),transparent_45%),radial-gradient(circle_at_85%_75%,rgba(77,163,255,0.12),transparent_40%)]" />
+
+  {/* neon glow blobs */}
+  <div className="absolute -top-32 -left-40 w-[520px] h-[520px] bg-[#4DA3FF]/25 blur-[160px] rounded-full" />
+  <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#F4C430]/20 blur-[140px] rounded-full" />
+
+  {/* ================= HEADER ================= */}
   <motion.div
+    className="max-w-6xl mx-auto text-center relative z-10"
+    initial={{ opacity: 0, y: 50 }}
+    whileInView={{ opacity: 1, y: 0 }}
+    viewport={{ once: true }}
+    transition={{ duration: 0.9, ease: "easeOut" }}
+  >
+    <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight">
+      Public Sector{" "}
+      <span className="text-[#F4C430] [text-shadow:0_0_16px_#F4C43066]">
+        Auctions
+      </span>
+    </h2>
+
+    <p className="mt-8 text-lg max-w-3xl mx-auto text-theme-text-primary/80 leading-relaxed">
+      BeAM’s auction platform is purpose-built for government bodies, PSUs,
+      and cooperatives — delivering compliant, transparent, and audit-ready
+      digital auctions with maximum bidder participation and zero friction.
+    </p>
+  </motion.div>
+
+  {/* ================= FEATURE CARDS ================= */}
+  <motion.div
+    className="max-w-6xl mx-auto mt-24 grid md:grid-cols-3 gap-10 relative z-10"
     initial="hidden"
     whileInView="visible"
     viewport={{ once: true }}
     variants={{
       hidden: {},
-      visible: { transition: { staggerChildren: 0.15 } }
+      visible: { transition: { staggerChildren: 0.18 } },
     }}
-    className="max-w-7xl mx-auto px-12 grid lg:grid-cols-12 gap-20"
-  >
-
-    {/* LEFT CONTENT */}
-    <motion.div
-      variants={{
-        hidden: { opacity: 0, y: 40 },
-        visible: {
-          opacity: 1,
-          y: 0,
-          transition: { duration: 0.8, ease: "easeOut" }
-        }
-      }}
-      className="lg:col-span-7"
-    >
-      <motion.h2
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6 }
-          }
-        }}
-        className="text-5xl font-bold mb-8"
-      >
-        <span className="text-[#143D2B]">Direct </span>
-        <span className="text-[#C62828]">Procurement</span>
-      </motion.h2>
-
-      <motion.p
-        variants={{
-          hidden: { opacity: 0, y: 20 },
-          visible: {
-            opacity: 1,
-            y: 0,
-            transition: { duration: 0.6, delay: 0.1 }
-          }
-        }}
-        className="text-[#2F4F43] text-lg leading-relaxed max-w-2xl mb-16"
-      >
-        BeAM brings the Bharat’s farmlands closer to the India’s largest buyers —
-        delivering traceable, compliant, and farmer-first procurement at scale.
-        Through strong technology infrastructure, it brings verified access to
-        over a million farmers and simplifies procurement for public agencies and
-        private agri-enterprises alike. From digital onboarding to DBT-enabled
-        payments, our platform ensures trust, speed, and scale at the grassroots.
-      </motion.p>
-
-      <motion.h4
-        variants={{
-          hidden: { opacity: 0, y: 15 },
-          visible: { opacity: 1, y: 0 }
-        }}
-        className="text-xl font-semibold mb-10"
-      >
-        <span className="text-[#143D2B]">Our </span>
-        <span className="text-[#C62828]">Offerings</span>
-      </motion.h4>
-
-      <motion.div
-        variants={{
-          hidden: {},
-          visible: { transition: { staggerChildren: 0.12 } }
-        }}
-        className="space-y-10 max-w-2xl"
-      >
-        {[
-          {
-            title: "Verified Farmer Access at Scale",
-            desc:
-              "Over 1.17 million KYC-compliant farmers, geo-tagged and digitally profiled via UIDAI, land records, and utilities.",
-          },
-          {
-            title: "Custom Procurement Workflows",
-            desc:
-              "Digitized tendering, survey, and sourcing modules — configurable for MSP, DBT, and institutional schemes.",
-          },
-          {
-            title: "Seamless Outreach & Aggregation",
-            desc:
-              "Region- and crop-specific mobilization with last-mile field teams and data-driven targeting.",
-          },
-          {
-            title: "100% Digital, Secure & Compliant",
-            desc:
-              "Real-time monitoring, PFMS-enabled DBT, and encrypted transactions with full audit traceability.",
-          },
-          {
-            title: "End-to-End Automation",
-            desc:
-              "Auto-generated POs, receipts, payment orders, and compliance reports — eliminating manual bottlenecks.",
-          },
-        ].map((item, i) => (
-          <motion.div
-            key={i}
-            variants={{
-              hidden: { opacity: 0, x: -20 },
-              visible: {
-                opacity: 1,
-                x: 0,
-                transition: { duration: 0.4 }
-              }
-            }}
-            className="relative pl-8 border-l border-[#D6E5DE]"
-          >
-            <span className="absolute -left-[7px] top-1.5 w-3 h-3 rounded-full bg-[#143D2B]" />
-            <h5 className="font-semibold text-[#143D2B] mb-2">
-              {item.title}
-            </h5>
-            <p className="text-sm text-[#4A6B5F] leading-relaxed">
-              {item.desc}
-            </p>
-          </motion.div>
-        ))}
-      </motion.div>
-    </motion.div>
-
-    {/* RIGHT SIDE CARD */}
-    <motion.div
-      initial={{ opacity: 0, x: 40 }}
-      whileInView={{ opacity: 1, x: 0 }}
-      viewport={{ once: true }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
-      className="lg:col-span-5"
-    >
-      <div className="sticky top-32 bg-[#0F3B2E] rounded-2xl overflow-hidden shadow-2xl">
-        <motion.img
-          src={ten}
-          alt="Direct Procurement"
-          className="w-full h-56 object-cover"
-          initial={{ scale: 1.05 }}
-          whileInView={{ scale: 1 }}
-          transition={{ duration: 0.8 }}
-        />
-
-        <div className="p-10">
-          <h4 className="text-white text-lg font-semibold mb-8">
-            Who <span className="text-[#C62828]">We Serve</span>
-          </h4>
-
-          <ul className="space-y-6 text-sm text-[#D7EEE6]">
-            <li className="border-b border-white/10 pb-4">
-              Government Procurement Agencies
-            </li>
-            <li className="border-b border-white/10 pb-4">
-              Agribusiness Corporates & Food Brands
-            </li>
-            <li className="border-b border-white/10 pb-4">
-              Input Companies & Contract Farming Ventures
-            </li>
-            <li>
-              Research, Extension & Agri-Tech Bodies
-            </li>
-          </ul>
-        </div>
-      </div>
-    </motion.div>
-
-  </motion.div>
-</section>
-
-
-   <section className="relative bg-theme-primary-light text-theme-text-primary py-36 px-8 overflow-hidden">
-  {/* Background texture */}
-  <img
-    src={ten}
-    alt=""
-    className="absolute inset-0 w-full h-full object-cover opacity-[0.08] pointer-events-none"
-  />
-
-  {/* Soft gradient + pattern */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(255,255,255,0.06),transparent_40%),radial-gradient(circle_at_80%_80%,rgba(255,255,255,0.05),transparent_40%)]" />
-
-  {/* Header */}
-  <motion.div
-    className="max-w-6xl mx-auto text-center relative z-10"
-    initial={{ opacity: 0, y: 40 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.8, ease: "easeOut" }}
-  >
-    <h2 className="text-5xl font-bold tracking-tight">
-      Public Sector <span className="text-white/90">Auctions</span>
-    </h2>
-
-    <p className="mt-6 text-lg max-w-3xl mx-auto text-white/80 leading-relaxed">
-      BeAM’s auction platform is purpose-built to serve government bodies, PSUs, and cooperatives — delivering compliant,
-      transparent, and audit-ready digital auctions for both sale and procurement. Our platform ensures regulatory alignment,
-      operational efficiency, and maximum bidder participation.
-    </p>
-  </motion.div>
-
-  {/* Feature cards */}
-  <motion.div
-    className="max-w-6xl mx-auto mt-20 flex flex-col md:flex-row gap-8 relative z-10"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    transition={{ staggerChildren: 0.15 }}
   >
     {[
       {
         title: "Robust Stakeholder Engagement",
-        desc: "Active onboarding and handholding of bidders, suppliers, and government users across states.",
+        desc: "Active onboarding, bidder outreach, and continuous handholding across states and institutions.",
       },
       {
         title: "Govt-Grade Auction Infrastructure",
-        desc: "Configurable workflows aligned with regulatory mandates, audit protocols, and SOPs.",
+        desc: "Highly configurable workflows aligned with SOPs, regulatory mandates, and audit protocols.",
       },
       {
         title: "End-to-End Auction Support",
-        desc: "From lot setup to award issuance — seamless execution with zero bottlenecks.",
+        desc: "From lot creation to award issuance — seamless execution without operational bottlenecks.",
       },
     ].map((item, idx) => (
       <motion.div
         key={idx}
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        whileHover={{ y: -6 }}
-        className="group flex-1 bg-theme-text-primary/10 backdrop-blur-xl p-8 rounded-2xl
-                   border border-theme-text-primary/10 shadow-[0_20px_60px_rgba(0,0,0,0.35)]
-                   hover:bg-theme-text-primary/15 hover:border-theme-text-primary/20 transition-all"
+        variants={{
+          hidden: { opacity: 0, y: 40 },
+          visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
+        }}
+        whileHover={{ y: -10 }}
+        className="group relative bg-theme-text-primary/10 backdrop-blur-2xl p-10 rounded-3xl
+                   border border-theme-text-primary/10
+                   shadow-[0_25px_70px_rgba(0,0,0,0.35)]
+                   hover:border-[#4DA3FF]/40 transition-all"
       >
-        <h3 className="text-xl font-semibold text-theme-text-primary">
+        {/* neon accent line */}
+        <div className="absolute top-0 left-8 h-[3px] w-12 bg-[#4DA3FF]
+                        shadow-[0_0_16px_#4DA3FF] opacity-0
+                        group-hover:opacity-100 transition-all" />
+
+        <h3 className="text-xl font-semibold mb-4">
           {item.title}
         </h3>
-        <p className="mt-3 text-theme-text-primary/80 leading-relaxed">
+
+        <p className="text-theme-text-primary/80 leading-relaxed">
           {item.desc}
         </p>
-        <div className="mt-6 h-[2px] w-0 bg-theme-text-primary/40 group-hover:w-12 transition-all duration-500" />
+
+        <div className="mt-8 h-[2px] w-0 bg-[#F4C430]
+                        group-hover:w-16 transition-all duration-500" />
       </motion.div>
     ))}
   </motion.div>
 
-  {/* Who we serve */}
+  {/* ================= WHO WE SERVE ================= */}
   <motion.div
-    className="max-w-6xl mx-auto mt-28 relative z-10"
-    initial={{ opacity: 0, y: 40 }}
+    className="max-w-6xl mx-auto mt-36 relative z-10"
+    initial={{ opacity: 0, y: 50 }}
     whileInView={{ opacity: 1, y: 0 }}
     viewport={{ once: true }}
-    transition={{ duration: 0.8 }}
+    transition={{ duration: 0.9 }}
   >
-    <h3 className="text-4xl font-bold text-center mb-14">
-      Who We <span className="text-theme-text-primary/90">Serve</span>
+    <h3 className="text-4xl md:text-5xl font-bold text-center mb-20">
+      Who We{" "}
+      <span className="text-[#4DA3FF] [text-shadow:0_0_14px_#4DA3FF66]">
+        Serve
+      </span>
     </h3>
 
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+    <div className="grid grid-cols-1 md:grid-cols-4 gap-14">
       {[
         { icon: Building, title: "State Marketing Federations" },
         { icon: Users, title: "PSU Procurement & Disposal Divisions" },
-        { icon: Landmark, title: "Government Departments & State Agencies" },
+        { icon: Landmark, title: "Government Departments & Agencies" },
         { icon: Handshake, title: "Cooperatives & Public Institutions" },
       ].map((item, idx) => {
         const Icon = item.icon;
         return (
           <motion.div
             key={idx}
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5 }}
-            whileHover={{ scale: 1.04 }}
-            className="flex flex-col items-center p-8 rounded-2xl
-                       bg-theme-text-primary/10 backdrop-blur-xl border border-theme-text-primary/10
-                       shadow-[0_20px_60px_rgba(0,0,0,0.35)]
-                       hover:bg-theme-text-primary/15 hover:border-theme-text-primary/20 transition-all"
+            transition={{ duration: 0.6 }}
+            whileHover={{ scale: 1.06, y: -6 }}
+            className="group flex flex-col items-center p-10 rounded-3xl
+                       bg-theme-text-primary/10 backdrop-blur-2xl
+                       border border-theme-text-primary/10
+                       shadow-[0_25px_70px_rgba(0,0,0,0.35)]
+                       hover:border-[#F4C430]/40 transition-all"
           >
-            <Icon className="w-12 h-12 mb-4 text-theme-text-primary" />
+            <Icon className="w-12 h-12 mb-6 text-theme-text-primary
+                             group-hover:text-[#F4C430] transition-colors" />
             <p className="text-theme-text-primary font-medium text-lg text-center">
               {item.title}
             </p>
@@ -418,62 +297,59 @@ const Services = () => {
       })}
     </div>
   </motion.div>
+
 </section>
 
-   <section className="relative bg-theme-bg-secondary py-28 overflow-hidden">
-  {/* subtle animated background accents */}
-  <motion.div
-    className="absolute inset-0 pointer-events-none"
-    initial={{ opacity: 0 }}
-    whileInView={{ opacity: 1 }}
-    viewport={{ once: true }}
-    transition={{ duration: 1 }}
-  >
-    <motion.div
-      className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-green-900/5 blur-3xl"
-      animate={{ scale: [1, 1.08, 1] }}
-      transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-    />
-    <motion.div
-      className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-green-700/5 blur-3xl"
-      animate={{ scale: [1, 1.1, 1] }}
-      transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
-    />
-  </motion.div>
+
+  <section className="relative bg-[#F7FBF9] py-32 text-[#0B2F26] overflow-hidden">
+
+  {/* subtle grid (softer) */}
+  <div className="absolute inset-0 opacity-[0.05]
+    bg-[linear-gradient(#1E8E6E_1px,transparent_1px),linear-gradient(90deg,#1E8E6E_1px,transparent_1px)]
+    bg-[size:96px_96px]" />
+
+  {/* soft capital washes */}
+  <div className="absolute -top-56 -left-56 w-[560px] h-[560px]
+    bg-gradient-to-br from-[#E6F4EE] to-transparent blur-3xl" />
+
+  <div className="absolute bottom-[-260px] right-[-240px] w-[520px] h-[520px]
+    bg-gradient-to-tr from-[#FFF4CC] to-transparent blur-3xl" />
 
   <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-20">
-    {/* LEFT */}
+
+    {/* ================= LEFT ================= */}
     <motion.div
-      className="lg:col-span-7"
-      initial={{ opacity: 0, y: 40 }}
+      className="lg:col-span-7 relative"
+      initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.8, ease: "easeOut" }}
+      transition={{ duration: 0.9 }}
     >
-      <h1 className="text-5xl font-bold leading-tight text-green-900">
+      {/* accent bar */}
+      <div className="absolute -left-8 top-4 w-1 h-24 bg-[#F4C430]" />
+
+      <h1 className="text-6xl font-extrabold leading-tight tracking-tight">
         Trade <br />
-        <span className="text-green-700">Connect</span>
+        <span className="text-[#1E8E6E]">
+          Connect
+        </span>
       </h1>
 
-      <p className="mt-6 text-gray-700 leading-relaxed max-w-xl">
+      <p className="mt-8 text-[#4B6F64] leading-relaxed max-w-xl">
         BeAM is a leading institutional-grade service provider for dynamic,
-        transparent e-auctions across agri and allied sectors. Built to drive
-        competitive price discovery, procurement efficiency, and trust, the
-        platform seamlessly connects verified buyers and sellers through
-        customized auction formats. Our proactive approach to supply-side
-        mobilization—ensuring each auction has the reach, participation,
-        and transparency it needs to deliver unmatched value.
+        transparent e-auctions across agri and allied sectors—engineered
+        for trust, speed, and competitive price discovery.
       </p>
 
-      <p className="mt-4 text-gray-700 leading-relaxed max-w-xl">
+      <p className="mt-4 text-[#4B6F64] leading-relaxed max-w-xl">
         Our flagship trade vertical facilitates real-time, transparent
-        e-auctions for procurement requirements, enhancing price discovery
-        and buyer-seller efficiency.
+        procurement auctions, enhancing buyer-seller efficiency at scale.
       </p>
 
-      <div className="mt-14">
-        <h3 className="text-lg font-semibold text-green-900 mb-6">
-          Key <span className="text-green-700">Features</span>
+      {/* ================= FEATURES ================= */}
+      <div className="mt-16">
+        <h3 className="text-lg font-semibold mb-8 tracking-wide">
+          Key <span className="text-[#1E8E6E]">Features</span>
         </h3>
 
         <motion.div
@@ -481,38 +357,28 @@ const Services = () => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          transition={{ staggerChildren: 0.12 }}
+          variants={{ visible: { transition: { staggerChildren: 0.12 } } }}
         >
           {[
             {
               title: "Zero-Lag Bidding Engine",
-              desc:
-                "Real-time, high-speed auction interface with nanosecond-level timestamp traceability",
-              icon: <circle cx="11" cy="11" r="9" />,
+              desc: "Real-time auction interface with full traceability",
             },
             {
               title: "Custom Auction Frameworks",
-              desc:
-                "Forward and reverse-bid formats tailored for multi-sector use",
-              icon: <rect x="3" y="3" width="16" height="16" />,
+              desc: "Forward and reverse bidding across sectors",
             },
             {
               title: "Robust Supplier Ecosystem",
-              desc:
-                "Deep network of verified sellers across agri, dairy, packaging, metals, and services",
-              icon: <path d="M3 19h18M6 17V7m6 10V7m6 10V7" />,
+              desc: "Verified sellers across agri, dairy & metals",
             },
             {
               title: "Proactive Partner Onboarding",
-              desc:
-                "Dedicated teams driving seller mobilization to boost competition and trade volumes",
-              icon: <path d="M12 2v20M2 12h20" />,
+              desc: "Dedicated seller acquisition & enablement",
             },
             {
               title: "Smart Docs & Insights",
-              desc:
-                "Auto-generated contracts, audit-ready reports, and performance analytics for every auction",
-              icon: <path d="M4 4h16v16H4z" />,
+              desc: "Audit-ready contracts, reports & analytics",
             },
           ].map((item, i) => (
             <motion.div
@@ -520,19 +386,22 @@ const Services = () => {
               initial={{ opacity: 0, x: -30 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              transition={{ duration: 0.5, ease: "easeOut" }}
               whileHover={{ x: 6 }}
-              className="flex gap-5 p-5 rounded-xl bg-green-50/60 border border-green-100
-                         hover:bg-green-100/60 transition-all"
+              transition={{ duration: 0.45 }}
+              className="flex gap-6 p-6 rounded-2xl
+                         bg-white
+                         border border-[#E2EFEA]
+                         shadow-[0_18px_50px_rgba(0,0,0,0.07)]
+                         hover:border-[#1E8E6E]/40
+                         transition"
             >
-              <div className="text-green-700 mt-1">
-                <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
-                  {item.icon}
-                </svg>
-              </div>
               <div>
-                <h4 className="font-semibold text-green-900">{item.title}</h4>
-                <p className="text-sm text-gray-700 mt-1">{item.desc}</p>
+                <h4 className="font-semibold text-[#0B2F26]">
+                  {item.title}
+                </h4>
+                <p className="text-sm text-[#4B6F64] mt-1">
+                  {item.desc}
+                </p>
               </div>
             </motion.div>
           ))}
@@ -540,42 +409,50 @@ const Services = () => {
       </div>
     </motion.div>
 
-    {/* RIGHT */}
+    {/* ================= RIGHT ================= */}
     <motion.div
       className="lg:col-span-5"
-      initial={{ opacity: 0, y: 60 }}
+      initial={{ opacity: 0, y: 70 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{ duration: 0.9, ease: "easeOut" }}
+      transition={{ duration: 1 }}
     >
       <motion.div
-        className="sticky top-28 rounded-2xl overflow-hidden shadow-xl bg-green-900 text-white"
-        whileHover={{ y: -8 }}
-        transition={{ type: "spring", stiffness: 120 }}
+        className="sticky top-28 relative
+                   bg-white rounded-[28px]
+                   border border-[#E2EFEA]
+                   shadow-[0_30px_80px_rgba(0,0,0,0.1)]
+                   overflow-hidden"
+        whileHover={{ y: -6 }}
       >
-        <img src={nine} alt="" className="w-full h-[260px] object-cover" />
+        <img
+          src={nine}
+          alt=""
+          className="w-full h-[260px] object-cover
+                     border-b border-[#E2EFEA]"
+        />
 
         <div className="p-10">
           <h4 className="text-lg font-semibold mb-8">
-            Who <span className="text-green-300">We Serve</span>
+            Who <span className="text-[#1E8E6E]">We Serve</span>
           </h4>
 
-          <ul className="space-y-6 text-sm">
+          <ul className="space-y-6 text-sm text-[#355E52]">
             {[
               "Agri & Food Processing Firms",
-              "Dairy Cooperatives and Allied Sector Players",
-              "Institutional Buyers and Procurement Agencies",
-              "FPOs, Aggregators, and Exporters",
+              "Dairy Cooperatives & Allied Players",
+              "Institutional Buyers & Agencies",
+              "FPOs, Aggregators & Exporters",
             ].map((item, i) => (
               <motion.li
                 key={i}
-                initial={{ opacity: 0, x: 20 }}
+                initial={{ opacity: 0, x: 16 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="flex gap-4"
+                className="flex gap-4 items-start"
               >
-                <span className="text-green-300">●</span>
+                <span className="text-[#1E8E6E]">▸</span>
                 {item}
               </motion.li>
             ))}
@@ -586,82 +463,137 @@ const Services = () => {
   </div>
 </section>
 
-<section className="relative pt-36 pb-36 pl-32 pr-24 bg-theme-bg-main overflow-hidden text-theme-text-primary">
-  {/* CONTENT WRAPPER */}
+
+
+<section className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white">
+
+  {/* ================= SUBTLE DATA GRID ================= */}
+  <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
+                  bg-[size:72px_72px] opacity-[0.08]" />
+
+  {/* ================= DIAGONAL DATA PLANES ================= */}
+  <div className="absolute -top-48 -left-56 w-[560px] h-[560px]
+                  bg-gradient-to-br from-[#1F7A5A]/40 to-transparent
+                  rotate-[25deg] blur-3xl pointer-events-none" />
+
+  <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
+                  bg-gradient-to-tr from-[#4DA3FF]/35 to-transparent
+                  rotate-[-18deg] blur-3xl pointer-events-none" />
+
+  {/* ================= NEON AXIS LINES ================= */}
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F4C430]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#4DA3FF]/25 blur-sm" />
+
   <div className="relative z-10 max-w-7xl mx-auto">
 
-    {/* TOP GRID */}
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    {/* ================= TOP GRID ================= */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
-      {/* LEFT CONTENT */}
-      <div>
-        <h2 className="text-5xl font-bold leading-tight">
+      {/* ================= LEFT CONTENT ================= */}
+      <div className="relative">
+
+        {/* vertical signal bar */}
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F4C430]
+                        shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
+
+        <h2 className="text-6xl font-extrabold leading-tight">
           Data Analytics &
-          <span className="block text-[#FF0000] ">Consulting</span>
+          <span className="block text-[#4DA3FF]
+                           [text-shadow:0_0_24px_#4DA3FF66]">
+            Consulting
+          </span>
         </h2>
 
-        <p className="mt-8 text-lg leading-relaxed text-white-50 max-w-xl">
+        <p className="mt-10 text-lg leading-relaxed text-white/75 max-w-xl">
           Through active partnerships, BeAM empowers stakeholders across the agri
           value chain with actionable insights, predictive intelligence, and
-          strategy-backed advisory. We convert complex data into decision-ready
-          intelligence.
+          strategy-backed advisory. We convert complex data into
+          decision-ready intelligence.
         </p>
 
-        {/* SERVICE ICON ROW */}
-        <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
-          <div className="flex items-start gap-4 p-5 rounded-xl bg-white/80 shadow-md">
-            <BarChart3 className="w-8 h-8 text-[#1F7A5A]" />
-            <div>
-              <h4 className="font-semibold text-[#1F7A5A]">Strategic Consulting</h4>
-              <p className="text-sm text-[#5C746C] mt-1">
-                Pricing trends, sourcing strategy, supply chain optimization
-              </p>
-            </div>
-          </div>
+        {/* ================= SERVICES ================= */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
 
-          <div className="flex items-start gap-4 p-5 rounded-xl bg-white/80 shadow-md">
-            <TrendingUp className="w-8 h-8 text-[#1F7A5A]" />
-            <div>
-              <h4 className="font-semibold text-[#1F7A5A]">Market Intelligence</h4>
-              <p className="text-sm text-[#5C746C] mt-1">
-                Commodity movements, demand shifts, policy impact
-              </p>
-            </div>
-          </div>
+          {[
+            {
+              icon: BarChart3,
+              title: "Strategic Consulting",
+              desc: "Pricing trends, sourcing strategy, supply chain optimization",
+            },
+            {
+              icon: TrendingUp,
+              title: "Market Intelligence",
+              desc: "Commodity movements, demand shifts, policy impact",
+            },
+            {
+              icon: Laptop2,
+              title: "Digital Deployment",
+              desc: "Analytics platforms integrated into enterprise systems",
+            },
+          ].map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={i}
+                className="group relative p-6
+                           bg-white/5 backdrop-blur-xl
+                           border border-white/10
+                           clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
+                           hover:border-[#4DA3FF]/60
+                           shadow-[0_20px_60px_rgba(0,0,0,0.5)]
+                           transition-all"
+              >
+                {/* neon corner */}
+                <div className="absolute top-0 right-0 w-4 h-4 bg-[#F4C430]
+                                shadow-[0_0_16px_#F4C430]" />
 
-          <div className="flex items-start gap-4 p-5 rounded-xl bg-white/80 shadow-md">
-            <Laptop2 className="w-8 h-8 text-[#1F7A5A]" />
-            <div>
-              <h4 className="font-semibold text-[#1F7A5A]">Digital Deployment</h4>
-              <p className="text-sm text-[#5C746C] mt-1">
-                Analytics platforms integrated into enterprise systems
-              </p>
-            </div>
-          </div>
+                <Icon className="w-8 h-8 text-[#1F7A5A]
+                                 group-hover:text-[#4DA3FF]
+                                 transition-colors" />
+
+                <h4 className="mt-4 font-semibold text-white">
+                  {item.title}
+                </h4>
+                <p className="mt-2 text-sm text-white/70">
+                  {item.desc}
+                </p>
+              </div>
+            );
+          })}
         </div>
       </div>
 
-      {/* RIGHT IMAGE STACK */}
-      <div className="relative">
-        <div className="absolute rounded-3xl bg-gradient-to-tr from-[#DDEFE9] to-transparent blur-2xl" />
+      {/* ================= RIGHT VISUAL ================= */}
+      <div className="relative sticky top-20
+                      clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
+                      border border-[#4DA3FF]/30
+                      shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
+
         <img
           src={ten}
           alt="Data consulting"
-          className="relative rounded-3xl shadow-2xl object-cover"
+          className="w-full h-[420px] object-cover opacity-90"
         />
+
+        {/* data overlay */}
+        <div className="absolute inset-0 bg-gradient-to-tr
+                        from-black/40 via-transparent to-black/30" />
       </div>
     </div>
 
-    {/* DIVIDER */}
-    <div className="my-12 h-px bg-gradient-to-r from-transparent via-[#CFE3DC] to-transparent" />
+    {/* ================= DIVIDER ================= */}
+    <div className="my-24 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-    {/* WHO WE SERVE */}
+    {/* ================= WHO WE SERVE ================= */}
     <div>
-      <h3 className="text-6xl font-bold text-center mb-20">
-        Who We <span className="text-[#1F7A5A]">Serve</span>
+      <h3 className="text-6xl font-extrabold text-center mb-24">
+        Who We{" "}
+        <span className="text-[#1F7A5A] drop-shadow-[0_0_12px_rgba(31,122,90,0.6)]">
+          Serve
+        </span>
       </h3>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-12">
         {[
           { icon: Briefcase, label: "Financial Institutions & NBFCs" },
           { icon: Building2, label: "Agri Corporates & FPOs" },
@@ -673,12 +605,18 @@ const Services = () => {
           return (
             <div
               key={i}
-              className="group p-8 rounded-2xl bg-white shadow-md hover:shadow-xl transition-all duration-300 text-center"
+              className="group p-10 text-center
+                         bg-white/5 backdrop-blur-xl
+                         border border-white/10
+                         clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
+                         hover:border-[#F4C430]/60
+                         shadow-[0_20px_60px_rgba(0,0,0,0.5)]
+                         transition-all"
             >
-              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EAF4F1] text-[#1F7A5A]">
-                <Icon size={28} />
-              </div>
-              <p className="font-medium text-[#355E52] leading-snug">
+              <Icon className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
+                               group-hover:text-[#F4C430]
+                               transition-colors" />
+              <p className="font-medium text-white/90 leading-snug">
                 {item.label}
               </p>
             </div>
@@ -686,73 +624,140 @@ const Services = () => {
         })}
       </div>
     </div>
+
   </div>
 </section>
-<section className="relative bg-white py-40 ">
+<section className="relative bg-[#F7FBF9] py-40 overflow-hidden text-[#0B2F26]">
 
-      {/* playful background shapes */}
-      <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full bg-[#E6F4EE] blur-3xl" />
-      <div className="absolute top-1/2 -right-32 w-[460px] h-[460px] rounded-full bg-[#F0FAF6] blur-3xl" />
-      <div className="absolute bottom-[-200px] left-[30%] w-[420px] h-[420px] rounded-full bg-[#EAF7F1] blur-3xl" />
+  {/* subtle finance grid */}
+  <div className="absolute inset-0 opacity-[0.05]
+    bg-[linear-gradient(#1E8E6E_1px,transparent_1px),linear-gradient(90deg,#1E8E6E_1px,transparent_1px)]
+    bg-[size:96px_96px]" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-24">
+  {/* soft capital glows */}
+  <div className="absolute -top-60 -left-72 w-[640px] h-[640px]
+    bg-gradient-to-br from-[#DDF2EB] to-transparent blur-3xl" />
 
-        {/* LEFT CONTENT */}
-        <div>
-          <h2 className="text-5xl font-bold text-[#0B2F26] leading-tight">
-            Trade <span className="text-[#1E8E6E]">Finance</span>
-          </h2>
+  <div className="absolute bottom-[-340px] right-[-300px] w-[680px] h-[680px]
+    bg-gradient-to-tr from-[#FFF3C4] to-transparent blur-3xl" />
 
-          <p className="mt-8 text-lg leading-relaxed text-[#4B6F64] max-w-xl">
-            BeAM enables seamless liquidity for agri-value chains and MSMEs.
-            Our plug-and-play platforms bridge working capital gaps, enabling
-            faster procurement, timely payouts, and uninterrupted trade execution —
-            with zero collateral.
-          </p>
+  <div className="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-28">
 
-          {/* OFFERINGS */}
-          <div className="mt-16 space-y-6">
+    {/* LEFT CONTENT */}
+    <div className="relative">
+
+      {/* accent bar */}
+      <div className="absolute -left-10 top-6 w-1 h-24 bg-[#F4C430]" />
+
+      <h2 className="text-6xl font-extrabold leading-tight">
+        Trade{" "}
+        <span className="text-[#1E8E6E]">
+          Finance
+        </span>
+      </h2>
+
+      <p className="mt-10 text-lg leading-relaxed text-[#4B6F64] max-w-xl">
+        BeAM enables seamless liquidity for agri-value chains and MSMEs.
+        Our plug-and-play platforms bridge working capital gaps, enabling
+        faster procurement, timely payouts, and uninterrupted trade execution —
+        with zero collateral.
+      </p>
+
+      {/* OFFERINGS */}
+      <div className="mt-20 space-y-7">
+        {[
+          {
+            icon: Receipt,
+            title: "End-to-End Invoice Discounting",
+            desc: "Digitized invoice-based finance enabling early payments for buyers and sellers.",
+          },
+          {
+            icon: Wallet,
+            title: "Working Capital as a Service",
+            desc: "Collateral-free short-term liquidity aligned with procurement cycles.",
+          },
+          {
+            icon: Shuffle,
+            title: "Buyer & Seller Float Solutions",
+            desc: "Structured float mechanisms to bridge cash flow gaps across value chains.",
+          },
+          {
+            icon: Layers,
+            title: "Embedded Finance via Fintech & NBFC Partners",
+            desc: "Scalable and compliant credit disbursement through integrated lending partners.",
+          },
+          {
+            icon: Database,
+            title: "Data-Driven Credit Intelligence",
+            desc: "Smart underwriting using trade data and behavioral patterns.",
+          },
+        ].map((item, i) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={i}
+              className="flex gap-6 p-7 rounded-2xl bg-white
+                         border border-[#E2EFEA]
+                         shadow-[0_14px_40px_rgba(0,0,0,0.06)]
+                         hover:-translate-y-1 transition"
+            >
+              <div className="flex h-12 w-12 items-center justify-center
+                              rounded-xl bg-[#E6F4EE] text-[#1E8E6E]">
+                <Icon size={26} />
+              </div>
+              <div>
+                <h4 className="font-semibold text-[#0B2F26]">
+                  {item.title}
+                </h4>
+                <p className="mt-1 text-sm text-[#4B6F64]">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    </div>
+
+    {/* RIGHT CARD */}
+    <div className="relative">
+      <div className="absolute -inset-10 rounded-[36px]
+        bg-gradient-to-br from-[#EAF7F1] to-transparent blur-xl" />
+
+      <div className="sticky top-32 bg-white rounded-[30px]
+        overflow-hidden border border-[#E2EFEA]
+        shadow-[0_30px_80px_rgba(0,0,0,0.1)]">
+
+        <img
+          src={ten}
+          alt="Trade Finance"
+          className="w-full h-64 object-cover"
+        />
+
+        <div className="p-10">
+          <h3 className="text-xl font-semibold mb-8">
+            Who We Serve
+          </h3>
+
+          <div className="space-y-6">
             {[
-              {
-                icon: Receipt,
-                title: "End-to-End Invoice Discounting",
-                desc: "Digitized invoice-based finance enabling early payments for buyers and sellers."
-              },
-              {
-                icon: Wallet,
-                title: "Working Capital as a Service",
-                desc: "Collateral-free short-term liquidity aligned with procurement cycles."
-              },
-              {
-                icon: Shuffle,
-                title: "Buyer & Seller Float Solutions",
-                desc: "Structured float mechanisms to bridge cash flow gaps across value chains."
-              },
-              {
-                icon: Layers,
-                title: "Embedded Finance via Fintech & NBFC Partners",
-                desc: "Scalable and compliant credit disbursement through integrated lending partners."
-              },
-              {
-                icon: Database,
-                title: "Data-Driven Credit Intelligence",
-                desc: "Smart underwriting using trade data and behavioral patterns."
-              }
+              { icon: Users, title: "Agri Traders & Aggregators", desc: "Liquidity support for high-volume trade cycles." },
+              { icon: Store, title: "Input Distributors & Retail Networks", desc: "Credit solutions to manage seasonal demand." },
+              { icon: Factory, title: "Large Buyers & Food Processors", desc: "Streamlined supplier payments and procurement finance." },
+              { icon: Rocket, title: "Agri-Tech Platforms & Startups", desc: "Embedded finance layers for ecosystem growth." },
             ].map((item, i) => {
               const Icon = item.icon;
               return (
-                <div
-                  key={i}
-                  className="flex gap-5 p-6 rounded-2xl bg-white shadow-[0_12px_32px_rgba(0,0,0,0.06)] border border-[#E4F1EC] hover:-translate-y-1 transition"
-                >
-                  <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-[#E6F4EE] text-[#1E8E6E]">
-                    <Icon size={26} />
+                <div key={i} className="flex gap-4">
+                  <div className="flex h-10 w-10 items-center justify-center
+                                  rounded-lg bg-[#E6F4EE] text-[#1E8E6E]">
+                    <Icon size={22} />
                   </div>
                   <div>
-                    <h4 className="text-[#0B2F26] font-semibold">
+                    <h5 className="font-medium text-[#0B2F26]">
                       {item.title}
-                    </h4>
-                    <p className="mt-1 text-sm text-[#4B6F64]">
+                    </h5>
+                    <p className="text-sm text-[#4B6F64]">
                       {item.desc}
                     </p>
                   </div>
@@ -761,220 +766,154 @@ const Services = () => {
             })}
           </div>
         </div>
+      </div>
+    </div>
 
-        {/* RIGHT CARD */}
-        <div className="relative">
-          <div className="absolute -inset-8 rounded-[32px] bg-gradient-to-br from-[#E6F4EE] to-transparent blur-xl" />
+  </div>
+</section>
 
-          <div className="sticky top-32 bg-white rounded-[28px] overflow-hidden shadow-[0_30px_80px_rgba(0,0,0,0.12)] border border-[#E4F1EC]">
-            <img
-              src={ten}
-              alt="Trade Finance"
-              className="w-full h-60 object-cover"
-            />
+ <section className="relative overflow-hidden py-40 bg-theme-bg-main">
 
-            <div className="p-10">
-              <h3 className="text-xl font-semibold text-[#0B2F26] mb-8">
-                Who We Serve
-              </h3>
+  {/* Decorative neon glow blobs */}
+  <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-green-400/40 rounded-full blur-[160px] pointer-events-none shadow-[0_0_120px_40px_#22c55e]" />
+  <div className="absolute bottom-[-300px] right-[-200px] w-[620px] h-[620px] bg-emerald-400/30 rounded-full blur-[200px] pointer-events-none shadow-[0_0_140px_50px_#34d399]" />
 
-              <div className="space-y-6">
-                {[
-                  {
-                    icon: Users,
-                    title: "Agri Traders & Aggregators",
-                    desc: "Liquidity support for high-volume trade cycles."
-                  },
-                  {
-                    icon: Store,
-                    title: "Input Distributors & Retail Networks",
-                    desc: "Credit solutions to manage seasonal demand."
-                  },
-                  {
-                    icon: Factory,
-                    title: "Large Buyers & Food Processors",
-                    desc: "Streamlined supplier payments and procurement finance."
-                  },
-                  {
-                    icon: Rocket,
-                    title: "Agri-Tech Platforms & Startups",
-                    desc: "Embedded finance layers for ecosystem growth."
-                  }
-                ].map((item, i) => {
-                  const Icon = item.icon;
-                  return (
-                    <div key={i} className="flex gap-4">
-                      <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-[#E6F4EE] text-[#1E8E6E]">
-                        <Icon size={22} />
-                      </div>
-                      <div>
-                        <h5 className="text-[#0B2F26] font-medium">
-                          {item.title}
-                        </h5>
-                        <p className="text-sm text-[#4B6F64]">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </div>
-                  );
-                })}
-              </div>
+  {/* Subtle dotted pattern */}
+  <div
+    className="absolute inset-0 opacity-[0.05] pointer-events-none"
+    style={{
+      backgroundImage: "radial-gradient(#1B7F5C 1px, transparent 1px)",
+      backgroundSize: "34px 34px",
+    }}
+  />
+
+  {/* Neon geometry grid */}
+  <div className="absolute inset-0 pointer-events-none opacity-[0.15]">
+    <div
+      className="absolute inset-0"
+      style={{
+        backgroundImage: `
+          linear-gradient(135deg, #22c55e33 1px, transparent 1px),
+          linear-gradient(45deg, #22c55e33 1px, transparent 1px)
+        `,
+        backgroundSize: "120px 120px",
+      }}
+    />
+  </div>
+
+  <div className="relative max-w-7xl mx-auto px-8">
+
+    {/* TOP GRID */}
+    <div className="grid lg:grid-cols-2 gap-20 items-center">
+
+      {/* LEFT */}
+      <div>
+        <h1 className="text-6xl font-bold text-white leading-tight neon-edge">
+          Metals
+        </h1>
+
+        <p className="mt-6 text-lg text-white max-w-xl">
+          BeAM brings transparency, speed, and efficiency to the industrial
+          metals trade. Whether you’re buying or selling steel, scrap, or
+          alloys — our digital platforms simplify every step with trust,
+          compliance, and traceability.
+        </p>
+
+        {/* FEATURES */}
+        <div className="mt-14 space-y-8">
+
+          <div className="flex gap-5">
+            <BarChart3 className="w-7 h-7 text-green-400 mt-1" />
+            <div>
+              <h4 className="font-semibold text-lg text-white">
+                Market Intelligence & Analytics
+              </h4>
+              <p className="text-white">
+                Price trends, bidder behavior, and trade data that empower
+                smarter, faster decisions.
+              </p>
             </div>
           </div>
+
+          <div className="flex gap-5">
+            <ShieldCheck className="w-7 h-7 text-green-400 mt-1" />
+            <div>
+              <h4 className="font-semibold text-lg text-white">
+                Quality & Compliance Assurance
+              </h4>
+              <p className="text-white">
+                Audit trails, certifications, and digital documentation for
+                risk-free trading.
+              </p>
+            </div>
+          </div>
+
+          <div className="flex gap-5">
+            <Settings className="w-7 h-7 text-green-400 mt-1" />
+            <div>
+              <h4 className="font-semibold text-lg text-white">
+                Seamless Execution Support
+              </h4>
+              <p className="text-white">
+                Logistics coordination, delivery tracking, and contract
+                lifecycle management.
+              </p>
+            </div>
+          </div>
+
         </div>
+      </div>
+
+      {/* RIGHT IMAGE */}
+      <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-green-400/20">
+        <img
+          src={ten}
+          alt="Metals Trading"
+          className="w-full h-[420px] object-cover"
+        />
+
+        <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur rounded-2xl p-6">
+          <p className="text-sm text-gray-700 font-medium">
+            Secure, transparent, and scalable digital trading for India’s
+            metals ecosystem.
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    {/* WHO WE SERVE */}
+    <div className="mt-40 text-center">
+      <h2 className="text-6xl font-bold text-white neon-edge">
+        Who We <span className="text-red-600">Serve</span>
+      </h2>
+
+      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+
+        {[
+          { Icon: Factory, title: "Steel Manufacturers & Processors", desc: "Efficient sourcing and competitive metal sales." },
+          { Icon: Recycle, title: "Scrap Aggregators & Dealers", desc: "Wider reach with transparent price discovery." },
+          { Icon: Building2, title: "Infrastructure & Construction", desc: "Reliable bulk procurement of compliant steel." },
+          { Icon: Landmark, title: "Public Sector & Institutions", desc: "Auditable and transparent procurement workflows." }
+        ].map(({ Icon, title, desc }, i) => (
+          <div
+            key={i}
+            className="bg-white rounded-2xl p-8 shadow-md transition 
+            hover:shadow-[0_0_30px_rgba(34,197,94,0.35)]
+            hover:-translate-y-1 border border-transparent hover:border-green-400"
+          >
+            <Icon className="w-8 h-8 text-green-600 mx-auto mb-4" />
+            <h4 className="font-semibold text-black">{title}</h4>
+            <p className="mt-2 text-gray-600 text-sm">{desc}</p>
+          </div>
+        ))}
 
       </div>
-    </section>
-  <section className="relative overflow-hidden py-40 bg-theme-bg-main">
+    </div>
 
-      {/* Decorative blurred circles */}
-      <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-green-200/50 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-[-300px] right-[-200px] w-[620px] h-[620px] bg-emerald-300/40 rounded-full blur-[180px] pointer-events-none" />
+  </div>
+</section>
 
-      {/* subtle green pattern */}
-      <div
-        className="absolute inset-0 opacity-[0.05] pointer-events-none"
-        style={{
-          backgroundImage:
-            "radial-gradient(#1B7F5C 1px, transparent 1px)",
-          backgroundSize: "34px 34px",
-        }}
-      />
-
-      <div className="relative max-w-7xl mx-auto px-8">
-
-        {/* TOP GRID */}
-        <div className="grid lg:grid-cols-2 gap-20 items-center">
-
-          {/* LEFT */}
-          <div>
-            <h1 className="text-6xl font-bold text-white leading-tight">
-              Metals
-            </h1>
-
-            <p className="mt-6 text-lg text-white max-w-xl">
-              BeAM brings transparency, speed, and efficiency to the industrial
-              metals trade. Whether you’re buying or selling steel, scrap, or
-              alloys — our digital platforms simplify every step with trust,
-              compliance, and traceability.
-            </p>
-
-            {/* FEATURES */}
-            <div className="mt-14 space-y-8">
-
-              <div className="flex gap-5">
-                <BarChart3 className="w-7 h-7 text-green-700 mt-1" />
-                <div>
-                  <h4 className="font-semibold text-lg text-white">
-                    Market Intelligence & Analytics
-                  </h4>
-                  <p className="text-white">
-                    Price trends, bidder behavior, and trade data that empower
-                    smarter, faster decisions.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <ShieldCheck className="w-7 h-7 text-white mt-1" />
-                <div>
-                  <h4 className="font-semibold text-lg text-white">
-                    Quality & Compliance Assurance
-                  </h4>
-                  <p className="text-white">
-                    Audit trails, certifications, and digital documentation for
-                    risk-free trading.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex gap-5">
-                <Settings className="w-7 h-7 text-white mt-1" />
-                <div>
-                  <h4 className="font-semibold text-lg text-white">
-                    Seamless Execution Support
-                  </h4>
-                  <p className="text-white">
-                    Logistics coordination, delivery tracking, and contract
-                    lifecycle management.
-                  </p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          {/* RIGHT IMAGE */}
-          <div className="relative rounded-3xl overflow-hidden border-xl shadow-2xl">
-            <img
-              src={ten}
-              alt="Metals Trading"
-              className="w-full h-[420px] object-cover"
-            />
-
-            <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur rounded-2xl p-6">
-              <p className="text-sm text-gray-700 font-medium">
-                Secure, transparent, and scalable digital trading for India’s
-                metals ecosystem.
-              </p>
-            </div>
-          </div>
-
-        </div>
-
-        {/* WHO WE SERVE */}
-        <div className="mt-40 text-center">
-          <h2 className="text-6xl font-bold text-white">
-            Who We <span className="text-red-600">Serve</span>
-          </h2>
-
-          <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
-
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-              <Factory className="w-8 h-8 text-green-700 mx-auto mb-4" />
-              <h4 className="font-semibold text-black">
-                Steel Manufacturers & Processors
-              </h4>
-              <p className="mt-2 text-gray-600 text-sm">
-                Efficient sourcing and competitive metal sales.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-              <Recycle className="w-8 h-8 text-green-700 mx-auto mb-4" />
-              <h4 className="font-semibold text-black">
-                Scrap Aggregators & Dealers
-              </h4>
-              <p className="mt-2 text-gray-600 text-sm">
-                Wider reach with transparent price discovery.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-              <Building2 className="w-8 h-8 text-green-700 mx-auto mb-4" />
-              <h4 className="font-semibold text-black">
-                Infrastructure & Construction
-              </h4>
-              <p className="mt-2 text-gray-600 text-sm">
-                Reliable bulk procurement of compliant steel.
-              </p>
-            </div>
-
-            <div className="bg-white rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-              <Landmark className="w-8 h-8 text-green-700 mx-auto mb-4" />
-              <h4 className="font-semibold text-black">
-                Public Sector & Institutions
-              </h4>
-              <p className="mt-2 text-gray-600 text-sm">
-                Auditable and transparent procurement workflows.
-              </p>
-            </div>
-
-          </div>
-        </div>
-
-      </div>
-    </section>
 
 <section className="relative bg-white py-32 overflow-hidden">
 
