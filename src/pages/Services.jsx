@@ -141,13 +141,13 @@ const Services = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative"
     >
-      <div className="absolute -inset-6 rotate-3 bg-[#123E32] opacity-60 rounded-[28px]" />
-      <div className="absolute -inset-6 -rotate-2 border border-[#4DA3FF]/40 rounded-[28px]" />
+      <div className="absolute -inset-6 rotate-3 bg-[#123E32] ml-32 opacity-60 rounded-[28px]" />
+      <div className="absolute -inset-6 -rotate-2 border ml-32 border-[#4DA3FF]/40 rounded-[28px]" />
 
       <img
         src={nine}
         alt="Agri Supply Chain"
-        className="relative rounded-[24px] object-cover
+        className="relative rounded-[24px] ml-28 w-[480px] object-cover
                    shadow-[0_0_70px_#4DA3FF33]"
       />
     </motion.div>
@@ -156,148 +156,157 @@ const Services = () => {
 </section>
 
 
-   <section className="relative bg-theme-primary-light text-theme-text-primary py-40 px-8 overflow-hidden">
+  <section className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white overflow-hidden">
 
-  {/* grain + image texture */}
-  <img
-    src={ten}
-    alt=""
-    className="absolute inset-0 w-full h-full object-cover opacity-[0.06] pointer-events-none mix-blend-overlay"
-  />
+  {/* ================= SUBTLE DATA GRID ================= */}
+  <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
+                  bg-[size:72px_72px] opacity-[0.08]" />
 
-  {/* asymmetric gradients */}
-  <div className="absolute inset-0 bg-[radial-gradient(circle_at_15%_25%,rgba(255,255,255,0.08),transparent_45%),radial-gradient(circle_at_85%_75%,rgba(77,163,255,0.12),transparent_40%)]" />
+  {/* ================= DIAGONAL PLANES ================= */}
+  <div className="absolute -top-48 -left-56 w-[560px] h-[560px]
+                  bg-gradient-to-br from-[#1F7A5A]/40 to-transparent
+                  rotate-[25deg] blur-3xl pointer-events-none" />
 
-  {/* neon glow blobs */}
-  <div className="absolute -top-32 -left-40 w-[520px] h-[520px] bg-[#4DA3FF]/25 blur-[160px] rounded-full" />
-  <div className="absolute bottom-0 right-0 w-[420px] h-[420px] bg-[#F4C430]/20 blur-[140px] rounded-full" />
+  <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
+                  bg-gradient-to-tr from-[#4DA3FF]/35 to-transparent
+                  rotate-[-18deg] blur-3xl pointer-events-none" />
 
-  {/* ================= HEADER ================= */}
-  <motion.div
-    className="max-w-6xl mx-auto text-center relative z-10"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.9, ease: "easeOut" }}
-  >
-    <h2 className="text-5xl md:text-6xl font-extrabold tracking-tight">
-      Public Sector{" "}
-      <span className="text-[#F4C430] [text-shadow:0_0_16px_#F4C43066]">
-        Auctions
-      </span>
-    </h2>
+  {/* ================= NEON AXIS ================= */}
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F4C430]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#4DA3FF]/25 blur-sm" />
 
-    <p className="mt-8 text-lg max-w-3xl mx-auto text-theme-text-primary/80 leading-relaxed">
-      BeAM’s auction platform is purpose-built for government bodies, PSUs,
-      and cooperatives — delivering compliant, transparent, and audit-ready
-      digital auctions with maximum bidder participation and zero friction.
-    </p>
-  </motion.div>
+  <div className="relative z-10 max-w-7xl mx-auto">
 
-  {/* ================= FEATURE CARDS ================= */}
-  <motion.div
-    className="max-w-6xl mx-auto mt-24 grid md:grid-cols-3 gap-10 relative z-10"
-    initial="hidden"
-    whileInView="visible"
-    viewport={{ once: true }}
-    variants={{
-      hidden: {},
-      visible: { transition: { staggerChildren: 0.18 } },
-    }}
-  >
-    {[
-      {
-        title: "Robust Stakeholder Engagement",
-        desc: "Active onboarding, bidder outreach, and continuous handholding across states and institutions.",
-      },
-      {
-        title: "Govt-Grade Auction Infrastructure",
-        desc: "Highly configurable workflows aligned with SOPs, regulatory mandates, and audit protocols.",
-      },
-      {
-        title: "End-to-End Auction Support",
-        desc: "From lot creation to award issuance — seamless execution without operational bottlenecks.",
-      },
-    ].map((item, idx) => (
-      <motion.div
-        key={idx}
-        variants={{
-          hidden: { opacity: 0, y: 40 },
-          visible: { opacity: 1, y: 0, transition: { duration: 0.7 } },
-        }}
-        whileHover={{ y: -10 }}
-        className="group relative bg-theme-text-primary/10 backdrop-blur-2xl p-10 rounded-3xl
-                   border border-theme-text-primary/10
-                   shadow-[0_25px_70px_rgba(0,0,0,0.35)]
-                   hover:border-[#4DA3FF]/40 transition-all"
-      >
-        {/* neon accent line */}
-        <div className="absolute top-0 left-8 h-[3px] w-12 bg-[#4DA3FF]
-                        shadow-[0_0_16px_#4DA3FF] opacity-0
-                        group-hover:opacity-100 transition-all" />
+    {/* ================= TOP GRID ================= */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
 
-        <h3 className="text-xl font-semibold mb-4">
-          {item.title}
-        </h3>
+      {/* ================= LEFT CONTENT ================= */}
+      <div className="relative">
 
-        <p className="text-theme-text-primary/80 leading-relaxed">
-          {item.desc}
+        {/* vertical signal bar */}
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F4C430]
+                        shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
+
+        <h2 className="text-6xl font-extrabold leading-tight">
+          Public Sector{" "}
+          <span className="block text-[#F4C430]
+                           [text-shadow:0_0_24px_#F4C43066]">
+            Auctions
+          </span>
+        </h2>
+
+        <p className="mt-10 text-lg leading-relaxed text-white/75 max-w-xl">
+          BeAM’s auction platform is purpose-built for government bodies, PSUs,
+          and cooperatives — delivering compliant, transparent, and audit-ready
+          digital auctions with maximum bidder participation and zero friction.
         </p>
 
-        <div className="mt-8 h-[2px] w-0 bg-[#F4C430]
-                        group-hover:w-16 transition-all duration-500" />
-      </motion.div>
-    ))}
-  </motion.div>
+        {/* ================= FEATURES ================= */}
+        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
 
-  {/* ================= WHO WE SERVE ================= */}
-  <motion.div
-    className="max-w-6xl mx-auto mt-36 relative z-10"
-    initial={{ opacity: 0, y: 50 }}
-    whileInView={{ opacity: 1, y: 0 }}
-    viewport={{ once: true }}
-    transition={{ duration: 0.9 }}
-  >
-    <h3 className="text-4xl md:text-5xl font-bold text-center mb-20">
-      Who We{" "}
-      <span className="text-[#4DA3FF] [text-shadow:0_0_14px_#4DA3FF66]">
-        Serve
-      </span>
-    </h3>
+          {[
+            {
+              title: "Robust Stakeholder Engagement",
+              desc: "Active onboarding, bidder outreach, and continuous handholding across states and institutions.",
+            },
+            {
+              title: "Govt-Grade Auction Infrastructure",
+              desc: "Highly configurable workflows aligned with SOPs, regulatory mandates, and audit protocols.",
+            },
+            {
+              title: "End-to-End Auction Support",
+              desc: "From lot creation to award issuance — seamless execution without operational bottlenecks.",
+            },
+          ].map((item, i) => (
+            <div
+              key={i}
+              className="group relative p-6
+                         bg-white/5 backdrop-blur-xl
+                         border border-white/10 rounded-2xl
+                         clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
+                         hover:border-[#4DA3FF]/60
+                         shadow-[0_20px_60px_rgba(0,0,0,0.5)]
+                         transition-all"
+            >
+              <div className="absolute top-0 right-0 w-4 h-4 bg-[#F4C430]
+                              shadow-[0_0_16px_#F4C430]" />
 
-    <div className="grid grid-cols-1 md:grid-cols-4 gap-14">
-      {[
-        { icon: Building, title: "State Marketing Federations" },
-        { icon: Users, title: "PSU Procurement & Disposal Divisions" },
-        { icon: Landmark, title: "Government Departments & Agencies" },
-        { icon: Handshake, title: "Cooperatives & Public Institutions" },
-      ].map((item, idx) => {
-        const Icon = item.icon;
-        return (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0, y: 40 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            whileHover={{ scale: 1.06, y: -6 }}
-            className="group flex flex-col items-center p-10 rounded-3xl
-                       bg-theme-text-primary/10 backdrop-blur-2xl
-                       border border-theme-text-primary/10
-                       shadow-[0_25px_70px_rgba(0,0,0,0.35)]
-                       hover:border-[#F4C430]/40 transition-all"
-          >
-            <Icon className="w-12 h-12 mb-6 text-theme-text-primary
-                             group-hover:text-[#F4C430] transition-colors" />
-            <p className="text-theme-text-primary font-medium text-lg text-center">
-              {item.title}
-            </p>
-          </motion.div>
-        );
-      })}
+              <h4 className="mt-2 font-semibold text-white">
+                {item.title}
+              </h4>
+              <p className="mt-2 text-sm text-white/70">
+                {item.desc}
+              </p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* ================= RIGHT VISUAL ================= */}
+      <div className="relative sticky top-20
+                      clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
+                      border border-[#4DA3FF]/30 rounded-2xl
+                      shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
+
+        <img
+          src={ten}
+          alt="Public sector auctions"
+          className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
+        />
+
+        <div className="absolute inset-0 bg-gradient-to-tr
+                        from-black/40 via-transparent to-black/30" />
+      </div>
     </div>
-  </motion.div>
 
+    {/* ================= DIVIDER ================= */}
+    <div className="my-24 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+
+ {/* ================= WHO WE SERVE ================= */}
+<div>
+  <h3 className="text-6xl font-extrabold text-center mb-24">
+    Who We{" "}
+    <span className="text-[#1F7A5A] drop-shadow-[0_0_12px_rgba(31,122,90,0.6)]">
+      Serve
+    </span>
+  </h3>
+
+  <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+    {[
+      { icon: Building, label: "State Marketing Federations" },
+      { icon: Users, label: "PSU Procurement & Disposal Divisions" },
+      { icon: Landmark, label: "Government Departments & Agencies" },
+      { icon: Handshake, label: "Cooperatives & Public Institutions" },
+    ].map((item, i) => {
+      const Icon = item.icon;
+      return (
+        <div
+          key={i}
+          className="group p-10 text-center
+                     bg-white/5 backdrop-blur-xl
+                     border border-white/10 rounded-2xl
+                     clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
+                     hover:border-[#F4C430]/60
+                     shadow-[0_20px_60px_rgba(0,0,0,0.5)]
+                     transition-all"
+        >
+          <Icon
+            className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
+                       group-hover:text-[#F4C430]
+                       transition-colors"
+          />
+
+          <p className="font-medium text-white/90 leading-snug">
+            {item.label}
+          </p>
+        </div>
+      );
+    })}
+  </div>
+</div>
+
+
+  </div>
 </section>
 
 
@@ -512,7 +521,7 @@ const Services = () => {
         </p>
 
         {/* ================= SERVICES ================= */}
-        <div className="mt-16 grid grid-cols-1 sm:grid-cols-3 gap-8">
+        <div className="mt-16 grid  grid-cols-1 sm:grid-cols-3 gap-8">
 
           {[
             {
@@ -537,7 +546,7 @@ const Services = () => {
                 key={i}
                 className="group relative p-6
                            bg-white/5 backdrop-blur-xl
-                           border border-white/10
+                           border border-white/10 rounded-2xl
                            clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
                            hover:border-[#4DA3FF]/60
                            shadow-[0_20px_60px_rgba(0,0,0,0.5)]
@@ -566,13 +575,13 @@ const Services = () => {
       {/* ================= RIGHT VISUAL ================= */}
       <div className="relative sticky top-20
                       clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
-                      border border-[#4DA3FF]/30
+                      border border-[#4DA3FF]/30 rounded-2xl
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
           src={ten}
           alt="Data consulting"
-          className="w-full h-[420px] object-cover opacity-90"
+          className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
         />
 
         {/* data overlay */}
@@ -772,63 +781,58 @@ const Services = () => {
   </div>
 </section>
 
- <section className="relative overflow-hidden py-40 bg-theme-bg-main">
+ <section className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white">
 
-  {/* Decorative neon glow blobs */}
-  <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-green-400/40 rounded-full blur-[160px] pointer-events-none shadow-[0_0_120px_40px_#22c55e]" />
-  <div className="absolute bottom-[-300px] right-[-200px] w-[620px] h-[620px] bg-emerald-400/30 rounded-full blur-[200px] pointer-events-none shadow-[0_0_140px_50px_#34d399]" />
+  {/* ================= SUBTLE DATA GRID ================= */}
+  <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
+                  bg-[size:72px_72px] opacity-[0.08]" />
 
-  {/* Subtle dotted pattern */}
-  <div
-    className="absolute inset-0 opacity-[0.05] pointer-events-none"
-    style={{
-      backgroundImage: "radial-gradient(#1B7F5C 1px, transparent 1px)",
-      backgroundSize: "34px 34px",
-    }}
-  />
+  {/* ================= DIAGONAL DATA PLANES ================= */}
+  <div className="absolute -top-48 -left-56 w-[560px] h-[560px]
+                  bg-gradient-to-br from-[#1F7A5A]/40 to-transparent
+                  rotate-[25deg] blur-3xl pointer-events-none" />
 
-  {/* Neon geometry grid */}
-  <div className="absolute inset-0 pointer-events-none opacity-[0.15]">
-    <div
-      className="absolute inset-0"
-      style={{
-        backgroundImage: `
-          linear-gradient(135deg, #22c55e33 1px, transparent 1px),
-          linear-gradient(45deg, #22c55e33 1px, transparent 1px)
-        `,
-        backgroundSize: "120px 120px",
-      }}
-    />
-  </div>
+  <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
+                  bg-gradient-to-tr from-[#4DA3FF]/35 to-transparent
+                  rotate-[-18deg] blur-3xl pointer-events-none" />
 
-  <div className="relative max-w-7xl mx-auto px-8">
+  {/* ================= NEON AXIS LINES ================= */}
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F4C430]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#4DA3FF]/25 blur-sm" />
 
-    {/* TOP GRID */}
-    <div className="grid lg:grid-cols-2 gap-20 items-center">
+  <div className="relative z-10 max-w-7xl mx-auto">
 
-      {/* LEFT */}
-      <div>
-        <h1 className="text-6xl font-bold text-white leading-tight neon-edge">
+    {/* ================= TOP GRID ================= */}
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+
+      {/* ================= LEFT CONTENT ================= */}
+      <div className="relative">
+
+        {/* vertical signal bar */}
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F4C430]
+                        shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
+
+        <h2 className="text-6xl font-extrabold leading-tight">
           Metals
-        </h1>
+        </h2>
 
-        <p className="mt-6 text-lg text-white max-w-xl">
+        <p className="mt-10 text-lg leading-relaxed text-white/75 max-w-xl">
           BeAM brings transparency, speed, and efficiency to the industrial
           metals trade. Whether you’re buying or selling steel, scrap, or
           alloys — our digital platforms simplify every step with trust,
           compliance, and traceability.
         </p>
 
-        {/* FEATURES */}
-        <div className="mt-14 space-y-8">
+        {/* ================= FEATURES ================= */}
+        <div className="mt-16 space-y-8">
 
           <div className="flex gap-5">
-            <BarChart3 className="w-7 h-7 text-green-400 mt-1" />
+            <BarChart3 className="w-7 h-7 text-[#1F7A5A] mt-1" />
             <div>
               <h4 className="font-semibold text-lg text-white">
                 Market Intelligence & Analytics
               </h4>
-              <p className="text-white">
+              <p className="text-white/70">
                 Price trends, bidder behavior, and trade data that empower
                 smarter, faster decisions.
               </p>
@@ -836,12 +840,12 @@ const Services = () => {
           </div>
 
           <div className="flex gap-5">
-            <ShieldCheck className="w-7 h-7 text-green-400 mt-1" />
+            <ShieldCheck className="w-7 h-7 text-[#1F7A5A] mt-1" />
             <div>
               <h4 className="font-semibold text-lg text-white">
                 Quality & Compliance Assurance
               </h4>
-              <p className="text-white">
+              <p className="text-white/70">
                 Audit trails, certifications, and digital documentation for
                 risk-free trading.
               </p>
@@ -849,12 +853,12 @@ const Services = () => {
           </div>
 
           <div className="flex gap-5">
-            <Settings className="w-7 h-7 text-green-400 mt-1" />
+            <Settings className="w-7 h-7 text-[#1F7A5A] mt-1" />
             <div>
               <h4 className="font-semibold text-lg text-white">
                 Seamless Execution Support
               </h4>
-              <p className="text-white">
+              <p className="text-white/70">
                 Logistics coordination, delivery tracking, and contract
                 lifecycle management.
               </p>
@@ -864,55 +868,69 @@ const Services = () => {
         </div>
       </div>
 
-      {/* RIGHT IMAGE */}
-      <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-green-400/20">
+      {/* ================= RIGHT VISUAL ================= */}
+      <div className="relative sticky top-20
+                      clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
+                      border border-[#4DA3FF]/30 rounded-2xl
+                      shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
+
         <img
           src={ten}
           alt="Metals Trading"
-          className="w-full h-[420px] object-cover"
+          className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
         />
 
-        <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur rounded-2xl p-6">
-          <p className="text-sm text-gray-700 font-medium">
-            Secure, transparent, and scalable digital trading for India’s
-            metals ecosystem.
-          </p>
-        </div>
+        <div className="absolute inset-0 bg-gradient-to-tr
+                        from-black/40 via-transparent to-black/30" />
       </div>
-
     </div>
 
-    {/* WHO WE SERVE */}
-    <div className="mt-40 text-center">
-      <h2 className="text-6xl font-bold text-white neon-edge">
-        Who We <span className="text-red-600">Serve</span>
-      </h2>
+    {/* ================= DIVIDER ================= */}
+    <div className="my-24 h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
-      <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
+    {/* ================= WHO WE SERVE ================= */}
+    <div>
+      <h3 className="text-6xl font-extrabold text-center mb-24">
+        Who We{" "}
+        <span className="text-[#1F7A5A] drop-shadow-[0_0_12px_rgba(31,122,90,0.6)]">
+          Serve
+        </span>
+      </h3>
 
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
         {[
-          { Icon: Factory, title: "Steel Manufacturers & Processors", desc: "Efficient sourcing and competitive metal sales." },
-          { Icon: Recycle, title: "Scrap Aggregators & Dealers", desc: "Wider reach with transparent price discovery." },
-          { Icon: Building2, title: "Infrastructure & Construction", desc: "Reliable bulk procurement of compliant steel." },
-          { Icon: Landmark, title: "Public Sector & Institutions", desc: "Auditable and transparent procurement workflows." }
-        ].map(({ Icon, title, desc }, i) => (
-          <div
-            key={i}
-            className="bg-white rounded-2xl p-8 shadow-md transition 
-            hover:shadow-[0_0_30px_rgba(34,197,94,0.35)]
-            hover:-translate-y-1 border border-transparent hover:border-green-400"
-          >
-            <Icon className="w-8 h-8 text-green-600 mx-auto mb-4" />
-            <h4 className="font-semibold text-black">{title}</h4>
-            <p className="mt-2 text-gray-600 text-sm">{desc}</p>
-          </div>
-        ))}
-
+          { icon: Factory, label: "Steel Manufacturers & Processors" },
+          { icon: Recycle, label: "Scrap Aggregators & Dealers" },
+          { icon: Building2, label: "Infrastructure & Construction" },
+          { icon: Landmark, label: "Public Sector & Institutions" },
+        ].map((item, i) => {
+          const Icon = item.icon;
+          return (
+            <div
+              key={i}
+              className="group p-10 text-center
+                         bg-white/5 backdrop-blur-xl
+                         border border-white/10 rounded-2xl
+                         clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
+                         hover:border-[#F4C430]/60
+                         shadow-[0_20px_60px_rgba(0,0,0,0.5)]
+                         transition-all"
+            >
+              <Icon className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
+                               group-hover:text-[#F4C430]
+                               transition-colors" />
+              <p className="font-medium text-white/90 leading-snug">
+                {item.label}
+              </p>
+            </div>
+          );
+        })}
       </div>
     </div>
 
   </div>
 </section>
+
 
 
 <section className="relative bg-white py-32 overflow-hidden">
