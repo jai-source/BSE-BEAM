@@ -150,8 +150,8 @@ const Services = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="relative"
     >
-      <div className="absolute -inset-6 rotate-3 bg-[#123E32] ml-32 opacity-60 rounded-[28px]" />
-      <div className="absolute -inset-6 -rotate-2 border ml-32 border-[#4DA3FF]/40 rounded-[28px]" />
+      <div className="absolute -inset-6 rotate-3 bg-white ml-32 opacity-60 rounded-[28px]" />
+      <div className="absolute -inset-6 -rotate-2 border ml-32 border-white rounded-[28px]" />
 
       <img
         src={plant}
