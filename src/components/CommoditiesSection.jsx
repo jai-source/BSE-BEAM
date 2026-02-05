@@ -41,7 +41,7 @@ export default function CommoditiesSection() {
           {commodities.map(({ name, icon: Icon }) => (
             <div
               key={name}
-              className="group flex flex-col items-center gap-4 text-theme-text-primary/80 transition"
+              className="group flex flex-col items-center gap-4 text-theme-text-primary opacity-80 group-hover:opacity-100 transition"
             >
               {/* ICON WRAPPER */}
               <div

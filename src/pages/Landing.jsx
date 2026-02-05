@@ -7,6 +7,7 @@ import triangleLarge from "../Assets/triangle-large.svg";
 import triangleOutline from "../Assets/triangle-inverted-small-outline.svg";
 import torn from "../Assets/Image-7-Banner-Image-scaled.jpg"
 import Coil from "../components/Coil";
+import CommoditiesSection from "../components/CommoditiesSection";
 import heroVideo from "../Assets/VIDEO.mp4";
 import backgroundimage from "../Assets/backgroundimage.png";
 import { motion } from "framer-motion";
@@ -701,40 +702,8 @@ function Landing() {
     </div>
   </div>
 </section>
-<section className="bg-theme-primary py-28">
-  <div className="max-w-7xl mx-auto px-8 text-center text-theme-text-primary">
 
-    <h2 className="text-4xl font-semibold mb-16">
-      Commodities <span className="text-theme-accent">We Trade</span>
-    </h2>
-
-    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-12 text-theme-text-primary/80">
-      
-      {[
-        "Paddy",
-        "Coarse Grains",
-        "Sugar",
-        "Rice",
-        "Oil Seeds",
-        "Corn",
-        "Wheat",
-        "Biofuels",
-        "Fruits & Vegetables",
-        "Spices",
-        "Pulses",
-      ].map(item => (
-        <div
-          key={item}
-          className="flex flex-col items-center gap-3 hover:text-theme-text-primary transition"
-        >
-          <div className="w-12 h-12 rounded-full bg-theme-text-primary/10" />
-          <span className="text-sm">{item}</span>
-        </div>
-      ))}
-
-    </div>
-  </div>
-</section>
+<CommoditiesSection />
 
 <footer className="bg-[#081f18] text-white pt-20">
 
