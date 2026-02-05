@@ -1,7 +1,5 @@
 import heroImage from "../Assets/main.png"
 import tech from "../Assets/tech.jpg";
-import CommoditiesSection from "../components/CommoditiesSection";
-
 import supply from "../Assets/supply.jpg";
 import finance from "../Assets/finance.jpg";
 import hexagon from "../Assets/hexagon-multiple.svg";
@@ -86,7 +84,7 @@ function Landing() {
     </h1>
 
     <p className="mt-6 max-w-2xl text-white/80 text-base">
-      Empowering sexual stakeholders with satellite imagery,
+      Empowering agricultural stakeholders with satellite imagery,
       market intelligence, and advanced analytics to optimize yield,
       mitigate risk, and drive informed decisions at scale.
     </p>
@@ -703,7 +701,40 @@ function Landing() {
     </div>
   </div>
 </section>
-<CommoditiesSection/>
+<section className="bg-theme-primary py-28">
+  <div className="max-w-7xl mx-auto px-8 text-center text-theme-text-primary">
+
+    <h2 className="text-4xl font-semibold mb-16">
+      Commodities <span className="text-theme-accent">We Trade</span>
+    </h2>
+
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-12 text-theme-text-primary/80">
+      
+      {[
+        "Paddy",
+        "Coarse Grains",
+        "Sugar",
+        "Rice",
+        "Oil Seeds",
+        "Corn",
+        "Wheat",
+        "Biofuels",
+        "Fruits & Vegetables",
+        "Spices",
+        "Pulses",
+      ].map(item => (
+        <div
+          key={item}
+          className="flex flex-col items-center gap-3 hover:text-theme-text-primary transition"
+        >
+          <div className="w-12 h-12 rounded-full bg-theme-text-primary/10" />
+          <span className="text-sm">{item}</span>
+        </div>
+      ))}
+
+    </div>
+  </div>
+</section>
 
 <footer className="bg-[#081f18] text-white pt-20">
 
