@@ -10,7 +10,8 @@ import data from "../Assets/data.png";
 import tradefinance from "../Assets/tradefinance.png";
 import metals from "../Assets/metals.png";
 import tradeconnect from "../Assets/tradeconnect.png";
-import React from "react";
+import React, { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import { Building, Users, Landmark, Handshake, FileChartColumnIncreasing } from "lucide-react";
 import { Globe, Leaf, Globe2, Truck,Zap, Layers, TrendingUp, FileText } from "lucide-react";
 import {
@@ -37,10 +38,26 @@ import {
   Rocket
 } from "lucide-react";
 const Services = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (!location.hash) return;
+
+    const targetId = decodeURIComponent(location.hash.slice(1));
+    const scrollToTarget = () => {
+      const el = document.getElementById(targetId);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+    };
+
+    requestAnimationFrame(() => requestAnimationFrame(scrollToTarget));
+  }, [location.hash]);
+
   return (
     <>
       {/* HERO SECTION */}
-     <section className="relative py-48 overflow-hidden">
+     <section id="farm-gate" className="relative py-48 overflow-hidden scroll-mt-24">
 
   {/* Background Image with brightness filter */}
   <div className="absolute inset-0" style={{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.6)' }} />
@@ -165,7 +182,7 @@ const Services = () => {
 </section>
 
 
-  <section className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white ">
+  <section id="public-sector" className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white scroll-mt-24 ">
 
   {/* ================= SUBTLE DATA GRID ================= */}
   <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
@@ -319,7 +336,7 @@ const Services = () => {
 </section>
 
 
-  <section className="relative bg-[#F7FBF9] py-32 text-[#0B2F26] ">
+  <section id="trade-connect" className="relative bg-[#F7FBF9] py-32 text-[#0B2F26] scroll-mt-24 ">
 
   {/* subtle grid (softer) */}
   <div className="absolute inset-0 opacity-[0.05]
@@ -483,7 +500,7 @@ const Services = () => {
 
 
 
-<section className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white">
+<section id="data-analytics-and-consulting" className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white scroll-mt-24">
 
   {/* ================= SUBTLE DATA GRID ================= */}
   <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
@@ -645,7 +662,7 @@ const Services = () => {
 
   </div>
 </section>
-<section className="relative bg-[#F7FBF9] py-40  text-[#0B2F26]">
+<section id="financial-float-trade" className="relative bg-[#F7FBF9] py-40  text-[#0B2F26] scroll-mt-24">
 
   {/* subtle finance grid */}
   <div className="absolute inset-0 opacity-[0.05]
@@ -790,7 +807,7 @@ const Services = () => {
   </div>
 </section>
 
- <section className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white">
+ <section id="metals" className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white scroll-mt-24">
 
   {/* ================= SUBTLE DATA GRID ================= */}
   <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
@@ -942,7 +959,7 @@ const Services = () => {
 
 
 
-<section className="relative bg-white py-32 ">
+<section id="bioenergy" className="relative bg-white py-32 scroll-mt-24 ">
 
   {/* soft decorative geometry */}
   <div className="absolute -top-48 -left-48 w-[520px] h-[520px] bg-emerald-400/10 rounded-full blur-[140px]" />

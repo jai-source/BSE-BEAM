@@ -1,51 +1,68 @@
 import heroImage from "../Assets/main.png"
-import tech from "../Assets/tech.jpg";
-import supply from "../Assets/supply.jpg";
-import finance from "../Assets/finance.jpg";
+import tech from "../public/pillar1.png";
+import supply from "../public/pillar2.png";
+import finance from "../public/pillar3.png";
 import hexagon from "../Assets/hexagon-multiple.svg";
 import triangleLarge from "../Assets/triangle-large.svg";
 import triangleOutline from "../Assets/triangle-inverted-small-outline.svg";
-import torn from "../Assets/Image-7-Banner-Image-scaled.jpg"
+import farmerIMG from "../public/farmerIMG.png";
+import tradeConnectIcon from "../public/offerings/presentation-19.svg";
+import farmGateIcon from "../public/offerings/competence.svg";
+import bioenergyIcon from "../public/offerings/Construction.svg";
+import metalsIcon from "../public/offerings/managment.svg";
+import financialFloatTradeIcon from "../public/offerings/presentation.svg";
+import dataAnalyticsIcon from "../public/offerings/database.svg";
+import publicSectorIcon from "../public/offerings/target.svg";
 import Coil from "../components/Coil";
 import CommoditiesSection from "../components/CommoditiesSection";
 import heroVideo from "../Assets/VIDEO.mp4";
 import backgroundimage from "../Assets/backgroundimage.png";
 import { motion } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
-
-import {
-  Factory,
-  Leaf,
-  Wheat,
-  Shuffle,
-  BarChart3
-} from "lucide-react";
+import { Link } from "react-router-dom";
 const offerings = [
   {
-    title: "Metals",
-    desc: "Efficient procurement and disposal of steel, scrap, and industrial metals.",
-    icon: Factory
-  },
-  {
-    title: "Bioenergy",
-    desc: "Biomass sourcing enabled through verified farm-gate networks.",
-    icon: Leaf
+    title: "Trade Connect",
+    desc: "Digitally facilitated auctions and agri-commodity trade services.",
+    icon: tradeConnectIcon,
+    hash: "trade-connect",
   },
   {
     title: "Farm Gate",
     desc: "Direct access to farmers with transparent pricing and logistics.",
-    icon: Wheat
+    icon: farmGateIcon,
+    hash: "farm-gate",
   },
   {
-    title: "Trade Connect",
-    desc: "Digitally facilitated auctions and agri-commodity trade services.",
-    icon: Shuffle
+    title: "Bioenergy",
+    desc: "Biomass sourcing enabled through verified supply networks.",
+    icon: bioenergyIcon,
+    hash: "bioenergy",
   },
   {
-    title: "Market Intelligence",
-    desc: "Data-backed insights powered by analytics and research.",
-    icon: BarChart3
-  }
+    title: "Metals",
+    desc: "Efficient procurement and disposal of steel, scrap, and industrial metals.",
+    icon: metalsIcon,
+    hash: "metals",
+  },
+  {
+    title: "Financial float trade",
+    desc: "Structured settlement and financing support for trade flows.",
+    icon: financialFloatTradeIcon,
+    hash: "financial-float-trade",
+  },
+  {
+    title: "Data analytics and consulting",
+    desc: "Insights and advisory powered by reliable data and analytics.",
+    icon: dataAnalyticsIcon,
+    hash: "data-analytics-and-consulting",
+  },
+  {
+    title: "Public sector",
+    desc: "Transparent procurement programs and government-led initiatives.",
+    icon: publicSectorIcon,
+    hash: "public-sector",
+  },
 ];
 
 function Landing() {
@@ -211,8 +228,8 @@ function Landing() {
         </motion.div>
       </motion.div>
 
-      {/* RIGHT – FULL HEIGHT LEFT-TORN IMAGE */}
-      <div className="relative ml-auto w-full max-w-[520px] h-full self-start">
+      {/* RIGHT – FULL-SCREEN LEFT-TORN IMAGE (Desktop) */}
+      <div className="relative ml-auto w-full max-w-[520px] aspect-[4/5] self-center lg:ml-0 lg:mr-[calc(50%-50vw)] lg:self-start lg:sticky lg:top-24 lg:h-[calc(100vh-6rem)] lg:w-full lg:max-w-none lg:aspect-auto">
 
 
         {/* SOFT EDGE GLOW */}
@@ -274,9 +291,9 @@ function Landing() {
           />
 
           <img
-            src={torn}
-            alt="visual"
-            className="w-full h-full object-cover saturate-[0.95] contrast-[0.96]"
+            src={farmerIMG}
+            alt="Farmer"
+            className="w-full h-full object-cover object-center"
           />
         </div>
       </div>
@@ -514,31 +531,31 @@ function Landing() {
 
   <div className="carousel-track flex gap-14 w-max">
 
-    {[
-      "Farm Gate",
-      "Trade Connect",
-      "Market Intelligence",
-      "Bioenergy",
-      "Farm Gate",
-      "Trade Connect",
-      "Market Intelligence",
-      "Bioenergy",
-    ].map((title, i) => (
-      <div key={i} className="min-w-[320px] group"> <div className=" relative rounded-3xl p-8 bg-white border border-[#0B3B2E]/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_70px_-30px_rgba(11,59,46,0.35)] " >
+    {[...offerings, ...offerings].map(({ title, desc, icon, hash }, i) => (
+      <div key={`${title}-${i}`} className="min-w-[320px] group">
+        <div className=" relative rounded-3xl p-8 bg-white border border-[#0B3B2E]/10 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_70px_-30px_rgba(11,59,46,0.35)] " >
           {/* neon accent strip */}
           <div className="absolute top-0 left-6 w-14 h-[3px] bg-emerald-500 rounded-full shadow-[0_0_12px_rgba(16,185,129,0.6)]" />
 
-          <h3 className="text-xl font-semibold text-[#0B3B2E] mb-3 mt-2">
-            {title}
-          </h3>
+          <div className="mt-2 mb-4 flex items-center gap-4">
+            <div className="w-12 h-12 rounded-2xl bg-[#0B3B2E]/5 border border-[#0B3B2E]/10 flex items-center justify-center">
+              <img src={icon} alt="" className="w-7 h-7" />
+            </div>
+            <h3 className="text-xl font-semibold text-[#0B3B2E]">
+              {title}
+            </h3>
+          </div>
 
           <p className="text-sm text-[#5F7F75] leading-relaxed mb-6">
-            Direct access to farmers with transparent pricing and logistics.
+            {desc}
           </p>
 
-          <span className="text-sm font-medium text-emerald-600">
+          <Link
+            to={`/services#${hash}`}
+            className="text-sm font-medium text-emerald-600"
+          >
             Explore →
-          </span>
+          </Link>
         </div>
       </div>
     ))}
@@ -683,21 +700,143 @@ function Landing() {
     </p>
 
     <div className="relative overflow-hidden">
-      <div className="flex w-max animate-partners-scroll gap-20 text-theme-text-muted font-medium tracking-wide">
-        <span>DUV</span>
-        <span>KRIBHCO</span>
-        <span>COFCO</span>
-        <span>NCDEX</span>
-        <span>ROQUETTE</span>
-        <span>McDonald Polz</span>
+      <div className="flex w-max items-center animate-partners-scroll gap-20 text-theme-text-muted font-medium tracking-wide">
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/SUFI.png", import.meta.url).href}
+            alt="SUFI"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
 
-        {/* duplicate */}
-        <span>DUV</span>
-        <span>KRIBHCO</span>
-        <span>COFCO</span>
-        <span>NCDEX</span>
-        <span>ROQUETTE</span>
-        <span>McDonald Polz</span>
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/Dalmia.png", import.meta.url).href}
+            alt="Dalmia"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/Ananda.png", import.meta.url).href}
+            alt="Ananda"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/Olam.png", import.meta.url).href}
+            alt="Olam"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/cargill.png", import.meta.url).href}
+            alt="Cargill"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/ICICI-Bank.png", import.meta.url).href}
+            alt="ICICI Bank"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/SBI.png", import.meta.url).href}
+            alt="SBI"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/aurionpro.png", import.meta.url).href}
+            alt="aurionpro"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/LDC.png", import.meta.url).href}
+            alt="LDC"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/shree-renuka.png", import.meta.url).href}
+            alt="Shri Renuka Sugers"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/cofco.png", import.meta.url).href}
+            alt="Cofco"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/NCCF-1.png", import.meta.url).href}
+            alt="NCCF"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/kribhco.png", import.meta.url).href}
+            alt="Kribhco"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/Roquette.png", import.meta.url).href}
+            alt="ROQUETTE"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
+
+        <span className="inline-flex items-center">
+          <img
+            src={new URL("../public/OurPartners/McDonald.png", import.meta.url).href}
+            alt="McDonald Pelz"
+            className="h-14 md:h-16 w-auto max-w-[220px] object-contain opacity-90"
+            loading="lazy"
+          />
+        </span>
       </div>
     </div>
   </div>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0B3B2E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" shape-rendering="geometricPrecision">
+  <!-- Management / Metals -->
+  <rect x="5" y="7" width="14" height="12" rx="2" />
+  <path d="M9 7V6.2c0-1 0.8-1.8 1.8-1.8h2.4C14.2 4.4 15 5.2 15 6.2V7" />
+  <path d="M9 13l2 2 4-5" />
+  <path d="M7.5 11.2h0.01" />
+  <path d="M16.5 11.2h0.01" />
+</svg>

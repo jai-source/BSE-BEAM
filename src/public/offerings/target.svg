@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#0B3B2E" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" shape-rendering="geometricPrecision">
+  <!-- Target / Public sector -->
+  <circle cx="12" cy="12" r="8" />
+  <circle cx="12" cy="12" r="4" />
+  <path d="M12 12l6-6" />
+  <path d="M16.3 6H18v1.7" />
+</svg>

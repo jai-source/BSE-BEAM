@@ -1,11 +1,9 @@
 import logo from "../Assets/logoo.png";
 import { Link } from 'react-router-dom'
-import { useTheme } from '../context/ThemeContext'
-import { Palette, Menu, X } from 'lucide-react'
+import { Menu, X } from 'lucide-react'
 import { useState, useEffect } from 'react'
 
 function Navbar() {
-  const { theme, toggleTheme } = useTheme();
   const [scrolled, setScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
@@ -61,16 +59,6 @@ function Navbar() {
 
         {/* ACTIONS */}
         <div className="flex items-center gap-3">
-          {/* Theme Toggle Button */}
-          <button 
-            onClick={toggleTheme}
-            className="group flex items-center gap-2 bg-white/10 backdrop-blur-md text-white px-4 py-2.5 rounded-full text-sm font-medium hover:bg-white/20 transition-all duration-300 border border-white/20 hover:border-white/40 hover:scale-105 transform shadow-lg"
-            title={`Switch to ${theme === 'green-white' ? 'Blue-Red-Yellow' : 'Green-White'} theme`}
-          >
-            <Palette size={16} className="group-hover:rotate-180 transition-transform duration-500" />
-            <span className="hidden xl:inline">Theme</span>
-          </button>
-          
           <button className="hidden md:block bg-gradient-to-r from-white to-white/90 text-[var(--color-button-text)] px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-2xl hover:shadow-white/30 transition-all duration-300 hover:scale-105 transform">
             Become a Member
           </button>
