@@ -21,7 +21,7 @@ function Navbar() {
         <li className="hover:text-white cursor-pointer transition"><Link to="/services">Services</Link></li>
         <li className="hover:text-white cursor-pointer transition"><Link to="/investors">Investors</Link></li>
         <li className="hover:text-white cursor-pointer transition"><Link to="/circulars">Circulars</Link></li>
-        <li className="hover:text-white cursor-pointer transition"><Link to="/compliance">Compliance</Link></li>
+        
         <li className="hover:text-white cursor-pointer transition"><Link to="/contact">Contact Us</Link></li>
       </ul>
 
