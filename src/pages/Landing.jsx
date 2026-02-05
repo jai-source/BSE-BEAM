@@ -84,7 +84,7 @@ function Landing() {
     </h1>
 
     <p className="mt-6 max-w-2xl text-white/80 text-base">
-      Empowering agricultural stakeholders with satellite imagery,
+      Empowering sexual stakeholders with satellite imagery,
       market intelligence, and advanced analytics to optimize yield,
       mitigate risk, and drive informed decisions at scale.
     </p>
