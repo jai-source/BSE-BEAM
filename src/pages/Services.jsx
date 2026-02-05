@@ -1069,7 +1069,90 @@ const Services = () => {
 
   </div>
 </section>
-<footer className="bg-theme-primary text-theme-text-primary pt-20">
+
+{/* ================= COMPLIANCE SECTION ================= */}
+<section className="relative bg-white py-32 lg:py-40 overflow-hidden">
+  {/* Background decoration */}
+  <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-theme-accent to-transparent" />
+  
+  <div className="max-w-5xl mx-auto px-8 lg:px-16">
+    {/* Section Header */}
+    <div className="text-center mb-16">
+      <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-theme-highlight/10 border border-theme-highlight/20 text-theme-highlight text-sm font-semibold tracking-wide uppercase mb-6">
+        <svg className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+        </svg>
+        Governance & Transparency
+      </div>
+      <h2 className="text-5xl md:text-6xl font-black leading-tight mb-4">
+        <span className="text-theme-accent">Compliance</span>
+      </h2>
+    </div>
+
+    {/* Content blocks */}
+    <div className="space-y-16">
+      {/* Block 1 */}
+      <div className="group">
+        <div className="relative pl-12 border-l-4 border-theme-highlight hover:border-theme-accent transition-colors duration-300">
+          <div className="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-theme-highlight group-hover:bg-theme-accent transition-colors duration-300 ring-4 ring-white shadow-lg" />
+          
+          <p className="text-2xl lg:text-3xl font-light leading-relaxed text-[#2F4F43]">
+            At <span className="font-bold text-theme-highlight">BSE E-Agricultural Markets (BEAM)</span>, 
+            we uphold the <span className="font-semibold text-theme-accent">highest standards of governance, 
+            transparency, and accountability</span> in every aspect of our operations. As part of the 
+            BSE ecosystem, our platforms, processes, and transactions adhere to all applicable 
+            <span className="font-semibold text-theme-highlight"> legal, regulatory, and policy frameworks</span> governing 
+            commodity spot markets in India.
+          </p>
+        </div>
+      </div>
+
+      {/* Block 2 */}
+      <div className="group">
+        <div className="relative pl-12 border-l-4 border-theme-accent hover:border-theme-highlight transition-colors duration-300">
+          <div className="absolute -left-[13px] top-0 w-6 h-6 rounded-full bg-theme-accent group-hover:bg-theme-highlight transition-colors duration-300 ring-4 ring-white shadow-lg" />
+          
+          <p className="text-2xl lg:text-3xl font-light leading-relaxed text-[#2F4F43]">
+            We are committed to <span className="font-bold text-theme-accent">maintaining institutional integrity</span>, 
+            ensuring <span className="font-semibold text-theme-highlight">data security</span>, and operating within a 
+            fully <span className="font-semibold text-theme-accent">compliant, audit-ready environment</span> — 
+            reinforcing trust among all stakeholders, from 
+            <span className="font-semibold text-theme-highlight"> government bodies and corporates to farmers and investors</span>.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    {/* Download Button */}
+    <div className="mt-20 flex justify-center">
+      <a 
+        href="#download" 
+        className="group relative inline-flex items-center gap-4 px-10 py-5 bg-gradient-to-r from-theme-highlight to-theme-accent rounded-2xl overflow-hidden shadow-2xl hover:shadow-[0_20px_60px_rgba(124,207,154,0.4)] transition-all duration-500 hover:scale-105"
+      >
+        {/* Animated background effect */}
+        <div className="absolute inset-0 bg-gradient-to-r from-theme-accent to-theme-highlight opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+        
+        {/* Content */}
+        <div className="relative flex items-center gap-4">
+          <div className="p-3 bg-white/10 rounded-xl group-hover:bg-white/20 transition-colors duration-300">
+            <svg className="w-7 h-7 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
+            </svg>
+          </div>
+          <div className="text-left">
+            <p className="text-white font-bold text-xl tracking-wide">Download Form 5A</p>
+            <p className="text-white/70 text-sm mt-1">Compliance Documentation</p>
+          </div>
+        </div>
+        
+        {/* Shine effect */}
+        <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/20 to-transparent" />
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer className="bg-[#081f18] text-white pt-20">
 
   <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 
@@ -1078,7 +1161,7 @@ const Services = () => {
       <h4 className="font-semibold mb-4">
         BSE E-Agricultural Markets Limited
       </h4>
-      <p className="text-white/70 text-sm leading-relaxed">
+      <p className="text-theme-text-primary/70 text-sm leading-relaxed">
         Delivering value across agri-commodity ecosystems through transparent,
         secure, and scalable market infrastructure.
       </p>
@@ -1087,7 +1170,7 @@ const Services = () => {
     {/* Links */}
     <div>
       <h4 className="font-semibold mb-4">Company</h4>
-      <ul className="space-y-2 text-sm text-white/70">
+      <ul className="space-y-2 text-sm text-theme-text-primary/70">
         <li>About Us</li>
         <li>Platforms</li>
         <li>Services</li>
@@ -1099,9 +1182,8 @@ const Services = () => {
     {/* Quick Links */}
     <div>
       <h4 className="font-semibold mb-4">Quick Links</h4>
-      <ul className="space-y-2 text-sm text-white/70">
+      <ul className="space-y-2 text-sm text-theme-text-primary/70">
         <li>Circulars</li>
-        <li>Privacy Policy</li>
         <li>Contact</li>
         <li>Become a Member</li>
         <li>Live Auctions</li>
@@ -1112,17 +1194,17 @@ const Services = () => {
     <div>
       <h4 className="font-semibold mb-4">Connect</h4>
       <div className="flex gap-4">
-        <div className="w-9 h-9 rounded-full bg-white/10" />
-        <div className="w-9 h-9 rounded-full bg-white/10" />
-        <div className="w-9 h-9 rounded-full bg-white/10" />
-        <div className="w-9 h-9 rounded-full bg-white/10" />
+        <div className="w-9 h-9 rounded-full bg-theme-text-primary/10" />
+        <div className="w-9 h-9 rounded-full bg-theme-text-primary/10" />
+        <div className="w-9 h-9 rounded-full bg-theme-text-primary/10" />
+        <div className="w-9 h-9 rounded-full bg-theme-text-primary/10" />
       </div>
     </div>
 
   </div>
 
   {/* Bottom Bar */}
-  <div className="border-t border-white/10 py-6 text-center text-xs text-white/60">
+  <div className="border-t border-theme-text-primary/10 py-6 text-center text-xs text-theme-text-primary/60">
     © 2026 BSE E-Agricultural Markets Limited. All rights reserved.
   </div>
 </footer>

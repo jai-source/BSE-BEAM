@@ -85,7 +85,9 @@ const DownloadsAccordion = () => {
                 isOpen ? 'translate-x-4 translate-y-4' : 'translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3'
               }`} />
               
-              <div className="relative bg-theme-primary border-2 border-theme-highlight/20 hover:border-theme-highlight/40 transition-all duration-300">
+
+              
+              <div className="relative bg-theme-primary border-2 border-theme-highlight/20 hover:border-theme-highlight/40 transition-all duration-300 group-hover:scale-[1.02] transform-gpu">
                 {/* Header - Clickable */}
                 <button
                   onClick={() => toggleSection(section.id)}
@@ -145,22 +147,26 @@ const DownloadsAccordion = () => {
                         {section.items.map((item, i) => (
                           <li key={i} className="group/item relative">
                             <div className="absolute inset-0 bg-theme-highlight/5 translate-x-0 translate-y-0 group-hover/item:translate-x-1 group-hover/item:translate-y-1 transition-transform opacity-0 group-hover/item:opacity-100" />
-                            <div className="relative flex items-center justify-between p-4 border-l-2 border-theme-highlight/0 hover:border-theme-highlight transition-all duration-300 cursor-pointer">
+                            <a 
+                              href="#download" 
+                              onClick={(e) => { e.preventDefault(); alert(`Downloading: ${item.title}`); }}
+                              className="relative flex items-center justify-between p-4 border-l-2 border-theme-highlight/0 hover:border-theme-highlight transition-all duration-300 cursor-pointer group-hover/item:bg-theme-highlight/5"
+                            >
                               <div className="flex items-center gap-4">
-                                <div className="w-2 h-2 bg-theme-highlight/50" />
+                                <div className="w-2 h-2 bg-theme-highlight/50 group-hover/item:animate-pulse" />
                                 <div className="flex-1">
                                   <span className="text-theme-text-primary font-medium group-hover/item:text-theme-highlight transition-colors">{item.title}</span>
                                 </div>
-                                <div className="px-3 py-1 border border-theme-highlight/30 text-xs font-mono text-theme-highlight/60">
+                                <div className="px-3 py-1 border border-theme-highlight/30 text-xs font-mono text-theme-highlight/60 group-hover/item:border-theme-highlight group-hover/item:bg-theme-highlight/10">
                                   FY {item.year}
                                 </div>
                               </div>
                               <div className="flex items-center gap-3 ml-4">
-                                <svg className="w-5 h-5 text-theme-text-primary/30 group-hover/item:text-theme-highlight transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg className="w-5 h-5 text-theme-text-primary/30 group-hover/item:text-theme-highlight transition-colors group-hover/item:animate-bounce" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
                                 </svg>
                               </div>
-                            </div>
+                            </a>
                           </li>
                         ))}
                       </ul>
@@ -188,14 +194,16 @@ const CollapsibleDownloads = () => {
           <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="relative w-full bg-theme-primary border-2 border-theme-highlight/20 hover:border-theme-highlight transition-all duration-300 p-8 md:p-12"
+            className="relative w-full bg-theme-primary border-2 border-theme-highlight/20 hover:border-theme-highlight transition-all duration-300 p-8 md:p-12 group-hover:scale-[1.02] transform-gpu overflow-hidden"
           >
+            {/* Animated sweep effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-theme-highlight/10 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000" />
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-8">
                 <div className="relative">
                   <div className="absolute inset-0 bg-theme-highlight/10 translate-x-1 translate-y-1" />
-                  <div className="relative w-20 h-20 bg-theme-highlight/10 border-2 border-theme-highlight/30 flex items-center justify-center">
-                    <svg className="w-10 h-10 text-theme-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="relative w-20 h-20 bg-theme-highlight/10 border-2 border-theme-highlight/30 flex items-center justify-center group-hover:animate-bounce">
+                    <svg className="w-10 h-10 text-theme-highlight relative z-10 group-hover:scale-125 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                     </svg>
                   </div>
@@ -216,8 +224,8 @@ const CollapsibleDownloads = () => {
                   <div className="text-sm text-theme-highlight font-bold">10 Documents</div>
                 </div>
                 
-                <div className={`w-16 h-16 border-2 flex items-center justify-center transition-all duration-500 ${
-                  isOpen ? 'border-theme-highlight bg-theme-highlight/20 rotate-180' : 'border-theme-highlight/30 rotate-0'
+                <div className={`w-16 h-16 border-2 flex items-center justify-center transition-all duration-500 group-hover:scale-110 ${
+                  isOpen ? 'border-theme-highlight bg-theme-highlight/20 rotate-180 animate-pulse' : 'border-theme-highlight/30 rotate-0 group-hover:animate-bounce'
                 }`}>
                   <svg className="w-8 h-8 text-theme-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M19 9l-7 7-7-7" />
@@ -244,14 +252,12 @@ function Investors() {
     <div className="relative w-full min-h-screen overflow-hidden text-theme-text-primary bg-theme-page-bg selection:bg-theme-highlight/30 font-sans">
 
       {/* ================= GLOBAL BACKGROUND FX ================= */}
-      <div className="fixed inset-0 z-0 pointer-events-none">
-        {/* Dynamic Aurora-like Gradients */}
-        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-theme-highlight/10 rounded-full blur-[120px] animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-green-500/10 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_reverse]" />
-        <div className="absolute top-1/2 left-1/2 w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[120px] animate-[pulse_10s_ease-in-out_infinite]" style={{animationDelay: '2s'}} />
-        
-        {/* Noise Texture */}
-        <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.04] mix-blend-overlay" />
+      <div className="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+        {/* Subtle grid pattern */}
+        <div className="absolute inset-0 opacity-[0.02]" style={{
+          backgroundImage: 'linear-gradient(rgba(124, 207, 154, 0.2) 1px, transparent 1px), linear-gradient(90deg, rgba(124, 207, 154, 0.2) 1px, transparent 1px)',
+          backgroundSize: '80px 80px'
+        }} />
       </div>
 
       {/* ================= HERO SECTION ================= */}
@@ -269,7 +275,7 @@ function Investors() {
 
         <div className="relative z-30 max-w-6xl px-12 pb-24">
           <FadeIn>
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-theme-text-primary/5 border border-theme-text-primary/10 backdrop-blur-md text-theme-highlight text-sm font-semibold tracking-wide uppercase hover:bg-theme-text-primary/10 transition-colors cursor-default mb-6">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-theme-highlight/10 border border-theme-highlight/20 text-theme-highlight text-sm font-semibold tracking-wide uppercase hover:bg-theme-highlight/20 transition-colors cursor-default mb-6">
               <span className="relative flex h-2 w-2">
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-highlight opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-highlight"></span>
@@ -279,9 +285,12 @@ function Investors() {
           </FadeIn>
 
           <FadeIn delay={200}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight max-w-4xl">
-              <span className="font-semibold text-transparent bg-clip-text bg-gradient-to-r from-theme-highlight via-theme-accent to-theme-text-primary bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite]">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight max-w-4xl group relative">
+              <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-theme-highlight via-theme-accent to-theme-text-primary bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite] relative inline-block hover:scale-105 transition-transform duration-500">
                 Investor Relations
+                {/* Glitch layers */}
+                <span className="absolute inset-0 text-theme-highlight opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(-2px, -2px)', mixBlendMode: 'screen', zIndex: -1}}>Investor Relations</span>
+                <span className="absolute inset-0 text-theme-accent opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(2px, 2px)', mixBlendMode: 'screen', zIndex: -1, animationDelay: '150ms'}}>Investor Relations</span>
               </span>
             </h1>
           </FadeIn>
@@ -295,11 +304,7 @@ function Investors() {
       </section>
 
       {/* ================= STATS / HIGHLIGHTS STRIP - UNIQUE DESIGN ================= */}
-      <section className="relative z-20 py-20 bg-gradient-to-r from-theme-bg-secondary via-theme-primary to-theme-bg-secondary overflow-hidden">
-        <div className="absolute inset-0 opacity-20">
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/20 rounded-full blur-[100px] animate-pulse" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/20 rounded-full blur-[100px] animate-pulse" style={{animationDelay: '1s'}} />
-        </div>
+      <section className="relative z-20 py-20 bg-theme-primary overflow-hidden">
         <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-8">
           {[
             { label: "Growth YoY", value: "45", suffix: "%", color: "from-blue-400 to-cyan-400" },
@@ -307,13 +312,16 @@ function Investors() {
             { label: "Transparency", value: "100", suffix: "%", color: "from-emerald-400 to-teal-400" },
             { label: "SEBI", value: "✓", suffix: "Regulated", color: "from-amber-400 to-orange-400" },
           ].map((stat, i) => (
-            <div key={i} className="relative group">
-              <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
-              <div className="relative bg-theme-primary border-2 border-theme-highlight/20 p-8 text-center group-hover:border-theme-highlight transition-all duration-300">
-                <h3 className={`text-5xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent`}>
+            <div key={i} className="relative group perspective-1000">
+              <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-500" />
+              <div className="relative bg-theme-primary border-2 border-theme-highlight/20 p-8 text-center group-hover:border-theme-highlight transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2 group-hover:shadow-[0_20px_50px_rgba(124,207,154,0.3)] transform-gpu">
+                <div className="absolute inset-0 bg-gradient-to-br from-theme-highlight/0 via-theme-highlight/10 to-theme-highlight/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-[shimmer_2s_linear_infinite]" />
+                <h3 className={`text-5xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent group-hover:scale-125 transition-transform duration-500 animate-[bounce_2s_ease-in-out_infinite]`}>
                   {stat.value}<span className="text-3xl">{stat.suffix}</span>
                 </h3>
-                <p className="text-sm font-medium text-theme-text-primary/70 uppercase tracking-wider">{stat.label}</p>
+                <p className="text-sm font-medium text-theme-text-primary/70 uppercase tracking-wider group-hover:text-theme-text-primary transition-colors">{stat.label}</p>
+                {/* Orbiting particles */}
+                <div className="absolute top-0 right-0 w-2 h-2 bg-theme-highlight rounded-full opacity-0 group-hover:opacity-100 group-hover:animate-[spin_3s_linear_infinite]" style={{transformOrigin: '-50px -50px'}} />
               </div>
             </div>
           ))}
@@ -340,10 +348,12 @@ function Investors() {
             <FadeIn delay={100}>
               <div className="group relative h-full">
                 <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
-                <div className="relative h-full bg-theme-primary p-8 border-2 border-theme-highlight/20 hover:border-theme-highlight transition-colors duration-300 flex flex-col">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 bg-theme-highlight/10 border-2 border-theme-highlight/30 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-theme-highlight" fill="currentColor" viewBox="0 0 640 512">
+                <div className="relative h-full bg-theme-primary p-8 border-2 border-theme-highlight/20 hover:border-theme-highlight transition-all duration-300 flex flex-col group-hover:shadow-[0_0_30px_rgba(124,207,154,0.4)] group-hover:scale-105 transform-gpu overflow-hidden">
+                  {/* Animated background gradient */}
+                  <div className="absolute inset-0 bg-gradient-to-br from-theme-highlight/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                  <div className="flex items-start justify-between mb-6 relative z-10">
+                    <div className="w-12 h-12 bg-theme-highlight/10 border-2 border-theme-highlight/30 flex items-center justify-center group-hover:rotate-12 group-hover:scale-125 transition-all duration-500">
+                      <svg className="w-6 h-6 text-theme-highlight group-hover:animate-bounce" fill="currentColor" viewBox="0 0 640 512">
                         <path d="M337.8 5.4C327-1.8 313-1.8 302.2 5.4L166.3 96H48C21.5 96 0 117.5 0 144V464c0 26.5 21.5 48 48 48H592c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H473.7L337.8 5.4zM256 416c0-35.3 28.7-64 64-64s64 28.7 64 64v32H256V416zM96 192h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V208c0-8.8 7.2-16 16-16zm0 128h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zM320 128a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM240 208c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H256c-8.8 0-16-7.2-16-16V208zm144-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H384c-8.8 0-16-7.2-16-16V208c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H480c-8.8 0-16-7.2-16-16V208zM240 336c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H256c-8.8 0-16-7.2-16-16V336zm144-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H384c-8.8 0-16-7.2-16-16V336c0-8.8 7.2-16 16-16zm80 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H480c-8.8 0-16-7.2-16-16V336z"/>
                       </svg>
                     </div>
@@ -366,10 +376,10 @@ function Investors() {
             <FadeIn delay={150}>
               <div className="group relative h-full">
                 <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
-                <div className="relative h-full bg-theme-primary p-8 border-2 border-theme-highlight/20 hover:border-theme-highlight transition-colors duration-300 flex flex-col">
-                  <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 bg-theme-highlight/10 border-2 border-theme-highlight/30 flex items-center justify-center">
-                      <Building2 className="w-6 h-6 text-theme-highlight" />
+                <div className="relative h-full bg-theme-primary p-8 border-2 border-theme-highlight/20 hover:border-theme-highlight transition-all duration-300 flex flex-col group-hover:scale-105 transform-gpu overflow-hidden">
+                  <div className="flex items-start justify-between mb-6 relative z-10">
+                    <div className="w-12 h-12 bg-theme-highlight/10 border-2 border-theme-highlight/30 flex items-center justify-center group-hover:rotate-12 group-hover:scale-125 transition-all duration-500">
+                      <Building2 className="w-6 h-6 text-theme-highlight group-hover:animate-bounce" />
                     </div>
                     <div className="text-xs font-mono text-theme-highlight/50">02</div>
                   </div>
@@ -495,11 +505,7 @@ function Investors() {
 
       {/* ================= STATUTORY DISCLOSURES AND GOVERNANCE ================= */}
       <section className="relative py-32 z-10 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-theme-primary via-theme-bg-secondary to-theme-primary" />
-        <div className="absolute inset-0">
-          <div className="absolute top-1/4 left-1/4 w-[600px] h-[600px] bg-cyan-500/10 rounded-full blur-[150px] animate-pulse" />
-          <div className="absolute bottom-1/4 right-1/4 w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[150px] animate-pulse" style={{animationDelay: '1s'}} />
-        </div>
+        <div className="absolute inset-0 bg-theme-primary" />
         <div className="relative max-w-6xl mx-auto px-6">
           <FadeIn>
             <div className="mb-20">
@@ -645,7 +651,7 @@ function Investors() {
       </section>
 
       {/* ================= SECTION 2: REPORTS & DISCLOSURES - HIDDEN DROPDOWN ================= */}
-      <section className="relative py-40 z-10 bg-gradient-to-b from-theme-primary via-theme-bg-secondary to-theme-primary">
+      <section className="relative py-40 z-10 bg-theme-primary">
         <div className="absolute inset-0 opacity-10">
           <div className="absolute top-20 right-1/3 w-[500px] h-[500px] bg-purple-500/30 rounded-full blur-[120px] animate-pulse" style={{animationDelay: '2s'}} />
           <div className="absolute bottom-20 left-1/4 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-[120px] animate-pulse" />
@@ -694,8 +700,8 @@ function Investors() {
       </section>
 
       {/* ================= INVESTOR RELATIONS CONTACT ================= */}
-      <section className="relative py-24 z-10">
-        <div className="absolute inset-0 bg-gradient-to-b from-theme-primary via-theme-bg-secondary to-theme-primary" />
+      <section className="relative py-24 z-10 bg-theme-primary">
+        <div className="absolute inset-0" />
         <div className="relative max-w-4xl mx-auto px-6">
           <FadeIn>
             <div className="text-center mb-12">
@@ -815,40 +821,61 @@ function Investors() {
       </section>
 
       {/* ================= FOOTER SECTION ================= */}
-      <section className="relative py-16 z-10 bg-gradient-to-br from-slate-50 to-blue-50 text-[#061712] overflow-hidden border-t border-gray-200">
-        <div className="relative max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-12">
-            {/* Registered Office */}
-            <div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">BSE E-Agricultural Markets Limited</h3>
-              <h4 className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-4">Registered Office</h4>
-              <div className="space-y-2 text-sm text-gray-700">
-                <p>25th Floor, P. J. Towers, Dalal Street, Fort,</p>
-                <p>Mumbai, Mumbai City, Maharashtra, India, 400001</p>
-                <p className="mt-4 font-semibold">CIN: U01400MH2020PLC350979</p>
-                <a href="mailto:inquiry@bsebeamagri.com" className="text-blue-600 hover:text-blue-700 transition-colors block mt-2">
-                  inquiry@bsebeamagri.com
-                </a>
-              </div>
-            </div>
+      <footer className="bg-theme-primary text-theme-text-primary pt-20">
+        <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 
-            {/* NCR Office */}
-            <div>
-              <h4 className="text-sm font-semibold text-blue-600 uppercase tracking-wide mb-4">NCR Office</h4>
-              <div className="space-y-2 text-sm text-gray-700">
-                <p>Unit No. 319, Suncity Success Towers,</p>
-                <p>Sector 65, Golf Course Extension Road,</p>
-                <p>Gurugram, Haryana, India – 122018</p>
-              </div>
+          {/* About */}
+          <div>
+            <h4 className="font-semibold mb-4">
+              BSE E-Agricultural Markets Limited
+            </h4>
+            <p className="text-theme-text-primary/70 text-sm leading-relaxed">
+              Delivering value across agri-commodity ecosystems through transparent,
+              secure, and scalable market infrastructure.
+            </p>
+          </div>
+
+          {/* Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Company</h4>
+            <ul className="space-y-2 text-sm text-theme-text-primary/70">
+              <li>About Us</li>
+              <li>Platforms</li>
+              <li>Services</li>
+              <li>Investors</li>
+              <li>Compliance</li>
+            </ul>
+          </div>
+
+          {/* Quick Links */}
+          <div>
+            <h4 className="font-semibold mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm text-theme-text-primary/70">
+              <li>Circulars</li>
+              <li>Contact</li>
+              <li>Become a Member</li>
+              <li>Live Auctions</li>
+            </ul>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h4 className="font-semibold mb-4">Connect</h4>
+            <div className="flex gap-4">
+              <div className="w-9 h-9 rounded-full bg-theme-text-primary/10" />
+              <div className="w-9 h-9 rounded-full bg-theme-text-primary/10" />
+              <div className="w-9 h-9 rounded-full bg-theme-text-primary/10" />
+              <div className="w-9 h-9 rounded-full bg-theme-text-primary/10" />
             </div>
           </div>
 
-          {/* Copyright */}
-          <div className="mt-12 pt-8 border-t border-gray-300 text-center text-sm text-gray-600">
-            <p>&copy; 2026 BSE e-Agricultural Markets Ltd. All rights reserved.</p>
-          </div>
         </div>
-      </section>
+
+        {/* Bottom Bar */}
+        <div className="border-t border-theme-text-primary/10 py-6 text-center text-xs text-theme-text-primary/60">
+          © 2026 BSE E-Agricultural Markets Limited. All rights reserved.
+        </div>
+      </footer>
 
     </div>
   )
