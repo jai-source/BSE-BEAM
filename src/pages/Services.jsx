@@ -4,6 +4,7 @@ import ten from "../Assets/image-10-scaled.jpg";
 import { motion } from "framer-motion";
 import services from "../Assets/services.png";
 import plant from "../Assets/plant.png";
+import heroImage from "../public/Hero-image2.png";
 import servicesfarmer from "../Assets/servicesfarmer.png";
 import data from "../Assets/data.png";
 import tradefinance from "../Assets/tradefinance.png";
@@ -39,11 +40,13 @@ const Services = () => {
   return (
     <>
       {/* HERO SECTION */}
-     <section className="relative bg-[#EEF3F8] py-48 overflow-hidden">
+     <section className="relative py-48 overflow-hidden">
 
-  {/* neon dot texture */}
-  <div className="absolute inset-0 bg-[radial-gradient(#4DA3FF_0.8px,transparent_1px)]
-                  [background-size:26px_26px] opacity-20" />
+  {/* Background Image with brightness filter */}
+  <div className="absolute inset-0" style={{ backgroundImage: `url(${heroImage})`, backgroundSize: 'cover', backgroundPosition: 'center', filter: 'brightness(0.6)' }} />
+
+  {/* dark overlay for text readability */}
+  <div className="absolute inset-0 bg-black/60" />
 
   {/* asymmetric glow blobs */}
   <div className="absolute -top-40 -left-40 w-[520px] h-[520px]
@@ -72,14 +75,14 @@ const Services = () => {
         className="flex items-center gap-4 mb-10"
       >
         <span className="w-14 h-[2px] bg-[#F4C430]" />
-        <p className="text-xs tracking-[0.35em] text-black font-semibold">
+        <p className="text-xs tracking-[0.35em] text-white font-semibold">
           SUPPLY CHAINS
         </p>
       </motion.div>
 
       {/* headline with inline typewriter */}
       <motion.h1
-        className="text-6xl font-extrabold leading-tight text-green-900"
+        className="text-6xl font-extrabold leading-tight text-white"
       >
         {"Unlocking Value".split("").map((c, i) => (
           <motion.span
@@ -130,7 +133,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 1.8 }}
-        className="mt-12 max-w-xl text-lg text-black leading-relaxed"
+        className="mt-12 max-w-xl text-lg text-white/90 leading-relaxed"
       >
         Building a transparent, efficient, and tech-powered
         agricultural ecosystem — connecting Bharat’s farms
@@ -1076,7 +1079,7 @@ const Services = () => {
   </div>
 </section>
 
-{/* ================= COMPLIANCE SECTION ================= */}
+{/* ================= COMPLIANCE & PRIVACY POLICY SECTION ================= */}
 <section className="relative bg-white py-32 lg:py-40 overflow-hidden">
   {/* Background decoration */}
   <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-theme-accent to-transparent" />
@@ -1091,7 +1094,9 @@ const Services = () => {
         Governance & Transparency
       </div>
       <h2 className="text-5xl md:text-6xl font-black leading-tight mb-4">
-        <span className="text-theme-accent">Compliance</span>
+        <span className="text-theme-text-primary">Compliance &</span>
+        <br />
+        <span className="text-theme-accent">Privacy Policy</span>
       </h2>
     </div>
 
@@ -1190,6 +1195,7 @@ const Services = () => {
       <h4 className="font-semibold mb-4">Quick Links</h4>
       <ul className="space-y-2 text-sm text-theme-text-primary/70">
         <li>Circulars</li>
+        <li>Privacy Policy</li>
         <li>Contact</li>
         <li>Become a Member</li>
         <li>Live Auctions</li>
