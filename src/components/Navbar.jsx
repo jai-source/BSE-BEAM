@@ -22,7 +22,7 @@ function Navbar() {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-emerald-900/80 backdrop-blur-xl shadow-2xl shadow-emerald-950/30 py-3' 
+          ? 'bg-gray-600 opacity-80 backdrop-blur-xl shadow-2xl shadow-gray-900 py-3' 
           : 'bg-gradient-to-b from-emerald-950/40 to-transparent py-6'
       }`}
     >
