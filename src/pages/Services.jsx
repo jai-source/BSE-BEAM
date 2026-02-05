@@ -2,9 +2,15 @@
 import nine from "../Assets/image-9-scaled.jpg";
 import ten from "../Assets/image-10-scaled.jpg";
 import { motion } from "framer-motion";
-
+import services from "../Assets/services.png";
+import plant from "../Assets/plant.png";
+import servicesfarmer from "../Assets/servicesfarmer.png";
+import data from "../Assets/data.png";
+import tradefinance from "../Assets/tradefinance.png";
+import metals from "../Assets/metals.png";
+import tradeconnect from "../Assets/tradeconnect.png";
 import React from "react";
-import { Building, Users, Landmark, Handshake } from "lucide-react";
+import { Building, Users, Landmark, Handshake, FileChartColumnIncreasing } from "lucide-react";
 import { Globe, Leaf, Globe2, Truck,Zap, Layers, TrendingUp, FileText } from "lucide-react";
 import {
 
@@ -145,7 +151,7 @@ const Services = () => {
       <div className="absolute -inset-6 -rotate-2 border ml-32 border-[#4DA3FF]/40 rounded-[28px]" />
 
       <img
-        src={nine}
+        src={plant}
         alt="Agri Supply Chain"
         className="relative rounded-[24px] ml-28 w-[480px] object-cover
                    shadow-[0_0_70px_#4DA3FF33]"
@@ -156,7 +162,7 @@ const Services = () => {
 </section>
 
 
-  <section className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white overflow-hidden">
+  <section className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white ">
 
   {/* ================= SUBTLE DATA GRID ================= */}
   <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
@@ -249,7 +255,7 @@ const Services = () => {
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
-          src={ten}
+          src={servicesfarmer}
           alt="Public sector auctions"
           className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
         />
@@ -310,7 +316,7 @@ const Services = () => {
 </section>
 
 
-  <section className="relative bg-[#F7FBF9] py-32 text-[#0B2F26] overflow-hidden">
+  <section className="relative bg-[#F7FBF9] py-32 text-[#0B2F26] ">
 
   {/* subtle grid (softer) */}
   <div className="absolute inset-0 opacity-[0.05]
@@ -431,11 +437,11 @@ const Services = () => {
                    bg-white rounded-[28px]
                    border border-[#E2EFEA]
                    shadow-[0_30px_80px_rgba(0,0,0,0.1)]
-                   overflow-hidden"
+                  "
         whileHover={{ y: -6 }}
       >
         <img
-          src={nine}
+          src={data}
           alt=""
           className="w-full h-[260px] object-cover
                      border-b border-[#E2EFEA]"
@@ -579,7 +585,7 @@ const Services = () => {
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
-          src={ten}
+          src={services}
           alt="Data consulting"
           className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
         />
@@ -636,7 +642,7 @@ const Services = () => {
 
   </div>
 </section>
-<section className="relative bg-[#F7FBF9] py-40 overflow-hidden text-[#0B2F26]">
+<section className="relative bg-[#F7FBF9] py-40  text-[#0B2F26]">
 
   {/* subtle finance grid */}
   <div className="absolute inset-0 opacity-[0.05]
@@ -734,11 +740,11 @@ const Services = () => {
         bg-gradient-to-br from-[#EAF7F1] to-transparent blur-xl" />
 
       <div className="sticky top-32 bg-white rounded-[30px]
-        overflow-hidden border border-[#E2EFEA]
+         border border-[#E2EFEA]
         shadow-[0_30px_80px_rgba(0,0,0,0.1)]">
 
         <img
-          src={ten}
+          src={tradefinance}
           alt="Trade Finance"
           className="w-full h-64 object-cover"
         />
@@ -875,7 +881,7 @@ const Services = () => {
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
-          src={ten}
+          src={metals}
           alt="Metals Trading"
           className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
         />
@@ -933,7 +939,7 @@ const Services = () => {
 
 
 
-<section className="relative bg-white py-32 overflow-hidden">
+<section className="relative bg-white py-32 ">
 
   {/* soft decorative geometry */}
   <div className="absolute -top-48 -left-48 w-[520px] h-[520px] bg-emerald-400/10 rounded-full blur-[140px]" />
@@ -1030,11 +1036,11 @@ const Services = () => {
 
     {/* RIGHT STICKY CARD */}
     <div className="lg:col-span-5">
-      <div className="sticky top-32 rounded-[28px] overflow-hidden bg-[#0f3b2e] shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
+      <div className="sticky top-32 rounded-[28px] bg-[#0f3b2e] shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
 
         <div className="relative h-[320px]">
           <img
-            src={ten}
+            src={tradeconnect}
             alt=""
             className="h-full w-full object-cover"
           />

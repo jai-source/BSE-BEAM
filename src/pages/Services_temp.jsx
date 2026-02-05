@@ -1,6 +1,10 @@
 
 import nine from "../Assets/image-9-scaled.jpg";
 import ten from "../Assets/image-10-scaled.jpg";
+import services from "../Assets/services.png";
+import plant from "../Assets/plant.png";
+import servicesfarmer from "../Assets/servicesfarmer.png";
+import data from "../Assets/data.png";
 import { motion } from "framer-motion";
 
 import React from "react";
@@ -119,7 +123,7 @@ const Services = () => {
     >
       <div className="absolute -inset-4 bg-theme-primary-light rounded-2xl" />
       <img
-        src={nine}
+        src={data}
         alt="Agricultural Supply Chain"
         className="relative rounded-2xl object-cover shadow-2xl"
       />
