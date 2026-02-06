@@ -79,17 +79,17 @@ function Landing() {
     loop
     muted
     playsInline
-    className="absolute inset-0 w-full h-full object-cover object-center will-change-transform"
+    className="absolute inset-0 w-full h-full object-cover object-center will-change-transform saturate-105 contrast-105"
     initial={{ scale: 1.04 }}
     animate={{ scale: 1.04 }}
-    transition={{ duration: 0.01 }}
+    transition={{ duration: 0 }}
   />
 
-  {/* Subtle green tint */}
-  <div className="absolute inset-0 bg-emerald-900/20 pointer-events-none" />
+  {/* Subtle theme tint */}
+  <div className="absolute inset-0 bg-theme-accent/10 pointer-events-none" />
 
   {/* OVERLAY */}
-  <div className="absolute inset-0 bg-gradient-to-t from-[#071b14] via-[#0b2a1e]/70 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-t from-theme-primary/95 via-theme-primary/55 to-transparent" />
 
   {/* CONTENT */}
   <motion.div
@@ -109,41 +109,59 @@ function Landing() {
       market intelligence, and advanced analytics to optimize yield,
       mitigate risk, and drive informed decisions at scale.
     </p>
-
-    <motion.div
-      className="mt-8 flex gap-4"
-      initial="hidden"
-      animate="visible"
-      variants={{
-        hidden: {},
-        visible: {
-          transition: { staggerChildren: 0.12 }
-        }
-      }}
-    >
-      {[
-        "Become a Member",
-        "E-Auction Live"
-      ].map((label, i) => (
-        <motion.button
-          key={i}
-          className={
-            i === 0
-              ? "bg-white text-[#071b14] px-7 py-3 rounded-full text-sm font-semibold"
-              : "border border-white/50 px-7 py-3 rounded-full text-sm font-medium"
-          }
-          variants={{
-            hidden: { y: 20, opacity: 0 },
-            visible: { y: 0, opacity: 1 }
-          }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          whileHover={{ y: -2 }}
-        >
-          {label}
-        </motion.button>
-      ))}
-    </motion.div>
   </motion.div>
+
+  {/* Floating CTAs (bottom-right) */}
+  <div className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-50">
+    <div
+      className="relative overflow-hidden rounded-2xl p-[10px]
+                 bg-theme-bg-main/35 backdrop-blur-md
+                 border border-theme-text-primary/12 ring-1 ring-theme-text-primary/10
+                 shadow-2xl"
+    >
+      {/* subtle inner sheen */}
+      <div className="pointer-events-none absolute inset-0 bg-gradient-to-br from-theme-text-primary/12 via-transparent to-transparent" />
+
+      <div className="relative flex flex-col gap-2">
+        {/* Become a Member */}
+        <Link
+          to="/contact"
+          className="group inline-flex items-center gap-3 rounded-xl px-4 py-3
+                     bg-theme-button-bg text-theme-button-text
+                     border border-theme-text-primary/12
+                     shadow-lg
+                     text-sm font-semibold tracking-wide
+                     transition-all duration-200
+                     hover:-translate-y-0.5 hover:shadow-xl hover:brightness-105
+                     active:translate-y-0
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-highlight/70"
+        >
+          <span className="w-2.5 h-2.5 rounded-full bg-theme-highlight" />
+          Become a Member
+        </Link>
+
+        {/* E-Auction Live */}
+        <Link
+          to="/services#trade-connect"
+          className="group inline-flex items-center gap-3 rounded-xl px-4 py-3
+                     bg-theme-accent text-theme-text-primary
+                     border border-theme-text-primary/12
+                     shadow-lg
+                     text-sm font-semibold tracking-wide
+                     transition-all duration-200
+                     hover:-translate-y-0.5 hover:shadow-xl hover:brightness-105
+                     active:translate-y-0
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-theme-highlight/70"
+        >
+          <span className="relative flex h-2.5 w-2.5">
+            <span className="absolute inline-flex h-full w-full rounded-full bg-theme-text-primary/35 animate-pulse" />
+            <span className="relative inline-flex h-2.5 w-2.5 rounded-full bg-theme-text-primary" />
+          </span>
+          E-Auction Live
+        </Link>
+      </div>
+    </div>
+  </div>
 </section>
 
      {/* TRANSITION DIVIDER */}
