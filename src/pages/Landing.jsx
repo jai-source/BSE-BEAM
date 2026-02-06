@@ -15,7 +15,7 @@ import dataAnalyticsIcon from "../public/offerings/database.svg";
 import publicSectorIcon from "../public/offerings/target.svg";
 import Coil from "../components/Coil";
 import CommoditiesSection from "../components/CommoditiesSection";
-import heroVideo from "../Assets/VIDEO.mp4";
+import heroVideo from "../public/iStock-1988605262.mp4";
 import backgroundimage from "../Assets/backgroundimage.png";
 import { motion } from "framer-motion";
 import { useScroll, useTransform } from "framer-motion";
@@ -72,18 +72,21 @@ function Landing() {
       {/* HERO SECTION */}
      <section className="relative w-full min-h-screen flex items-end overflow-hidden">
 
-  {/* BACKGROUND VIDEO WITH PARALLAX ZOOM */}
+  {/* BACKGROUND VIDEO (slightly zoomed) */}
   <motion.video
     src={heroVideo}
     autoPlay
     loop
     muted
     playsInline
-    className="absolute inset-0 w-full h-full object-cover"
-    initial={{ scale: 1.05 }}
-    animate={{ scale: 1 }}
-    transition={{ duration: 2.5, ease: [0.22, 1, 0.36, 1] }}
+    className="absolute inset-0 w-full h-full object-cover object-center will-change-transform"
+    initial={{ scale: 1.04 }}
+    animate={{ scale: 1.04 }}
+    transition={{ duration: 0.01 }}
   />
+
+  {/* Subtle green tint */}
+  <div className="absolute inset-0 bg-emerald-900/20 pointer-events-none" />
 
   {/* OVERLAY */}
   <div className="absolute inset-0 bg-gradient-to-t from-[#071b14] via-[#0b2a1e]/70 to-transparent" />

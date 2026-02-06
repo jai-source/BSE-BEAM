@@ -343,12 +343,7 @@ const Services = () => {
     bg-[linear-gradient(#1E8E6E_1px,transparent_1px),linear-gradient(90deg,#1E8E6E_1px,transparent_1px)]
     bg-[size:96px_96px]" />
 
-  {/* soft capital washes */}
-  <div className="absolute -top-56 -left-56 w-[560px] h-[560px]
-    bg-gradient-to-br from-[#E6F4EE] to-transparent blur-3xl" />
-
-  <div className="absolute bottom-[-260px] right-[-240px] w-[520px] h-[520px]
-    bg-gradient-to-tr from-[#FFF4CC] to-transparent blur-3xl" />
+  {/* soft capital washes removed (was creating white hotspots) */}
 
   <div className="relative max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-20">
 
@@ -669,12 +664,7 @@ const Services = () => {
     bg-[linear-gradient(#1E8E6E_1px,transparent_1px),linear-gradient(90deg,#1E8E6E_1px,transparent_1px)]
     bg-[size:96px_96px]" />
 
-  {/* soft capital glows */}
-  <div className="absolute -top-60 -left-72 w-[640px] h-[640px]
-    bg-gradient-to-br from-[#DDF2EB] to-transparent blur-3xl" />
-
-  <div className="absolute bottom-[-340px] right-[-300px] w-[680px] h-[680px]
-    bg-gradient-to-tr from-[#FFF3C4] to-transparent blur-3xl" />
+  {/* soft capital glows removed (was creating white hotspots on some screens) */}
 
   <div className="relative z-10 max-w-7xl mx-auto px-8 grid grid-cols-1 lg:grid-cols-2 gap-28">
 
@@ -756,9 +746,6 @@ const Services = () => {
 
     {/* RIGHT CARD */}
     <div className="relative">
-      <div className="absolute -inset-10 rounded-[36px]
-        bg-gradient-to-br from-[#EAF7F1] to-transparent blur-xl" />
-
       <div className="sticky top-32 bg-white rounded-[30px]
          border border-[#E2EFEA]
         shadow-[0_30px_80px_rgba(0,0,0,0.1)]">
