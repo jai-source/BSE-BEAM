@@ -40,13 +40,13 @@ const FadeIn = ({ children, delay = 0, className = "" }) => {
 
 export default function AboutUs() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden text-theme-text-primary bg-theme-page-bg selection:bg-theme-highlight/30 font-sans">
+    <div className="relative w-full min-h-screen overflow-hidden text-[#1C1917] bg-[#FFFBF2] selection:bg-[#F97316]/30 font-sans">
 
       {/* ================= GLOBAL BACKGROUND FX ================= */}
       <div className="fixed inset-0 z-0 pointer-events-none">
         {/* Dynamic Aurora-like Gradients */}
-        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-theme-highlight/10 rounded-full blur-[120px] animate-[pulse_8s_ease-in-out_infinite]" />
-        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-theme-accent/10 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_reverse]" />
+        <div className="absolute top-[-20%] left-[-10%] w-[600px] h-[600px] bg-[#F97316]/10 rounded-full blur-[120px] animate-[pulse_8s_ease-in-out_infinite]" />
+        <div className="absolute bottom-[-10%] right-[-10%] w-[500px] h-[500px] bg-[#EAB308]/8 rounded-full blur-[100px] animate-[pulse_6s_ease-in-out_infinite_reverse]" />
 
         {/* Noise Texture */}
         <div className="absolute inset-0 bg-[url('/noise.png')] opacity-[0.04] mix-blend-overlay" />
@@ -57,7 +57,7 @@ export default function AboutUs() {
 
         {/* Parallax Background */}
         <div className="absolute inset-0 z-0 select-none">
-          <div className="absolute inset-0 bg-gradient-to-b from-[var(--color-page-bg)]/40 via-transparent to-[var(--color-page-bg)] z-20" />
+          <div className="absolute inset-0 bg-gradient-to-b from-[#FFFBF2]/40 via-transparent to-[#FFFBF2] z-20" />
           <img
             src={heroImage}
             alt="Agricultural landscape"
@@ -67,62 +67,62 @@ export default function AboutUs() {
 
         <div className="relative z-30 max-w-7xl mx-auto px-6 text-center">
           <FadeIn>
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-theme-text-primary/5 border border-theme-text-primary/10 backdrop-blur-md text-theme-highlight text-sm font-semibold tracking-wide uppercase hover:bg-theme-text-primary/10 transition-colors cursor-default">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#F97316]/10 border border-[#F97316]/20 backdrop-blur-md text-[#F97316] text-sm font-bold tracking-wide uppercase hover:bg-[#F97316]/20 transition-colors cursor-default">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-highlight opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-highlight"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F97316] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F97316]"></span>
               </span>
               India's Digital Agri-Backbone
             </div>
           </FadeIn>
 
           <FadeIn delay={200}>
-            <h1 className="mt-8 text-6xl md:text-8xl lg:text-9xl font-light tracking-tighter leading-[0.9]">
+            <h1 className="mt-8 text-6xl md:text-8xl lg:text-9xl font-extrabold tracking-tighter leading-[0.9]">
               Reimagining <br />
-              <span className="font-bold text-transparent bg-clip-text bg-gradient-to-r from-lime-300 via-white to-lime-300 bg-[length:200%_auto] animate-[shimmer_5s_linear_infinite]">
+              <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] via-[#FDE68A] to-[#F97316] bg-[length:200%_auto] animate-[shimmer_5s_linear_infinite]">
                 Trust & Trade
               </span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={400}>
-            <p className="mt-10 text-lg md:text-2xl text-theme-text-primary/70 max-w-2xl mx-auto font-light leading-relaxed">
-              Where <span className="text-theme-text-primary font-medium">BSE's legacy</span> meets the future of agriculture.
-              We are building the definitive digital infrastructure for a transparent, efficient Bharat.
+            <p className="mt-10 text-lg md:text-2xl text-[#1C1917]/60 max-w-2xl mx-auto font-light leading-relaxed">
+              Where <span className="text-[#F97316] font-bold">BSE's legacy</span> meets the future of agriculture.<br />
+              Building the definitive digital infrastructure for a transparent, efficient Bharat.
             </p>
           </FadeIn>
         </div>
       </section>
 
       {/* ================= STATS / IMPACT STRIP ================= */}
-      <section className="relative z-20 border-y border-theme-text-primary/5 bg-theme-text-primary/5 backdrop-blur-sm overflow-hidden">
-        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-white/10">
+      <section className="relative z-20 border-y border-[#F97316]/10 bg-[#FFF3D6]/50 backdrop-blur-sm overflow-hidden">
+        <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 divide-x divide-[#F97316]/10">
           {[
             { label: "BSE Heritage", value: "150+", suffix: "Years" },
             { label: "Transparency", value: "100", suffix: "%" },
             { label: "Market Reach", value: "Pan", suffix: "India" },
             { label: "Compliance", value: "SEBI", suffix: "Regulated" },
           ].map((stat, i) => (
-            <div key={i} className="py-12 text-center group hover:bg-white/5 transition-colors duration-500">
-              <h3 className="text-4xl md:text-5xl font-bold text-white mb-2 group-hover:scale-110 transition-transform duration-300">
-                {stat.value}<span className="text-lime-400 text-2xl">{stat.suffix}</span>
+            <div key={i} className="py-12 text-center group hover:bg-[#F97316]/5 transition-colors duration-500">
+              <h3 className="text-4xl md:text-5xl font-extrabold text-[#1C1917] mb-2 group-hover:scale-110 transition-transform duration-300">
+                {stat.value}<span className="text-[#F97316] text-2xl">{stat.suffix}</span>
               </h3>
-              <p className="text-sm font-medium text-white/50 uppercase tracking-widest">{stat.label}</p>
+              <p className="text-sm font-semibold text-[#1C1917]/40 uppercase tracking-widest">{stat.label}</p>
             </div>
           ))}
         </div>
       </section>
 
       {/* ================= NARRATIVE SPLIT ================= */}
-      <section className="relative py-40 z-10 bg-theme-page-bg">
+      <section className="relative py-40 z-10 bg-[#FFFBF2]">
         <div className="max-w-7xl mx-auto px-6 md:px-12 grid lg:grid-cols-2 gap-20">
 
           <FadeIn className="relative">
             <div className="absolute top-0 left-0 w-20 h-20 bg-theme-highlight/20 rounded-full blur-3xl" />
-            <h2 className="text-5xl font-semibold mb-8 leading-tight">
-              Transforming India's<br /> <span className="text-theme-highlight">Agri & Commodity Ecosystem</span>
+            <h2 className="text-5xl font-extrabold mb-8 leading-tight text-[#1C1917]">
+              Transforming India's<br /> <span className="text-[#F97316]">Agri & Commodity Ecosystem</span>
             </h2>
-            <div className="space-y-6 text-lg text-theme-text-primary/70 leading-relaxed">
+            <div className="space-y-6 text-lg text-[#1C1917]/60 leading-relaxed">
               <p>
                 BSE e-Agricultural Markets Ltd. (BeAM) is an associate company of BSE Investments Limited (a wholly owned subsidiary of Bombay Stock Exchange). The company offers platforms for national-level, transparent electronic commodity spot trading platform. Our goal is to enhance India’s agricultural market competitiveness through cutting-edge technology, efficient supply chain management, and financial integration.
 
@@ -132,12 +132,12 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
           </FadeIn>
 
           <FadeIn delay={200} className="relative group">
-            <div className="absolute inset-0 bg-theme-highlight rounded-3xl blur opacity-20 group-hover:opacity-30 transition-opacity duration-700" />
-            <div className="relative h-full bg-[#0a261e] border border-white/10 rounded-3xl p-10 flex flex-col justify-center overflow-hidden">
+            <div className="absolute inset-0 bg-[#F97316] rounded-3xl blur opacity-10 group-hover:opacity-20 transition-opacity duration-700" />
+            <div className="relative h-full bg-[#FFF3D6]/50 border border-[#F97316]/10 rounded-3xl p-10 flex flex-col justify-center overflow-hidden">
               <div className="absolute top-0 right-0 p-10 opacity-10">
                 <svg className="w-64 h-64" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5zm0 9l2.5-1.25L12 8.5l-2.5 1.25L12 11zm0 2.5l-5-2.5-5 2.5L12 22l10-8.5-5-2.5-5 2.5z" /></svg>
               </div>
-              <h3 className="text-2xl font-medium text-theme-text-primary mb-6">Sectors We Serve</h3>
+              <h3 className="text-2xl font-extrabold text-[#1C1917] mb-6">Sectors We Serve</h3>
               <ul className="space-y-4">
                 {[
                   { 
@@ -202,7 +202,7 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
           {/* Mission */}
           <FadeIn className="group relative">
             <div className="absolute -inset-1 bg-gradient-to-r from-theme-highlight to-theme-accent rounded-[2.5rem] opacity-20 blur transition duration-500 group-hover:opacity-50" />
-            <div className="relative h-full bg-theme-primary rounded-[2.5rem] p-12 border border-theme-text-primary/5 hover:border-theme-highlight/30 transition-colors duration-500">
+              <div className="relative h-full bg-[#FFF3D6] rounded-[2.5rem] p-12 border border-[#F97316]/10 hover:border-[#F97316]/30 transition-colors duration-500">
               <div className="w-16 h-16 bg-theme-highlight-dim rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
                 <svg className="w-8 h-8 text-theme-highlight" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
               </div>
@@ -215,13 +215,13 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
 
           {/* Vision */}
           <FadeIn delay={200} className="group relative">
-            <div className="absolute -inset-1 bg-gradient-to-r from-green-600 to-teal-500 rounded-[2.5rem] opacity-20 blur transition duration-500 group-hover:opacity-50" />
-            <div className="relative h-full bg-[#081f18] rounded-[2.5rem] p-12 border border-white/5 hover:border-teal-500/30 transition-colors duration-500">
-              <div className="w-16 h-16 bg-teal-500/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
-                <svg className="w-8 h-8 text-teal-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
+            <div className="absolute -inset-1 bg-gradient-to-r from-[#F97316] to-[#EAB308] rounded-[2.5rem] opacity-20 blur transition duration-500 group-hover:opacity-50" />
+            <div className="relative h-full bg-[#FFF3D6] rounded-[2.5rem] p-12 border border-white/5 hover:border-[#F97316]/30 transition-colors duration-500">
+              <div className="w-16 h-16 bg-[#F97316]/10 rounded-2xl flex items-center justify-center mb-8 group-hover:scale-110 transition-transform duration-500">
+                <svg className="w-8 h-8 text-[#F97316]" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" /></svg>
               </div>
               <h3 className="text-3xl font-semibold mb-6">Our Vision</h3>
-              <p className="text-lg text-white/60 leading-relaxed group-hover:text-white/80 transition-colors">
+              <p className="text-lg text-[#1C1917]/60 leading-relaxed group-hover:text-white/80 transition-colors">
                 To be the largest supply chain solutions platform for agriculture & food value chains, connecting suppliers to buyers in the most efficient, transparent and cost-effective way.
               </p>
             </div>
@@ -230,10 +230,10 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
       </section>
 
       {/* ================= REASONS GRID ================= */}
-      <section className="relative py-32 bg-white text-[#061712] rounded-t-[5rem] overflow-hidden -mt-16 z-20">
+      <section className="relative py-32 bg-white text-[#C2410C] rounded-t-[5rem] overflow-hidden -mt-16 z-20">
         <div className="max-w-7xl mx-auto px-6 relative z-10">
           <div className="text-center max-w-3xl mx-auto mb-20 animate-on-scroll">
-            <h2 className="text-5xl font-bold mb-6 tracking-tight">Why Choose<span className="text-transparent bg-clip-text bg-gradient-to-r from-green-700 to-lime-600"> BeAM?</span></h2>
+            <h2 className="text-5xl font-bold mb-6 tracking-tight">Why Choose<span className="text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] to-[#EAB308]"> BeAM?</span></h2>
             <p className="text-xl text-gray-500">Built on the legacy of BSE, powered by technology, and trusted by institutions across sectors — BeAM is redefining how agricultural and allied markets connect, trade, and grow. Here's what sets us apart:</p>
           </div>
 
@@ -241,8 +241,8 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
             {/* First Row - 4 items */}
             <div className="grid md:grid-cols-4 gap-8">
               {features.slice(0, 4).map((feature, idx) => (
-                <div key={idx} className="group p-10 bg-gray-50 rounded-[2rem] border border-transparent hover:border-lime-200 hover:bg-white hover:shadow-2xl hover:shadow-lime-900/5 transition-all duration-500">
-                  <div className="w-14 h-14 bg-white border border-gray-100 rounded-2xl flex items-center justify-center text-green-700 mb-6 group-hover:bg-lime-500 group-hover:text-white transition-colors duration-500 shadow-sm">
+                <div key={idx} className="group p-10 bg-gray-50 rounded-[2rem] border border-transparent hover:border-[#F97316]/30 hover:bg-white hover:shadow-2xl hover:shadow-[#C2410C]/5 transition-all duration-500">
+                  <div className="w-14 h-14 bg-white border border-gray-100 rounded-2xl flex items-center justify-center text-[#C2410C] mb-6 group-hover:bg-[#F97316] group-hover:text-white transition-colors duration-500 shadow-sm">
                     {feature.icon}
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:translate-x-1 transition-transform">{feature.title}</h3>
@@ -256,8 +256,8 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
             {/* Second Row - 3 items centered */}
             <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {features.slice(4, 7).map((feature, idx) => (
-                <div key={idx + 4} className="group p-10 bg-gray-50 rounded-[2rem] border border-transparent hover:border-lime-200 hover:bg-white hover:shadow-2xl hover:shadow-lime-900/5 transition-all duration-500">
-                  <div className="w-14 h-14 bg-white border border-gray-100 rounded-2xl flex items-center justify-center text-green-700 mb-6 group-hover:bg-lime-500 group-hover:text-white transition-colors duration-500 shadow-sm">
+                <div key={idx + 4} className="group p-10 bg-gray-50 rounded-[2rem] border border-transparent hover:border-[#F97316]/30 hover:bg-white hover:shadow-2xl hover:shadow-[#C2410C]/5 transition-all duration-500">
+                  <div className="w-14 h-14 bg-white border border-gray-100 rounded-2xl flex items-center justify-center text-[#C2410C] mb-6 group-hover:bg-[#F97316] group-hover:text-white transition-colors duration-500 shadow-sm">
                     {feature.icon}
                   </div>
                   <h3 className="text-2xl font-bold mb-4 text-gray-900 group-hover:translate-x-1 transition-transform">{feature.title}</h3>
@@ -274,9 +274,9 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
       {/* ================= VALUE WE ADD SECTION ================= */}
       <div className="bg-white py-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="rounded-[3rem] bg-[#061712] p-16 md:p-32 relative overflow-hidden">
+          <div className="rounded-[3rem] bg-[#C2410C] p-16 md:p-32 relative overflow-hidden">
             {/* Hover Reveal Glow */}
-            <div className="absolute inset-0 bg-gradient-to-r from-lime-500/20 to-transparent opacity-30 transition-opacity duration-1000 pointer-events-none" />
+            <div className="absolute inset-0 bg-gradient-to-r from-[#F97316]/20 to-transparent opacity-30 transition-opacity duration-1000 pointer-events-none" />
 
             <h2 className="text-5xl md:text-7xl font-bold text-white mb-24 text-center relative z-10">Value We Add</h2>
             
@@ -291,7 +291,7 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
                 <div key={i} className="flex flex-col items-center text-center group">
                   <div className="relative w-40 h-40 mb-12">
                     {/* Main Image with Enhanced Effects */}
-                    <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl shadow-lime-500/20 group-hover:shadow-3xl group-hover:shadow-lime-500/40 transition-all duration-700 transform group-hover:-translate-y-2 group-hover:scale-105">
+                    <div className="relative w-full h-full rounded-3xl overflow-hidden shadow-2xl shadow-[#F97316]/20 group-hover:shadow-3xl group-hover:shadow-[#F97316]/40 transition-all duration-700 transform group-hover:-translate-y-2 group-hover:scale-105">
                       {/* Image */}
                       <img 
                         src={item.image} 
@@ -300,7 +300,7 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
                       />
                       
                       {/* Gradient Overlay on Hover */}
-                      <div className="absolute inset-0 bg-gradient-to-t from-lime-400/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#F97316]/20 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                       
                       {/* Shine Effect */}
                       <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
@@ -333,10 +333,10 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
                     </div>
                     
                     {/* Glow Ring */}
-                    <div className="absolute inset-0 rounded-3xl ring-2 ring-lime-400/0 group-hover:ring-lime-400/60 group-hover:scale-110 transition-all duration-700" />
+                    <div className="absolute inset-0 rounded-3xl ring-2 ring-[#F97316]/0 group-hover:ring-[#F97316]/60 group-hover:scale-110 transition-all duration-700" />
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-white/90 group-hover:text-lime-300 transition-all duration-500 leading-snug px-4">
+                  <h3 className="text-xl font-semibold text-[#1C1917]/90 group-hover:text-[#F97316] transition-all duration-500 leading-snug px-4">
                     {item.title}
                   </h3>
                 </div>
@@ -347,7 +347,7 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
       </div>
 
       {/* ================= FOOTER ================= */}
-      <footer className="bg-[#081f18] text-white pt-20">
+      <footer className="bg-[#1C1917] text-white pt-20">
 
         <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 

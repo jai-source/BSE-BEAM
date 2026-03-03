@@ -7,10 +7,10 @@ export default function Coil({ className = "" }) {
     >
       <defs>
         <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#4f6f60" />
-          <stop offset="45%" stopColor="#1e3b30" />
-          <stop offset="55%" stopColor="#10261f" />
-          <stop offset="100%" stopColor="#4f6f60" />
+          <stop offset="0%" stopColor="#F97316" /> {/* Hill Green Light */}
+          <stop offset="45%" stopColor="#F59E0B" /> {/* Sky Blue */}
+          <stop offset="55%" stopColor="#EAB308" /> {/* Sky Blue Dark */}
+          <stop offset="100%" stopColor="#F97316" /> {/* Hill Green Light */}
         </linearGradient>
 
         <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">

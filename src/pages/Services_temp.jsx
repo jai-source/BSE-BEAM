@@ -326,10 +326,10 @@ const Services = () => {
     transition={{ duration: 0.8, ease: "easeOut" }}
   >
     <h2 className="text-5xl font-bold tracking-tight">
-      Public Sector <span className="text-white/90">Auctions</span>
+      Public Sector <span className="text-[#1C1917]/90">Auctions</span>
     </h2>
 
-    <p className="mt-6 text-lg max-w-3xl mx-auto text-white/80 leading-relaxed">
+    <p className="mt-6 text-lg max-w-3xl mx-auto text-[#1C1917]/80 leading-relaxed">
       BeAM’s auction platform is purpose-built to serve government bodies, PSUs, and cooperatives — delivering compliant,
       transparent, and audit-ready digital auctions for both sale and procurement. Our platform ensures regulatory alignment,
       operational efficiency, and maximum bidder participation.
@@ -1125,7 +1125,7 @@ const Services = () => {
       <h4 className="font-semibold mb-4">
         BSE E-Agricultural Markets Limited
       </h4>
-      <p className="text-white/70 text-sm leading-relaxed">
+      <p className="text-[#1C1917]/70 text-sm leading-relaxed">
         Delivering value across agri-commodity ecosystems through transparent,
         secure, and scalable market infrastructure.
       </p>
@@ -1134,7 +1134,7 @@ const Services = () => {
     {/* Links */}
     <div>
       <h4 className="font-semibold mb-4">Company</h4>
-      <ul className="space-y-2 text-sm text-white/70">
+      <ul className="space-y-2 text-sm text-[#1C1917]/70">
         <li>About Us</li>
         <li>Platforms</li>
         <li>Services</li>
@@ -1146,7 +1146,7 @@ const Services = () => {
     {/* Quick Links */}
     <div>
       <h4 className="font-semibold mb-4">Quick Links</h4>
-      <ul className="space-y-2 text-sm text-white/70">
+      <ul className="space-y-2 text-sm text-[#1C1917]/70">
         <li>Circulars</li>
         <li>Contact</li>
         <li>Become a Member</li>
@@ -1168,7 +1168,7 @@ const Services = () => {
   </div>
 
   {/* Bottom Bar */}
-  <div className="border-t border-white/10 py-6 text-center text-xs text-white/60">
+  <div className="border-t border-white/10 py-6 text-center text-xs text-[#1C1917]/60">
     © 2026 BSE E-Agricultural Markets Limited. All rights reserved.
   </div>
 </footer>

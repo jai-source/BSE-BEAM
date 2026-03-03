@@ -109,7 +109,7 @@ export default function Circulars() {
 
                 <button className="flex items-center gap-2
                                    bg-red-600 hover:bg-red-500
-                                   text-white px-6 py-3 rounded-xl
+                                   text-[#1C1917] px-6 py-3 rounded-xl
                                    shadow-[0_0_30px_rgba(239,68,68,0.5)]
                                    transition">
                   <RefreshCcw size={18} />
@@ -129,7 +129,7 @@ export default function Circulars() {
                        shadow-[0_0_140px_rgba(16,185,129,0.3)]"
           >
             <table className="w-full text-left">
-              <thead className="bg-[#081f18] text-white">
+              <thead className="bg-[#081f18] text-[#1C1917]">
                 <tr>
                   {[
                     "Circular No.",

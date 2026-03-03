@@ -4,25 +4,36 @@
 
 /* Theme Variables */
 :root[data-theme="green-white"] {
-  --color-primary: #071b14;
-  --color-primary-light: #0b2a1e;
-  --color-primary-dark: #041009;
-  --color-accent: #1f7a5c;
-  --color-accent-hover: #1a6b4f;
-  --color-bg-main: #071b14;
-  --color-bg-secondary: #ffffff;
-  --color-text-primary: #ffffff;
-  --color-text-secondary: #0b2a1e;
-  --color-text-muted: #5f6f64;
-  --color-button-bg: #ffffff;
-  --color-button-text: #071b14;
-  --color-gradient-from: #071b14;
-  --color-gradient-to: #081f18;
-  
-  /* For About page and dynamic pages */
-  --color-page-bg: #061712;
-  --color-highlight: #84cc16; /* lime-500 */
-  --color-highlight-dim: rgba(132, 204, 22, 0.1);
+  /* ── Base ─────────────────────────────── */
+  --color-primary:        #FFF3D6;   /* soft orange section bg */
+  --color-primary-light:  #FFE4A0;   /* amber section bg       */
+  --color-primary-dark:   #FFE4A0;   /* deep amber             */
+
+  /* ── Accent ───────────────────────────── */
+  --color-accent:         #F97316;   /* bright orange          */
+  --color-accent-hover:   #EA580C;   /* deeper orange          */
+
+  /* ── Backgrounds ──────────────────────── */
+  --color-bg-main:        #FFFBF2;   /* warm cream canvas      */
+  --color-bg-secondary:   #FFF3D6;   /* soft orange tint       */
+  --color-page-bg:        #FFF3D6;   /* page default           */
+
+  /* ── Text ─────────────────────────────── */
+  --color-text-primary:   #1C1917;   /* near-black             */
+  --color-text-secondary: #78350F;   /* warm amber-brown       */
+  --color-text-muted:     #FDE68A;   /* pale yellow for muted  */
+
+  /* ── Buttons ──────────────────────────── */
+  --color-button-bg:      #F97316;   /* bright orange          */
+  --color-button-text:    #FFFFFF;   /* white                  */
+
+  /* ── Gradients ────────────────────────── */
+  --color-gradient-from:  #F97316;
+  --color-gradient-to:    #EAB308;   /* bright yellow          */
+
+  /* ── Highlights ───────────────────────── */
+  --color-highlight:      #F97316;   /* bright orange          */
+  --color-highlight-dim:  rgba(249,115,22,0.12);
 }
 
 :root[data-theme="blue-red-yellow"] {

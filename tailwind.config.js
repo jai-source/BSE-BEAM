@@ -7,6 +7,22 @@ export default {
   theme: {
     extend: {
       colors: {
+        // Sun Oranges (Major)
+        'hill-green': '#F97316',          // bright orange
+        'hill-green-dark': '#C2410C',     // dark orange
+        'hill-green-mid': '#EA580C',      // deep orange
+        'hill-green-deep': '#FFF3D6',     // pale orange bg
+        'hill-green-light': '#FB923C',    // light orange
+        // Sun Yellows
+        'sky-blue': '#EAB308',            // bright yellow
+        'sky-blue-mid': '#F59E0B',        // amber
+        'sky-blue-light': '#FCD34D',      // light yellow
+        'sky-blue-lightest': '#FDE68A',   // pale yellow
+        // Warm Whites / Creams
+        'cloud-white': '#FFFFFF',
+        'cloud-white-soft': '#FFFBF2',    // warm cream
+        'cloud-white-muted': '#FFF3D6',   // soft orange tint
+        // Theme variables
         'theme-primary': 'var(--color-primary)',
         'theme-primary-light': 'var(--color-primary-light)',
         'theme-primary-dark': 'var(--color-primary-dark)',

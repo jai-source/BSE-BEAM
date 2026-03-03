@@ -170,7 +170,7 @@ export default function Contact() {
         </div>
       </div>
     </section>
-    <footer className="bg-[#081f18] text-white pt-20">
+    <footer className="bg-[#081f18] text-[#1C1917] pt-20">
 
   <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 

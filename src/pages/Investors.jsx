@@ -265,7 +265,7 @@ function Investors() {
 
         {/* Parallax Background */}
         <div className="absolute inset-0 z-0 select-none">
-          <div className="absolute inset-0 bg-gradient-to-t from-theme-primary via-theme-primary/70 to-transparent z-20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/88 via-[#78350F]/50 to-transparent z-20" />
           <img
             src={heroImage}
             alt="Investors Relations"
@@ -275,28 +275,28 @@ function Investors() {
 
         <div className="relative z-30 max-w-6xl px-12 pb-24">
           <FadeIn>
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-theme-highlight/10 border border-theme-highlight/20 text-theme-highlight text-sm font-semibold tracking-wide uppercase hover:bg-theme-highlight/20 transition-colors cursor-default mb-6">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#F97316]/10 border border-[#F97316]/20 text-[#F97316] text-sm font-bold tracking-wide uppercase hover:bg-[#F97316]/20 transition-colors cursor-default mb-6">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-theme-highlight opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-theme-highlight"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F97316] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F97316]"></span>
               </span>
               Investors Relations
             </div>
           </FadeIn>
 
           <FadeIn delay={200}>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-light leading-tight max-w-4xl group relative">
-              <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-theme-highlight via-theme-accent to-theme-text-primary bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite] relative inline-block hover:scale-105 transition-transform duration-500">
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight max-w-4xl group relative retro-title">
+              <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] via-[#FDE68A] to-[#F97316] bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite] relative inline-block hover:scale-105 transition-transform duration-500">
                 Investor Relations
                 {/* Glitch layers */}
-                <span className="absolute inset-0 text-theme-highlight opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(-2px, -2px)', mixBlendMode: 'screen', zIndex: -1}}>Investor Relations</span>
-                <span className="absolute inset-0 text-theme-accent opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(2px, 2px)', mixBlendMode: 'screen', zIndex: -1, animationDelay: '150ms'}}>Investor Relations</span>
+                <span className="absolute inset-0 text-[#F97316] opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(-2px, -2px)', mixBlendMode: 'screen', zIndex: -1}}>Investor Relations</span>
+                <span className="absolute inset-0 text-[#F59E0B] opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(2px, 2px)', mixBlendMode: 'screen', zIndex: -1, animationDelay: '150ms'}}>Investor Relations</span>
               </span>
             </h1>
           </FadeIn>
 
           <FadeIn delay={400}>
-            <p className="mt-6 max-w-2xl text-theme-text-primary/80 text-base">
+            <p className="mt-6 max-w-2xl text-[#1C1917]/70 text-base">
               Transparent information and engagement with our valued investors
             </p>
           </FadeIn>

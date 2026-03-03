@@ -30,37 +30,37 @@ export default function CommoditiesSection() {
   ];
 
   return (
-    <section className="bg-theme-primary py-28">
-      <div className="max-w-7xl mx-auto px-8 text-center text-theme-text-primary">
+    <section className="bg-hill-green-light/10 py-28">
+      <div className="max-w-7xl mx-auto px-8 text-center text-hill-green-dark">
 
         <h2 className="text-4xl font-semibold mb-20">
-          Commodities <span className="text-theme-accent">We Trade</span>
+          Commodities <span className="text-hill-green">We Trade</span>
         </h2>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-y-16 gap-x-12">
           {commodities.map(({ name, icon: Icon }) => (
             <div
               key={name}
-              className="group flex flex-col items-center gap-4 text-theme-text-primary/90 transition"
+              className="group flex flex-col items-center gap-4 text-hill-green-dark/90 transition"
             >
               {/* ICON WRAPPER */}
               <div
                 className="
                   w-16 h-16 rounded-full
-                  bg-theme-text-primary/5 border border-theme-text-primary/10
+                  bg-hill-green-light/10 border border-hill-green-light/20
                   flex items-center justify-center
                   transition-all duration-300
                   group-hover:scale-110
-                  group-hover:bg-theme-text-primary/10
-                  group-hover:shadow-[0_0_28px_var(--color-highlight-dim)]
+                  group-hover:bg-hill-green-light/20
+                  group-hover:shadow-[0_0_28px_#F9731622]
                 "
               >
                 <Icon
                   className="
-                    w-9 h-9 text-theme-highlight
+                    w-9 h-9 text-hill-green
                     transition-all duration-300
-                    group-hover:text-theme-accent
-                    group-hover:drop-shadow-[0_0_10px_var(--color-highlight)]
+                    group-hover:text-sky-blue
+                    group-hover:drop-shadow-[0_0_10px_#EAB308]
                   "
                 />
               </div>
@@ -70,7 +70,7 @@ export default function CommoditiesSection() {
                 className="
                   text-sm text-center
                   transition
-                  group-hover:text-theme-text-primary
+                  group-hover:text-hill-green
                 "
               >
                 {name}

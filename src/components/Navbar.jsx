@@ -20,11 +20,11 @@ function Navbar() {
     <nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
         scrolled 
-          ? 'bg-gray-600 opacity-80 backdrop-blur-xl shadow-2xl shadow-gray-900 py-3' 
-          : 'bg-gradient-to-b from-emerald-950/40 to-transparent py-6'
+          ? 'bg-[#EA580C]/95 backdrop-blur-xl shadow-2xl shadow-[#C2410C]/30 py-3' 
+          : 'bg-gradient-to-b from-[#1C1917]/30 to-transparent py-6'
       }`}
     >
-      <div className="px-6 md:px-12 flex items-center justify-between text-white">
+      <div className="px-6 md:px-12 flex items-center justify-between text-theme-text-primary">
         {/* LOGO */}
         <Link to="/" className="group relative z-10">
           <img
@@ -48,10 +48,10 @@ function Navbar() {
             <li key={item.to} className="group relative">
               <Link 
                 to={item.to}
-                className="text-white/80 hover:text-white transition-all duration-300 font-medium tracking-wide"
+                className="text-hill-green-dark/80 hover:text-hill-green-dark transition-all duration-300 font-medium tracking-wide"
               >
                 {item.label}
-                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-secondary)] group-hover:w-full transition-all duration-300"></span>
+                <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-hill-green-mid to-sky-blue group-hover:w-full transition-all duration-300"></span>
               </Link>
             </li>
           ))}
@@ -59,22 +59,22 @@ function Navbar() {
 
         {/* ACTIONS */}
         <div className="flex items-center gap-3">
-          <button className="hidden md:block bg-gradient-to-r from-white to-white/90 text-[var(--color-button-text)] px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-2xl hover:shadow-white/30 transition-all duration-300 hover:scale-105 transform">
+          <button className="hidden md:block bg-[#F97316] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-2xl hover:shadow-[#C2410C]/30 transition-all duration-300 hover:scale-105 transform">
             Become a Member
           </button>
           
-          <button className="hidden md:block relative overflow-hidden bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-2xl hover:shadow-red-500/50 transition-all duration-300 hover:scale-105 transform group">
+          <button className="hidden md:block relative overflow-hidden bg-gradient-to-r from-[#F97316] to-[#EAB308] text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:shadow-2xl hover:shadow-[#F97316]/50 transition-all duration-300 hover:scale-105 transform group">
             <span className="relative z-10 flex items-center gap-2">
               <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
               E-Auction Live
             </span>
-            <span className="absolute inset-0 bg-gradient-to-r from-orange-600 to-red-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
+            <span className="absolute inset-0 bg-gradient-to-r from-[#EAB308] to-[#F97316] opacity-0 group-hover:opacity-100 transition-opacity duration-300"></span>
           </button>
-
+          
           {/* Mobile Menu Button */}
           <button 
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            className="lg:hidden p-2 rounded-lg bg-white/10 backdrop-blur-md hover:bg-white/20 transition-all duration-300 border border-white/20"
+            className="lg:hidden p-2 rounded-lg bg-[#F97316]/10 backdrop-blur-md hover:bg-[#F97316]/20 transition-all duration-300 border border-[#F97316]/20"
           >
             {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -87,7 +87,7 @@ function Navbar() {
           mobileMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <div className="px-6 pt-4 pb-6 bg-emerald-950/95 backdrop-blur-xl border-t border-white/10 mt-4">
+          <div className="px-6 pt-4 pb-6 bg-[#C2410C]/95 backdrop-blur-xl border-t border-[#F97316]/10 mt-4">
           <ul className="flex flex-col gap-4">
             {[
               { to: '/about', label: 'About' },
@@ -108,10 +108,10 @@ function Navbar() {
             ))}
           </ul>
           <div className="flex flex-col gap-3 mt-6">
-            <button className="w-full bg-gradient-to-r from-white to-white/90 text-[var(--color-button-text)] px-6 py-3 rounded-full text-sm font-semibold hover:shadow-xl transition-all duration-300">
+            <button className="w-full bg-hill-green text-cloud-white px-6 py-3 rounded-full text-sm font-semibold hover:shadow-xl transition-all duration-300">
               Become a Member
             </button>
-            <button className="w-full bg-gradient-to-r from-red-600 to-orange-600 text-white px-6 py-3 rounded-full text-sm font-semibold hover:shadow-xl transition-all duration-300">
+            <button className="w-full bg-gradient-to-r from-sky-blue to-hill-green text-cloud-white px-6 py-3 rounded-full text-sm font-semibold hover:shadow-xl transition-all duration-300">
               <span className="flex items-center justify-center gap-2">
                 <span className="w-2 h-2 bg-white rounded-full animate-pulse"></span>
                 E-Auction Live

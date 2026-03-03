@@ -67,9 +67,9 @@ const Services = () => {
 
   {/* asymmetric glow blobs */}
   <div className="absolute -top-40 -left-40 w-[520px] h-[520px]
-                  bg-[#4DA3FF]/20 blur-[160px] rounded-full" />
+                  bg-[#F59E0B]/20 blur-[160px] rounded-full" />
   <div className="absolute bottom-0 right-0 w-[420px] h-[420px]
-                  bg-[#F4C430]/20 blur-[140px] rounded-full" />
+                  bg-[#F97316]/20 blur-[140px] rounded-full" />
 
   <div className="relative max-w-7xl mx-auto px-12 grid lg:grid-cols-2 gap-24 items-center">
 
@@ -91,15 +91,15 @@ const Services = () => {
         }}
         className="flex items-center gap-4 mb-10"
       >
-        <span className="w-14 h-[2px] bg-[#F4C430]" />
-        <p className="text-xs tracking-[0.35em] text-white font-semibold">
+        <span className="w-14 h-[2px] bg-[#F97316]" />
+        <p className="text-xs tracking-[0.35em] text-[#1C1917] font-semibold">
           SUPPLY CHAINS
         </p>
       </motion.div>
 
       {/* headline with inline typewriter */}
       <motion.h1
-        className="text-6xl font-extrabold leading-tight text-white"
+        className="text-6xl font-extrabold leading-tight text-[#1C1917]"
       >
         {"Unlocking Value".split("").map((c, i) => (
           <motion.span
@@ -114,7 +114,7 @@ const Services = () => {
         ))}
         <br />
 
-        <span className="text-[#4DA3FF] [text-shadow:0_0_14px_#4DA3FF66]">
+        <span className="text-[#F59E0B] [text-shadow:0_0_14px_#F59E0B66]">
           {"Across India’s".split("").map((c, i) => (
             <motion.span
               key={i}
@@ -129,7 +129,7 @@ const Services = () => {
         </span>
         <br />
 
-        <span className="text-[#F4C430] [text-shadow:0_0_16px_#F4C43066]">
+        <span className="text-[#F97316] [text-shadow:0_0_16px_#F9731666]">
           {"Agri & Allied Markets".split("").map((c, i) => (
             <motion.span
               key={i}
@@ -150,7 +150,7 @@ const Services = () => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         transition={{ delay: 1.8 }}
-        className="mt-12 max-w-xl text-lg text-white/90 leading-relaxed"
+        className="mt-12 max-w-xl text-lg text-[#1C1917]/90 leading-relaxed"
       >
         Building a transparent, efficient, and tech-powered
         agricultural ecosystem — connecting Bharat’s farms
@@ -174,7 +174,7 @@ const Services = () => {
         src={plant}
         alt="Agri Supply Chain"
         className="relative rounded-[24px] ml-28 w-[480px] object-cover
-                   shadow-[0_0_70px_#4DA3FF33]"
+                   shadow-[0_0_70px_#F59E0B33]"
       />
     </motion.div>
 
@@ -182,7 +182,7 @@ const Services = () => {
 </section>
 
 
-  <section id="public-sector" className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white scroll-mt-24 ">
+  <section id="public-sector" className="relative pt-40 pb-40 px-24 bg-theme-primary text-[#1C1917] scroll-mt-24 ">
 
   {/* ================= SUBTLE DATA GRID ================= */}
   <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
@@ -194,12 +194,12 @@ const Services = () => {
                   rotate-[25deg] blur-3xl pointer-events-none" />
 
   <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
-                  bg-gradient-to-tr from-[#4DA3FF]/35 to-transparent
+                  bg-gradient-to-tr from-[#F59E0B]/35 to-transparent
                   rotate-[-18deg] blur-3xl pointer-events-none" />
 
   {/* ================= NEON AXIS ================= */}
-  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F4C430]/30 blur-sm" />
-  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#4DA3FF]/25 blur-sm" />
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F97316]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#F59E0B]/25 blur-sm" />
 
   <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -210,18 +210,18 @@ const Services = () => {
       <div className="relative">
 
         {/* vertical signal bar */}
-        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F4C430]
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F97316]
                         shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
 
         <h2 className="text-6xl font-extrabold leading-tight">
           Public Sector{" "}
-          <span className="block text-[#F4C430]
-                           [text-shadow:0_0_24px_#F4C43066]">
+          <span className="block text-[#F97316]
+                           [text-shadow:0_0_24px_#F9731666]">
             Auctions
           </span>
         </h2>
 
-        <p className="mt-10 text-lg leading-relaxed text-white/75 max-w-xl">
+        <p className="mt-10 text-lg leading-relaxed text-[#1C1917]/75 max-w-xl">
           BeAM’s auction platform is purpose-built for government bodies, PSUs,
           and cooperatives — delivering compliant, transparent, and audit-ready
           digital auctions with maximum bidder participation and zero friction.
@@ -250,17 +250,17 @@ const Services = () => {
                          bg-white/5 backdrop-blur-xl
                          border border-white/10 rounded-2xl
                          clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                         hover:border-[#4DA3FF]/60
+                         hover:border-[#F59E0B]/60
                          shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                          transition-all"
             >
-              <div className="absolute top-0 right-0 w-4 h-4 bg-[#F4C430]
-                              shadow-[0_0_16px_#F4C430]" />
+              <div className="absolute top-0 right-0 w-4 h-4 bg-[#F97316]
+                              shadow-[0_0_16px_#F97316]" />
 
-              <h4 className="mt-2 font-semibold text-white">
+              <h4 className="mt-2 font-semibold text-[#1C1917]">
                 {item.title}
               </h4>
-              <p className="mt-2 text-sm text-white/70">
+              <p className="mt-2 text-sm text-[#1C1917]/70">
                 {item.desc}
               </p>
             </div>
@@ -271,13 +271,13 @@ const Services = () => {
       {/* ================= RIGHT VISUAL ================= */}
       <div className="relative sticky top-20
                       clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
-                      border border-[#4DA3FF]/30 rounded-2xl
+                      border border-[#F59E0B]/30 rounded-2xl
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
           src={servicesfarmer}
           alt="Public sector auctions"
-          className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
+          className="w-full h-[420px] border border-[#F59E0B]/30 rounded-2xl object-cover opacity-90"
         />
 
         <div className="absolute inset-0 bg-gradient-to-tr
@@ -312,17 +312,17 @@ const Services = () => {
                      bg-white/5 backdrop-blur-xl
                      border border-white/10 rounded-2xl
                      clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                     hover:border-[#F4C430]/60
+                     hover:border-[#F97316]/60
                      shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                      transition-all"
         >
           <Icon
             className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
-                       group-hover:text-[#F4C430]
+                       group-hover:text-[#F97316]
                        transition-colors"
           />
 
-          <p className="font-medium text-white/90 leading-snug">
+          <p className="font-medium text-[#1C1917]/90 leading-snug">
             {item.label}
           </p>
         </div>
@@ -336,7 +336,7 @@ const Services = () => {
 </section>
 
 
-  <section id="trade-connect" className="relative bg-[#F7FBF9] py-32 text-[#0B2F26] scroll-mt-24 ">
+  <section id="trade-connect" className="relative bg-cloud-white-soft py-32 text-hill-green-deep scroll-mt-24 ">
 
   {/* subtle grid (softer) */}
   <div className="absolute inset-0 opacity-[0.05]
@@ -356,7 +356,7 @@ const Services = () => {
       transition={{ duration: 0.9 }}
     >
       {/* accent bar */}
-      <div className="absolute -left-8 top-4 w-1 h-24 bg-[#F4C430]" />
+      <div className="absolute -left-8 top-4 w-1 h-24 bg-[#F97316]" />
 
       <h1 className="text-6xl font-extrabold leading-tight tracking-tight">
         Trade <br />
@@ -426,7 +426,7 @@ const Services = () => {
                          transition"
             >
               <div>
-                <h4 className="font-semibold text-[#0B2F26]">
+                <h4 className="font-semibold text-hill-green-deep">
                   {item.title}
                 </h4>
                 <p className="text-sm text-[#4B6F64] mt-1">
@@ -495,7 +495,7 @@ const Services = () => {
 
 
 
-<section id="data-analytics-and-consulting" className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white scroll-mt-24">
+<section id="data-analytics-and-consulting" className="relative pt-40 pb-40 px-24 bg-theme-primary text-[#1C1917] scroll-mt-24">
 
   {/* ================= SUBTLE DATA GRID ================= */}
   <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
@@ -507,12 +507,12 @@ const Services = () => {
                   rotate-[25deg] blur-3xl pointer-events-none" />
 
   <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
-                  bg-gradient-to-tr from-[#4DA3FF]/35 to-transparent
+                  bg-gradient-to-tr from-[#F59E0B]/35 to-transparent
                   rotate-[-18deg] blur-3xl pointer-events-none" />
 
   {/* ================= NEON AXIS LINES ================= */}
-  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F4C430]/30 blur-sm" />
-  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#4DA3FF]/25 blur-sm" />
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F97316]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#F59E0B]/25 blur-sm" />
 
   <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -523,18 +523,18 @@ const Services = () => {
       <div className="relative">
 
         {/* vertical signal bar */}
-        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F4C430]
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F97316]
                         shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
 
         <h2 className="text-6xl font-extrabold leading-tight">
           Data Analytics &
-          <span className="block text-[#4DA3FF]
-                           [text-shadow:0_0_24px_#4DA3FF66]">
+          <span className="block text-[#F59E0B]
+                           [text-shadow:0_0_24px_#F59E0B66]">
             Consulting
           </span>
         </h2>
 
-        <p className="mt-10 text-lg leading-relaxed text-white/75 max-w-xl">
+        <p className="mt-10 text-lg leading-relaxed text-[#1C1917]/75 max-w-xl">
           Through active partnerships, BeAM empowers stakeholders across the agri
           value chain with actionable insights, predictive intelligence, and
           strategy-backed advisory. We convert complex data into
@@ -569,22 +569,22 @@ const Services = () => {
                            bg-white/5 backdrop-blur-xl
                            border border-white/10 rounded-2xl
                            clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                           hover:border-[#4DA3FF]/60
+                           hover:border-[#F59E0B]/60
                            shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                            transition-all"
               >
                 {/* neon corner */}
-                <div className="absolute top-0 right-0 w-4 h-4 bg-[#F4C430]
-                                shadow-[0_0_16px_#F4C430]" />
+                <div className="absolute top-0 right-0 w-4 h-4 bg-[#F97316]
+                                shadow-[0_0_16px_#F97316]" />
 
                 <Icon className="w-8 h-8 text-[#1F7A5A]
-                                 group-hover:text-[#4DA3FF]
+                                 group-hover:text-[#F59E0B]
                                  transition-colors" />
 
-                <h4 className="mt-4 font-semibold text-white">
+                <h4 className="mt-4 font-semibold text-[#1C1917]">
                   {item.title}
                 </h4>
-                <p className="mt-2 text-sm text-white/70">
+                <p className="mt-2 text-sm text-[#1C1917]/70">
                   {item.desc}
                 </p>
               </div>
@@ -596,13 +596,13 @@ const Services = () => {
       {/* ================= RIGHT VISUAL ================= */}
       <div className="relative sticky top-20
                       clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
-                      border border-[#4DA3FF]/30 rounded-2xl
+                      border border-[#F59E0B]/30 rounded-2xl
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
           src={services}
           alt="Data consulting"
-          className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
+          className="w-full h-[420px] border border-[#F59E0B]/30 rounded-2xl object-cover opacity-90"
         />
 
         {/* data overlay */}
@@ -639,14 +639,14 @@ const Services = () => {
                          bg-white/5 backdrop-blur-xl
                          border border-white/10
                          clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                         hover:border-[#F4C430]/60
+                         hover:border-[#F97316]/60
                          shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                          transition-all"
             >
               <Icon className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
-                               group-hover:text-[#F4C430]
+                               group-hover:text-[#F97316]
                                transition-colors" />
-              <p className="font-medium text-white/90 leading-snug">
+              <p className="font-medium text-[#1C1917]/90 leading-snug">
                 {item.label}
               </p>
             </div>
@@ -657,7 +657,7 @@ const Services = () => {
 
   </div>
 </section>
-<section id="financial-float-trade" className="relative bg-[#F7FBF9] py-40  text-[#0B2F26] scroll-mt-24">
+<section id="financial-float-trade" className="relative bg-cloud-white-soft py-40  text-hill-green-deep scroll-mt-24">
 
   {/* subtle finance grid */}
   <div className="absolute inset-0 opacity-[0.05]
@@ -672,7 +672,7 @@ const Services = () => {
     <div className="relative">
 
       {/* accent bar */}
-      <div className="absolute -left-10 top-6 w-1 h-24 bg-[#F4C430]" />
+      <div className="absolute -left-10 top-6 w-1 h-24 bg-[#F97316]" />
 
       <h2 className="text-6xl font-extrabold leading-tight">
         Trade{" "}
@@ -731,7 +731,7 @@ const Services = () => {
                 <Icon size={26} />
               </div>
               <div>
-                <h4 className="font-semibold text-[#0B2F26]">
+                <h4 className="font-semibold text-hill-green-deep">
                   {item.title}
                 </h4>
                 <p className="mt-1 text-sm text-[#4B6F64]">
@@ -776,7 +776,7 @@ const Services = () => {
                     <Icon size={22} />
                   </div>
                   <div>
-                    <h5 className="font-medium text-[#0B2F26]">
+                    <h5 className="font-medium text-hill-green-deep">
                       {item.title}
                     </h5>
                     <p className="text-sm text-[#4B6F64]">
@@ -794,7 +794,7 @@ const Services = () => {
   </div>
 </section>
 
- <section id="metals" className="relative pt-40 pb-40 px-24 bg-[#07140f] text-white scroll-mt-24">
+ <section id="metals" className="relative pt-40 pb-40 px-24 bg-theme-primary text-[#1C1917] scroll-mt-24">
 
   {/* ================= SUBTLE DATA GRID ================= */}
   <div className="absolute inset-0 bg-[linear-gradient(#ffffff10_1px,transparent_1px),linear-gradient(90deg,#ffffff10_1px,transparent_1px)]
@@ -806,12 +806,12 @@ const Services = () => {
                   rotate-[25deg] blur-3xl pointer-events-none" />
 
   <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
-                  bg-gradient-to-tr from-[#4DA3FF]/35 to-transparent
+                  bg-gradient-to-tr from-[#F59E0B]/35 to-transparent
                   rotate-[-18deg] blur-3xl pointer-events-none" />
 
   {/* ================= NEON AXIS LINES ================= */}
-  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F4C430]/30 blur-sm" />
-  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#4DA3FF]/25 blur-sm" />
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F97316]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#F59E0B]/25 blur-sm" />
 
   <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -822,14 +822,14 @@ const Services = () => {
       <div className="relative">
 
         {/* vertical signal bar */}
-        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F4C430]
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F97316]
                         shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
 
         <h2 className="text-6xl font-extrabold leading-tight">
           Metals
         </h2>
 
-        <p className="mt-10 text-lg leading-relaxed text-white/75 max-w-xl">
+        <p className="mt-10 text-lg leading-relaxed text-[#1C1917]/75 max-w-xl">
           BeAM brings transparency, speed, and efficiency to the industrial
           metals trade. Whether you’re buying or selling steel, scrap, or
           alloys — our digital platforms simplify every step with trust,
@@ -842,10 +842,10 @@ const Services = () => {
           <div className="flex gap-5">
             <BarChart3 className="w-7 h-7 text-[#1F7A5A] mt-1" />
             <div>
-              <h4 className="font-semibold text-lg text-white">
+              <h4 className="font-semibold text-lg text-[#1C1917]">
                 Market Intelligence & Analytics
               </h4>
-              <p className="text-white/70">
+              <p className="text-[#1C1917]/70">
                 Price trends, bidder behavior, and trade data that empower
                 smarter, faster decisions.
               </p>
@@ -855,10 +855,10 @@ const Services = () => {
           <div className="flex gap-5">
             <ShieldCheck className="w-7 h-7 text-[#1F7A5A] mt-1" />
             <div>
-              <h4 className="font-semibold text-lg text-white">
+              <h4 className="font-semibold text-lg text-[#1C1917]">
                 Quality & Compliance Assurance
               </h4>
-              <p className="text-white/70">
+              <p className="text-[#1C1917]/70">
                 Audit trails, certifications, and digital documentation for
                 risk-free trading.
               </p>
@@ -868,10 +868,10 @@ const Services = () => {
           <div className="flex gap-5">
             <Settings className="w-7 h-7 text-[#1F7A5A] mt-1" />
             <div>
-              <h4 className="font-semibold text-lg text-white">
+              <h4 className="font-semibold text-lg text-[#1C1917]">
                 Seamless Execution Support
               </h4>
-              <p className="text-white/70">
+              <p className="text-[#1C1917]/70">
                 Logistics coordination, delivery tracking, and contract
                 lifecycle management.
               </p>
@@ -884,13 +884,13 @@ const Services = () => {
       {/* ================= RIGHT VISUAL ================= */}
       <div className="relative sticky top-20
                       clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
-                      border border-[#4DA3FF]/30 rounded-2xl
+                      border border-[#F59E0B]/30 rounded-2xl
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
           src={metals}
           alt="Metals Trading"
-          className="w-full h-[420px] border border-[#4DA3FF]/30 rounded-2xl object-cover opacity-90"
+          className="w-full h-[420px] border border-[#F59E0B]/30 rounded-2xl object-cover opacity-90"
         />
 
         <div className="absolute inset-0 bg-gradient-to-tr
@@ -925,14 +925,14 @@ const Services = () => {
                          bg-white/5 backdrop-blur-xl
                          border border-white/10 rounded-2xl
                          clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                         hover:border-[#F4C430]/60
+                         hover:border-[#F97316]/60
                          shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                          transition-all"
             >
               <Icon className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
-                               group-hover:text-[#F4C430]
+                               group-hover:text-[#F97316]
                                transition-colors" />
-              <p className="font-medium text-white/90 leading-snug">
+              <p className="font-medium text-[#1C1917]/90 leading-snug">
                 {item.label}
               </p>
             </div>
@@ -1054,7 +1054,7 @@ const Services = () => {
           <div className="absolute inset-0 bg-gradient-to-t from-[#0f3b2e]/90 via-transparent to-transparent" />
         </div>
 
-        <div className="p-10 text-white">
+        <div className="p-10 text-[#1C1917]">
           <h3 className="text-xl font-semibold mb-8">Who We Serve</h3>
 
           <div className="space-y-6 text-sm">
@@ -1129,9 +1129,9 @@ const Services = () => {
         <div className="mt-6 flex justify-start">
           <a
             href="#download"
-            className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-theme-highlight to-theme-accent px-5 py-3 text-sm font-semibold text-white shadow-lg hover:opacity-95 transition-opacity"
+            className="inline-flex items-center gap-3 rounded-xl bg-gradient-to-r from-theme-highlight to-theme-accent px-5 py-3 text-sm font-semibold text-[#1C1917] shadow-lg hover:opacity-95 transition-opacity"
           >
-            <svg className="w-5 h-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-5 h-5 text-[#1C1917]" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4" />
             </svg>
             Download Form 5A
@@ -1142,7 +1142,7 @@ const Services = () => {
   </div>
 </section>
 
-<footer className="bg-[#081f18] text-white pt-20">
+<footer className="bg-[#081f18] text-[#1C1917] pt-20">
 
   <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 
