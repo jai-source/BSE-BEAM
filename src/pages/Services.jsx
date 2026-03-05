@@ -1,4 +1,4 @@
-
+﻿
 import nine from "../Assets/image-9-scaled.jpg";
 import ten from "../Assets/image-10-scaled.jpg";
 import { motion } from "framer-motion";
@@ -67,9 +67,9 @@ const Services = () => {
 
   {/* asymmetric glow blobs */}
   <div className="absolute -top-40 -left-40 w-[520px] h-[520px]
-                  bg-[#F59E0B]/20 blur-[160px] rounded-full" />
+                  bg-[#3A7BD5]/20 blur-[160px] rounded-full" />
   <div className="absolute bottom-0 right-0 w-[420px] h-[420px]
-                  bg-[#F97316]/20 blur-[140px] rounded-full" />
+                  bg-[#1660C1]/20 blur-[140px] rounded-full" />
 
   <div className="relative max-w-7xl mx-auto px-12 grid lg:grid-cols-2 gap-24 items-center">
 
@@ -91,7 +91,7 @@ const Services = () => {
         }}
         className="flex items-center gap-4 mb-10"
       >
-        <span className="w-14 h-[2px] bg-[#F97316]" />
+        <span className="w-14 h-[2px] bg-[#1660C1]" />
         <p className="text-xs tracking-[0.35em] text-[#1C1917] font-semibold">
           SUPPLY CHAINS
         </p>
@@ -114,7 +114,7 @@ const Services = () => {
         ))}
         <br />
 
-        <span className="text-[#F59E0B] [text-shadow:0_0_14px_#F59E0B66]">
+        <span className="text-[#3A7BD5] [text-shadow:0_0_14px_#3A7BD566]">
           {"Across India’s".split("").map((c, i) => (
             <motion.span
               key={i}
@@ -129,7 +129,7 @@ const Services = () => {
         </span>
         <br />
 
-        <span className="text-[#F97316] [text-shadow:0_0_16px_#F9731666]">
+        <span className="text-[#1660C1] [text-shadow:0_0_16px_#1660C166]">
           {"Agri & Allied Markets".split("").map((c, i) => (
             <motion.span
               key={i}
@@ -174,7 +174,7 @@ const Services = () => {
         src={plant}
         alt="Agri Supply Chain"
         className="relative rounded-[24px] ml-28 w-[480px] object-cover
-                   shadow-[0_0_70px_#F59E0B33]"
+                   shadow-[0_0_70px_#3A7BD533]"
       />
     </motion.div>
 
@@ -190,16 +190,16 @@ const Services = () => {
 
   {/* ================= DIAGONAL PLANES ================= */}
   <div className="absolute -top-48 -left-56 w-[560px] h-[560px]
-                  bg-gradient-to-br from-[#1F7A5A]/40 to-transparent
+                  bg-gradient-to-br from-[#1660C1]/40 to-transparent
                   rotate-[25deg] blur-3xl pointer-events-none" />
 
   <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
-                  bg-gradient-to-tr from-[#F59E0B]/35 to-transparent
+                  bg-gradient-to-tr from-[#3A7BD5]/35 to-transparent
                   rotate-[-18deg] blur-3xl pointer-events-none" />
 
   {/* ================= NEON AXIS ================= */}
-  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F97316]/30 blur-sm" />
-  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#F59E0B]/25 blur-sm" />
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#1660C1]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#3A7BD5]/25 blur-sm" />
 
   <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -210,13 +210,13 @@ const Services = () => {
       <div className="relative">
 
         {/* vertical signal bar */}
-        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F97316]
-                        shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#1660C1]
+                        shadow-[0_0_18px_rgba(22,96,193,0.8)]" />
 
         <h2 className="text-6xl font-extrabold leading-tight">
           Public Sector{" "}
-          <span className="block text-[#F97316]
-                           [text-shadow:0_0_24px_#F9731666]">
+          <span className="block text-[#1660C1]
+                           [text-shadow:0_0_24px_#1660C166]">
             Auctions
           </span>
         </h2>
@@ -250,12 +250,12 @@ const Services = () => {
                          bg-white/5 backdrop-blur-xl
                          border border-white/10 rounded-2xl
                          clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                         hover:border-[#F59E0B]/60
+                         hover:border-[#3A7BD5]/60
                          shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                          transition-all"
             >
-              <div className="absolute top-0 right-0 w-4 h-4 bg-[#F97316]
-                              shadow-[0_0_16px_#F97316]" />
+              <div className="absolute top-0 right-0 w-4 h-4 bg-[#1660C1]
+                              shadow-[0_0_16px_#1660C1]" />
 
               <h4 className="mt-2 font-semibold text-[#1C1917]">
                 {item.title}
@@ -271,13 +271,13 @@ const Services = () => {
       {/* ================= RIGHT VISUAL ================= */}
       <div className="relative sticky top-20
                       clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
-                      border border-[#F59E0B]/30 rounded-2xl
+                      border border-[#3A7BD5]/30 rounded-2xl
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
           src={servicesfarmer}
           alt="Public sector auctions"
-          className="w-full h-[420px] border border-[#F59E0B]/30 rounded-2xl object-cover opacity-90"
+          className="w-full h-[420px] border border-[#3A7BD5]/30 rounded-2xl object-cover opacity-90"
         />
 
         <div className="absolute inset-0 bg-gradient-to-tr
@@ -292,7 +292,7 @@ const Services = () => {
 <div>
   <h3 className="text-6xl font-extrabold text-center mb-24">
     Who We{" "}
-    <span className="text-[#1F7A5A] drop-shadow-[0_0_12px_rgba(31,122,90,0.6)]">
+    <span className="text-[#1660C1] drop-shadow-[0_0_12px_rgba(22,96,193,0.6)]">
       Serve
     </span>
   </h3>
@@ -312,13 +312,13 @@ const Services = () => {
                      bg-white/5 backdrop-blur-xl
                      border border-white/10 rounded-2xl
                      clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                     hover:border-[#F97316]/60
+                     hover:border-[#1660C1]/60
                      shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                      transition-all"
         >
           <Icon
-            className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
-                       group-hover:text-[#F97316]
+            className="w-8 h-8 mx-auto mb-5 text-[#1660C1]
+                       group-hover:text-[#1660C1]
                        transition-colors"
           />
 
@@ -356,7 +356,7 @@ const Services = () => {
       transition={{ duration: 0.9 }}
     >
       {/* accent bar */}
-      <div className="absolute -left-8 top-4 w-1 h-24 bg-[#F97316]" />
+      <div className="absolute -left-8 top-4 w-1 h-24 bg-[#1660C1]" />
 
       <h1 className="text-6xl font-extrabold leading-tight tracking-tight">
         Trade <br />
@@ -365,13 +365,13 @@ const Services = () => {
         </span>
       </h1>
 
-      <p className="mt-8 text-[#4B6F64] leading-relaxed max-w-xl">
+      <p className="mt-8 text-[#2E5FA3] leading-relaxed max-w-xl">
         BeAM is a leading institutional-grade service provider for dynamic,
         transparent e-auctions across agri and allied sectors—engineered
         for trust, speed, and competitive price discovery.
       </p>
 
-      <p className="mt-4 text-[#4B6F64] leading-relaxed max-w-xl">
+      <p className="mt-4 text-[#2E5FA3] leading-relaxed max-w-xl">
         Our flagship trade vertical facilitates real-time, transparent
         procurement auctions, enhancing buyer-seller efficiency at scale.
       </p>
@@ -429,7 +429,7 @@ const Services = () => {
                 <h4 className="font-semibold text-hill-green-deep">
                   {item.title}
                 </h4>
-                <p className="text-sm text-[#4B6F64] mt-1">
+                <p className="text-sm text-[#2E5FA3] mt-1">
                   {item.desc}
                 </p>
               </div>
@@ -503,16 +503,16 @@ const Services = () => {
 
   {/* ================= DIAGONAL DATA PLANES ================= */}
   <div className="absolute -top-48 -left-56 w-[560px] h-[560px]
-                  bg-gradient-to-br from-[#1F7A5A]/40 to-transparent
+                  bg-gradient-to-br from-[#1660C1]/40 to-transparent
                   rotate-[25deg] blur-3xl pointer-events-none" />
 
   <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
-                  bg-gradient-to-tr from-[#F59E0B]/35 to-transparent
+                  bg-gradient-to-tr from-[#3A7BD5]/35 to-transparent
                   rotate-[-18deg] blur-3xl pointer-events-none" />
 
   {/* ================= NEON AXIS LINES ================= */}
-  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F97316]/30 blur-sm" />
-  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#F59E0B]/25 blur-sm" />
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#1660C1]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#3A7BD5]/25 blur-sm" />
 
   <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -523,13 +523,13 @@ const Services = () => {
       <div className="relative">
 
         {/* vertical signal bar */}
-        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F97316]
-                        shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#1660C1]
+                        shadow-[0_0_18px_rgba(22,96,193,0.8)]" />
 
         <h2 className="text-6xl font-extrabold leading-tight">
           Data Analytics &
-          <span className="block text-[#F59E0B]
-                           [text-shadow:0_0_24px_#F59E0B66]">
+          <span className="block text-[#3A7BD5]
+                           [text-shadow:0_0_24px_#3A7BD566]">
             Consulting
           </span>
         </h2>
@@ -569,16 +569,16 @@ const Services = () => {
                            bg-white/5 backdrop-blur-xl
                            border border-white/10 rounded-2xl
                            clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                           hover:border-[#F59E0B]/60
+                           hover:border-[#3A7BD5]/60
                            shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                            transition-all"
               >
                 {/* neon corner */}
-                <div className="absolute top-0 right-0 w-4 h-4 bg-[#F97316]
-                                shadow-[0_0_16px_#F97316]" />
+                <div className="absolute top-0 right-0 w-4 h-4 bg-[#1660C1]
+                                shadow-[0_0_16px_#1660C1]" />
 
-                <Icon className="w-8 h-8 text-[#1F7A5A]
-                                 group-hover:text-[#F59E0B]
+                <Icon className="w-8 h-8 text-[#1660C1]
+                                 group-hover:text-[#3A7BD5]
                                  transition-colors" />
 
                 <h4 className="mt-4 font-semibold text-[#1C1917]">
@@ -596,13 +596,13 @@ const Services = () => {
       {/* ================= RIGHT VISUAL ================= */}
       <div className="relative sticky top-20
                       clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
-                      border border-[#F59E0B]/30 rounded-2xl
+                      border border-[#3A7BD5]/30 rounded-2xl
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
           src={services}
           alt="Data consulting"
-          className="w-full h-[420px] border border-[#F59E0B]/30 rounded-2xl object-cover opacity-90"
+          className="w-full h-[420px] border border-[#3A7BD5]/30 rounded-2xl object-cover opacity-90"
         />
 
         {/* data overlay */}
@@ -618,7 +618,7 @@ const Services = () => {
     <div>
       <h3 className="text-6xl font-extrabold text-center mb-24">
         Who We{" "}
-        <span className="text-[#1F7A5A] drop-shadow-[0_0_12px_rgba(31,122,90,0.6)]">
+        <span className="text-[#1660C1] drop-shadow-[0_0_12px_rgba(22,96,193,0.6)]">
           Serve
         </span>
       </h3>
@@ -639,12 +639,12 @@ const Services = () => {
                          bg-white/5 backdrop-blur-xl
                          border border-white/10
                          clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                         hover:border-[#F97316]/60
+                         hover:border-[#1660C1]/60
                          shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                          transition-all"
             >
-              <Icon className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
-                               group-hover:text-[#F97316]
+              <Icon className="w-8 h-8 mx-auto mb-5 text-[#1660C1]
+                               group-hover:text-[#1660C1]
                                transition-colors" />
               <p className="font-medium text-[#1C1917]/90 leading-snug">
                 {item.label}
@@ -672,7 +672,7 @@ const Services = () => {
     <div className="relative">
 
       {/* accent bar */}
-      <div className="absolute -left-10 top-6 w-1 h-24 bg-[#F97316]" />
+      <div className="absolute -left-10 top-6 w-1 h-24 bg-[#1660C1]" />
 
       <h2 className="text-6xl font-extrabold leading-tight">
         Trade{" "}
@@ -681,7 +681,7 @@ const Services = () => {
         </span>
       </h2>
 
-      <p className="mt-10 text-lg leading-relaxed text-[#4B6F64] max-w-xl">
+      <p className="mt-10 text-lg leading-relaxed text-[#2E5FA3] max-w-xl">
         BeAM enables seamless liquidity for agri-value chains and MSMEs.
         Our plug-and-play platforms bridge working capital gaps, enabling
         faster procurement, timely payouts, and uninterrupted trade execution —
@@ -734,7 +734,7 @@ const Services = () => {
                 <h4 className="font-semibold text-hill-green-deep">
                   {item.title}
                 </h4>
-                <p className="mt-1 text-sm text-[#4B6F64]">
+                <p className="mt-1 text-sm text-[#2E5FA3]">
                   {item.desc}
                 </p>
               </div>
@@ -779,7 +779,7 @@ const Services = () => {
                     <h5 className="font-medium text-hill-green-deep">
                       {item.title}
                     </h5>
-                    <p className="text-sm text-[#4B6F64]">
+                    <p className="text-sm text-[#2E5FA3]">
                       {item.desc}
                     </p>
                   </div>
@@ -802,16 +802,16 @@ const Services = () => {
 
   {/* ================= DIAGONAL DATA PLANES ================= */}
   <div className="absolute -top-48 -left-56 w-[560px] h-[560px]
-                  bg-gradient-to-br from-[#1F7A5A]/40 to-transparent
+                  bg-gradient-to-br from-[#1660C1]/40 to-transparent
                   rotate-[25deg] blur-3xl pointer-events-none" />
 
   <div className="absolute bottom-[-300px] right-[-280px] w-[620px] h-[620px]
-                  bg-gradient-to-tr from-[#F59E0B]/35 to-transparent
+                  bg-gradient-to-tr from-[#3A7BD5]/35 to-transparent
                   rotate-[-18deg] blur-3xl pointer-events-none" />
 
   {/* ================= NEON AXIS LINES ================= */}
-  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#F97316]/30 blur-sm" />
-  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#F59E0B]/25 blur-sm" />
+  <div className="absolute top-0 left-[20%] w-[2px] h-full bg-[#1660C1]/30 blur-sm" />
+  <div className="absolute top-0 right-[26%] w-[1px] h-full bg-[#3A7BD5]/25 blur-sm" />
 
   <div className="relative z-10 max-w-7xl mx-auto">
 
@@ -822,8 +822,8 @@ const Services = () => {
       <div className="relative">
 
         {/* vertical signal bar */}
-        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#F97316]
-                        shadow-[0_0_18px_rgba(244,196,48,0.8)]" />
+        <div className="absolute -left-8 top-8 w-1 h-28 bg-[#1660C1]
+                        shadow-[0_0_18px_rgba(22,96,193,0.8)]" />
 
         <h2 className="text-6xl font-extrabold leading-tight">
           Metals
@@ -840,7 +840,7 @@ const Services = () => {
         <div className="mt-16 space-y-8">
 
           <div className="flex gap-5">
-            <BarChart3 className="w-7 h-7 text-[#1F7A5A] mt-1" />
+            <BarChart3 className="w-7 h-7 text-[#1660C1] mt-1" />
             <div>
               <h4 className="font-semibold text-lg text-[#1C1917]">
                 Market Intelligence & Analytics
@@ -853,7 +853,7 @@ const Services = () => {
           </div>
 
           <div className="flex gap-5">
-            <ShieldCheck className="w-7 h-7 text-[#1F7A5A] mt-1" />
+            <ShieldCheck className="w-7 h-7 text-[#1660C1] mt-1" />
             <div>
               <h4 className="font-semibold text-lg text-[#1C1917]">
                 Quality & Compliance Assurance
@@ -866,7 +866,7 @@ const Services = () => {
           </div>
 
           <div className="flex gap-5">
-            <Settings className="w-7 h-7 text-[#1F7A5A] mt-1" />
+            <Settings className="w-7 h-7 text-[#1660C1] mt-1" />
             <div>
               <h4 className="font-semibold text-lg text-[#1C1917]">
                 Seamless Execution Support
@@ -884,13 +884,13 @@ const Services = () => {
       {/* ================= RIGHT VISUAL ================= */}
       <div className="relative sticky top-20
                       clip-path-[polygon(0_0,100%_0,92%_100%,0_100%)]
-                      border border-[#F59E0B]/30 rounded-2xl
+                      border border-[#3A7BD5]/30 rounded-2xl
                       shadow-[0_40px_120px_rgba(77,163,255,0.25)]">
 
         <img
           src={metals}
           alt="Metals Trading"
-          className="w-full h-[420px] border border-[#F59E0B]/30 rounded-2xl object-cover opacity-90"
+          className="w-full h-[420px] border border-[#3A7BD5]/30 rounded-2xl object-cover opacity-90"
         />
 
         <div className="absolute inset-0 bg-gradient-to-tr
@@ -905,7 +905,7 @@ const Services = () => {
     <div>
       <h3 className="text-6xl font-extrabold text-center mb-24">
         Who We{" "}
-        <span className="text-[#1F7A5A] drop-shadow-[0_0_12px_rgba(31,122,90,0.6)]">
+        <span className="text-[#1660C1] drop-shadow-[0_0_12px_rgba(22,96,193,0.6)]">
           Serve
         </span>
       </h3>
@@ -925,12 +925,12 @@ const Services = () => {
                          bg-white/5 backdrop-blur-xl
                          border border-white/10 rounded-2xl
                          clip-path-[polygon(0_0,95%_0,100%_50%,95%_100%,0_100%)]
-                         hover:border-[#F97316]/60
+                         hover:border-[#1660C1]/60
                          shadow-[0_20px_60px_rgba(0,0,0,0.5)]
                          transition-all"
             >
-              <Icon className="w-8 h-8 mx-auto mb-5 text-[#1F7A5A]
-                               group-hover:text-[#F97316]
+              <Icon className="w-8 h-8 mx-auto mb-5 text-[#1660C1]
+                               group-hover:text-[#1660C1]
                                transition-colors" />
               <p className="font-medium text-[#1C1917]/90 leading-snug">
                 {item.label}
@@ -949,7 +949,7 @@ const Services = () => {
 <section id="bioenergy" className="relative bg-white py-32 scroll-mt-24 ">
 
   {/* soft decorative geometry */}
-  <div className="absolute -top-48 -left-48 w-[520px] h-[520px] bg-emerald-400/10 rounded-full blur-[140px]" />
+  <div className="absolute -top-48 -left-48 w-[520px] h-[520px] bg-[#5BA9E1]/10 rounded-full blur-[140px]" />
   <div className="absolute bottom-[-280px] right-[-260px] w-[600px] h-[600px] bg-lime-300/15 rounded-full blur-[180px]" />
 
   {/* diagonal texture */}
@@ -979,60 +979,60 @@ const Services = () => {
       <div className="mt-16 space-y-10">
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <BarChart3 size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <BarChart3 size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">Smart Trading Support</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">Smart Trading Support</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Commodity-specific services tailored to the bioenergy trade lifecycle.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <ShieldCheck size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <ShieldCheck size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">Verified & Trusted Supply Base</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">Verified & Trusted Supply Base</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Onboarded network of vetted producers and aggregators.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <Factory size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <Factory size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">Price Discovery</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">Price Discovery</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Transparent pricing powered by trade data and logistics insights.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <Truck size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <Truck size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">End-to-End Logistics Coordination</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">End-to-End Logistics Coordination</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Integrated support for delivery, dispatch tracking, and payment flows.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <Globe2 size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <Globe2 size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">Pan-India Access</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">Pan-India Access</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Digital reach across major production and consumption zones.
             </p>
           </div>
@@ -1043,7 +1043,7 @@ const Services = () => {
 
     {/* RIGHT STICKY CARD */}
     <div className="lg:col-span-5">
-      <div className="sticky top-32 rounded-[28px] bg-[#0f3b2e] shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
+      <div className="sticky top-32 rounded-[28px] bg-[#0A2052] shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
 
         <div className="relative h-[320px]">
           <img
@@ -1051,7 +1051,7 @@ const Services = () => {
             alt=""
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f3b2e]/90 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A2052]/90 via-transparent to-transparent" />
         </div>
 
         <div className="p-10 text-[#1C1917]">
@@ -1059,19 +1059,19 @@ const Services = () => {
 
           <div className="space-y-6 text-sm">
             <div className="flex items-center gap-4">
-              <Users size={20} className="text-emerald-300" />
+              <Users size={20} className="text-[#5BA9E1]" />
               Biomass Producers & Aggregators
             </div>
             <div className="flex items-center gap-4">
-              <Factory size={20} className="text-emerald-300" />
+              <Factory size={20} className="text-[#5BA9E1]" />
               Industrial Fuel Buyers (Cement, Textile, Steel, FMCG)
             </div>
             <div className="flex items-center gap-4">
-              <Leaf size={20} className="text-emerald-300" />
+              <Leaf size={20} className="text-[#5BA9E1]" />
               Bioenergy Project Developers & EPCs
             </div>
             <div className="flex items-center gap-4">
-              <Building2 size={20} className="text-emerald-300" />
+              <Building2 size={20} className="text-[#5BA9E1]" />
               Green Energy Investors & Policy Bodies
             </div>
           </div>

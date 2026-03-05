@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import {
   Search,
   Calendar,
@@ -18,20 +18,20 @@ export default function Circulars() {
 
         {/* ───────── NEON BLOBS ───────── */}
         <div className="absolute -top-40 -left-40 w-[520px] h-[520px] rounded-full 
-                        bg-emerald-400/40 blur-[180px]
-                        shadow-[0_0_160px_60px_rgba(16,185,129,0.45)]" />
+                        bg-[#5BA9E1]/40 blur-[180px]
+                        shadow-[0_0_160px_60px_rgba(22,96,193,0.45)]" />
 
         <div className="absolute top-1/2 -right-40 w-[460px] h-[460px] rounded-full 
-                        bg-teal-400/30 blur-[180px]
-                        shadow-[0_0_140px_50px_rgba(20,184,166,0.35)]" />
+                        bg-[#5BA9E1]/30 blur-[180px]
+                        shadow-[0_0_140px_50px_rgba(91,169,225,0.35)]" />
 
         {/* ───────── GEOMETRIC GRID ───────── */}
         <div
           className="absolute inset-0 pointer-events-none opacity-[0.12]"
           style={{
             backgroundImage: `
-              linear-gradient(135deg, rgba(16,185,129,0.25) 1px, transparent 1px),
-              linear-gradient(45deg, rgba(16,185,129,0.25) 1px, transparent 1px)
+              linear-gradient(135deg, rgba(22,96,193,0.25) 1px, transparent 1px),
+              linear-gradient(45deg, rgba(22,96,193,0.25) 1px, transparent 1px)
             `,
             backgroundSize: "120px 120px",
           }}
@@ -61,7 +61,7 @@ export default function Circulars() {
             </p>
 
             <h1 className="text-5xl md:text-6xl font-extrabold mt-4
-                           drop-shadow-[0_0_30px_rgba(16,185,129,0.45)]">
+                           drop-shadow-[0_0_30px_rgba(22,96,193,0.45)]">
               Latest{" "}
               <span className="text-theme-highlight">
                 Circulars
@@ -81,9 +81,9 @@ export default function Circulars() {
             transition={{ duration: 0.9 }}
             className="sticky top-28 z-20
                        bg-white/5 backdrop-blur-2xl
-                       border border-emerald-400/20
+                       border border-[#5BA9E1]/20
                        rounded-2xl
-                       shadow-[0_0_120px_rgba(16,185,129,0.25)]
+                       shadow-[0_0_120px_rgba(22,96,193,0.25)]
                        p-8 mb-20"
           >
             <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
@@ -101,7 +101,7 @@ export default function Circulars() {
                 <button className="flex items-center gap-2
                                    bg-theme-accent hover:bg-theme-accent-hover
                                    text-black px-6 py-3 rounded-xl
-                                   shadow-[0_0_35px_rgba(16,185,129,0.6)]
+                                   shadow-[0_0_35px_rgba(22,96,193,0.6)]
                                    transition">
                   <Filter size={18} />
                   Filter
@@ -125,8 +125,8 @@ export default function Circulars() {
             whileInView={{ opacity: 1 }}
             transition={{ duration: 0.6 }}
             className="overflow-hidden rounded-2xl
-                       border border-emerald-400/20
-                       shadow-[0_0_140px_rgba(16,185,129,0.3)]"
+                       border border-[#5BA9E1]/20
+                       shadow-[0_0_140px_rgba(22,96,193,0.3)]"
           >
             <table className="w-full text-left">
               <thead className="bg-[#081f18] text-[#1C1917]">
@@ -156,7 +156,7 @@ export default function Circulars() {
                     transition={{ delay: i * 0.05 }}
                     className="border-b border-white/10
                                hover:bg-theme-highlight/10
-                               hover:shadow-[inset_0_0_25px_rgba(16,185,129,0.25)]
+                               hover:shadow-[inset_0_0_25px_rgba(22,96,193,0.25)]
                                transition"
                   >
                     <td className="px-6 py-4 font-medium text-theme-text-secondary">
@@ -175,7 +175,7 @@ export default function Circulars() {
                     <td className="px-6 py-4">
                       <button className="flex items-center gap-2
                                          text-theme-accent hover:text-theme-accent-hover
-                                         drop-shadow-[0_0_12px_rgba(16,185,129,0.7)]
+                                         drop-shadow-[0_0_12px_rgba(22,96,193,0.7)]
                                          font-semibold">
                         <Download size={18} />
                         Download
@@ -254,19 +254,19 @@ export default function Circulars() {
 function Input({ label, icon }) {
   return (
     <div className="flex flex-col gap-2">
-      <label className="text-sm font-medium text-emerald-100/80">
+      <label className="text-sm font-medium text-[#D6E8F8]/80">
         {label}
       </label>
       <div className="relative">
-        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-emerald-400">
+        <span className="absolute left-3 top-1/2 -translate-y-1/2 text-[#5BA9E1]">
           {icon}
         </span>
         <input
           placeholder="dd-mm-yyyy"
           className="w-full pl-10 pr-4 py-3 rounded-xl
-                     bg-[#07130f] text-white
+                     bg-[#0A1A3E] text-white
                      border border-white/15
-                     focus:ring-2 focus:ring-emerald-500 outline-none transition"
+                     focus:ring-2 focus:ring-[#1660C1] outline-none transition"
         />
       </div>
     </div>
@@ -276,14 +276,14 @@ function Input({ label, icon }) {
 function Select({ label }) {
   return (
     <div className="flex flex-col gap-2">
-      <label className="text-sm font-medium text-emerald-100/80">
+      <label className="text-sm font-medium text-[#D6E8F8]/80">
         {label}
       </label>
       <select
         className="w-full py-3 px-4 rounded-xl
-                   bg-[#07130f] text-white
+                   bg-[#0A1A3E] text-white
                    border border-white/15
-                   focus:ring-2 focus:ring-emerald-500 outline-none transition"
+                   focus:ring-2 focus:ring-[#1660C1] outline-none transition"
       >
         <option>Select an option</option>
       </select>

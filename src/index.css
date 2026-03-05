@@ -5,35 +5,35 @@
 /* Theme Variables */
 :root[data-theme="green-white"] {
   /* ── Base ─────────────────────────────── */
-  --color-primary:        #FFF3D6;   /* soft orange section bg */
-  --color-primary-light:  #FFE4A0;   /* amber section bg       */
-  --color-primary-dark:   #FFE4A0;   /* deep amber             */
+  --color-primary:        #E8F2FC;   /* light XP blue section bg  */
+  --color-primary-light:  #D0E8F8;   /* slightly deeper light blue */
+  --color-primary-dark:   #D0E8F8;   /* slightly deeper light blue */
 
   /* ── Accent ───────────────────────────── */
-  --color-accent:         #F97316;   /* bright orange          */
-  --color-accent-hover:   #EA580C;   /* deeper orange          */
+  --color-accent:         #1660C1;   /* XP classic blue            */
+  --color-accent-hover:   #0A246A;   /* XP dark title blue         */
 
   /* ── Backgrounds ──────────────────────── */
-  --color-bg-main:        #FFFBF2;   /* warm cream canvas      */
-  --color-bg-secondary:   #FFF3D6;   /* soft orange tint       */
-  --color-page-bg:        #FFF3D6;   /* page default           */
+  --color-bg-main:        #F0F7FF;   /* near-white blue canvas     */
+  --color-bg-secondary:   #E8F2FC;   /* soft blue tint             */
+  --color-page-bg:        #E8F2FC;   /* page default               */
 
   /* ── Text ─────────────────────────────── */
-  --color-text-primary:   #1C1917;   /* near-black             */
-  --color-text-secondary: #78350F;   /* warm amber-brown       */
-  --color-text-muted:     #FDE68A;   /* pale yellow for muted  */
+  --color-text-primary:   #0F172A;   /* near-black                 */
+  --color-text-secondary: #1E3A6E;   /* dark XP navy               */
+  --color-text-muted:     #A6CAF0;   /* pale XP blue for muted     */
 
   /* ── Buttons ──────────────────────────── */
-  --color-button-bg:      #F97316;   /* bright orange          */
-  --color-button-text:    #FFFFFF;   /* white                  */
+  --color-button-bg:      #1660C1;   /* XP classic blue            */
+  --color-button-text:    #FFFFFF;   /* white                      */
 
   /* ── Gradients ────────────────────────── */
-  --color-gradient-from:  #F97316;
-  --color-gradient-to:    #EAB308;   /* bright yellow          */
+  --color-gradient-from:  #1660C1;
+  --color-gradient-to:    #5BA9E1;   /* XP sky blue                */
 
   /* ── Highlights ───────────────────────── */
-  --color-highlight:      #F97316;   /* bright orange          */
-  --color-highlight-dim:  rgba(249,115,22,0.12);
+  --color-highlight:      #1660C1;   /* XP classic blue            */
+  --color-highlight-dim:  rgba(22,96,193,0.12);
 }
 
 :root[data-theme="blue-red-yellow"] {

@@ -1,4 +1,4 @@
-import { motion } from "framer-motion";
+﻿import { motion } from "framer-motion";
 import { MapPin, Mail } from "lucide-react";
 
 export default function Contact() {
@@ -8,13 +8,13 @@ export default function Contact() {
 
       {/* subtle grid pattern */}
       <div className="absolute inset-0 opacity-[0.04]
-        bg-[linear-gradient(to_right,#1a3a2d_1px,transparent_1px),
-            linear-gradient(to_bottom,#1a3a2d_1px,transparent_1px)]
+        bg-[linear-gradient(to_right,#1a3a6e_1px,transparent_1px),
+            linear-gradient(to_bottom,#1a3a6e_1px,transparent_1px)]
         bg-[size:90px_90px]" />
 
       {/* soft glow */}
       <div className="absolute top-[-300px] left-1/2 -translate-x-1/2
-        w-[900px] h-[900px] bg-emerald-900/25 blur-[180px] rounded-full" />
+        w-[900px] h-[900px] bg-[#0A246A]/25 blur-[180px] rounded-full" />
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 pt-36 pb-32">
 
@@ -53,13 +53,13 @@ export default function Contact() {
             <div className="flex gap-5 p-6 rounded-2xl
               bg-white/5 border border-white/10
               backdrop-blur-xl">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10
+              <div className="w-12 h-12 rounded-xl bg-[#1660C1]/10
                 flex items-center justify-center">
-                <MapPin className="text-emerald-400" />
+                <MapPin className="text-[#5BA9E1]" />
               </div>
               <div>
                 <h3 className="font-medium mb-1">Registered Office</h3>
-                <p className="text-sm text-emerald-100/60 leading-relaxed">
+                <p className="text-sm text-[#D6E8F8]/60 leading-relaxed">
                   25th Floor, P.J. Towers, Dalal Street, Fort,
                   Mumbai, Mumbai City, Maharashtra, India – 400001
                 </p>
@@ -70,13 +70,13 @@ export default function Contact() {
             <div className="flex gap-5 p-6 rounded-2xl
               bg-white/5 border border-white/10
               backdrop-blur-xl">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10
+              <div className="w-12 h-12 rounded-xl bg-[#1660C1]/10
                 flex items-center justify-center">
-                <MapPin className="text-emerald-400" />
+                <MapPin className="text-[#5BA9E1]" />
               </div>
               <div>
                 <h3 className="font-medium mb-1">NCR Office</h3>
-                <p className="text-sm text-emerald-100/60 leading-relaxed">
+                <p className="text-sm text-[#D6E8F8]/60 leading-relaxed">
                   Unit No. 319, Suncity Success Towers, Sector 65,
                   Golf Course Extension Road, Gurugram, Haryana,
                   India – 122018
@@ -88,13 +88,13 @@ export default function Contact() {
             <div className="flex gap-5 p-6 rounded-2xl
               bg-white/5 border border-white/10
               backdrop-blur-xl">
-              <div className="w-12 h-12 rounded-xl bg-emerald-500/10
+              <div className="w-12 h-12 rounded-xl bg-[#1660C1]/10
                 flex items-center justify-center">
-                <Mail className="text-emerald-400" />
+                <Mail className="text-[#5BA9E1]" />
               </div>
               <div>
                 <h3 className="font-medium mb-1">Email us</h3>
-                <p className="text-sm text-emerald-100/60">
+                <p className="text-sm text-[#D6E8F8]/60">
                   inquiry@bsebeamagr.com
                 </p>
               </div>
@@ -110,7 +110,7 @@ export default function Contact() {
               bg-white/5 border border-white/10
               backdrop-blur-2xl"
           >
-            <p className="text-sm text-emerald-300 mb-6">
+            <p className="text-sm text-[#5BA9E1] mb-6">
               Required fields are marked *
             </p>
 
@@ -128,8 +128,8 @@ export default function Contact() {
                   <input
                     placeholder={placeholder}
                     className="w-full px-4 py-3 rounded-xl
-                      bg-[#07130f] border border-white/15
-                      focus:border-emerald-500 outline-none transition"
+                      bg-[#0A1A3E] border border-white/15
+                      focus:border-[#1660C1] outline-none transition"
                   />
                 </div>
               ))}
@@ -142,15 +142,15 @@ export default function Contact() {
                   placeholder="Enter your Message"
                   rows={4}
                   className="w-full px-4 py-3 rounded-xl
-                    bg-[#07130f] border border-white/15
-                    focus:border-emerald-500 outline-none transition"
+                    bg-[#0A1A3E] border border-white/15
+                    focus:border-[#1660C1] outline-none transition"
                 />
               </div>
 
               <button
                 className="mt-4 px-6 py-3 rounded-xl
-                  bg-emerald-500 text-black font-medium
-                  hover:bg-emerald-400 transition"
+                  bg-[#1660C1] text-black font-medium
+                  hover:bg-[#5BA9E1] transition"
               >
                 Submit message
               </button>

@@ -7,21 +7,21 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Sun Oranges (Major)
-        'hill-green': '#F97316',          // bright orange
-        'hill-green-dark': '#C2410C',     // dark orange
-        'hill-green-mid': '#EA580C',      // deep orange
-        'hill-green-deep': '#FFF3D6',     // pale orange bg
-        'hill-green-light': '#FB923C',    // light orange
-        // Sun Yellows
-        'sky-blue': '#EAB308',            // bright yellow
-        'sky-blue-mid': '#F59E0B',        // amber
-        'sky-blue-light': '#FCD34D',      // light yellow
-        'sky-blue-lightest': '#FDE68A',   // pale yellow
-        // Warm Whites / Creams
+        // XP Blues (Major)
+        'hill-green': '#1660C1',          // XP classic blue
+        'hill-green-dark': '#0A246A',     // XP dark title blue
+        'hill-green-mid': '#0F3A9B',      // XP deep blue
+        'hill-green-deep': '#E8F2FC',     // XP pale blue bg
+        'hill-green-light': '#5B9BD5',    // XP light blue
+        // XP Sky Blues
+        'sky-blue': '#5BA9E1',            // XP sky blue
+        'sky-blue-mid': '#3A7BD5',        // XP medium blue
+        'sky-blue-light': '#A6CAF0',      // XP title bar pale blue
+        'sky-blue-lightest': '#C7DFF7',   // XP very light blue
+        // Whites / Light Blues
         'cloud-white': '#FFFFFF',
-        'cloud-white-soft': '#FFFBF2',    // warm cream
-        'cloud-white-muted': '#FFF3D6',   // soft orange tint
+        'cloud-white-soft': '#F0F7FF',    // near-white blue
+        'cloud-white-muted': '#E8F2FC',   // soft blue tint
         // Theme variables
         'theme-primary': 'var(--color-primary)',
         'theme-primary-light': 'var(--color-primary-light)',

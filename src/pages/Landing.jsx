@@ -1,4 +1,4 @@
-import heroImage from "../Assets/main.png"
+﻿import heroImage from "../Assets/main.png"
 import tech from "../public/pillar1.png";
 import supply from "../public/pillar2.png";
 import finance from "../public/pillar3.png";
@@ -67,7 +67,7 @@ const offerings = [
 
 function Landing() {
   return (
-    <div className="relative w-full min-h-screen overflow-hidden bg-[#FFFBF2] text-[#1C1917] font-sans">
+    <div className="relative w-full min-h-screen overflow-hidden bg-[#F0F7FF] text-[#1C1917] font-sans">
 
       {/* HERO SECTION */}
     <section className="relative w-full min-h-screen flex items-end overflow-hidden">
@@ -86,10 +86,10 @@ function Landing() {
   />
 
   {/* Subtle theme tint */}
-  <div className="absolute inset-0 bg-[#F97316]/10 pointer-events-none" />
+  <div className="absolute inset-0 bg-[#1660C1]/10 pointer-events-none" />
 
   {/* OVERLAY */}
-  <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/88 via-[#78350F]/50 to-transparent" />
+  <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/88 via-[#1E3A6E]/50 to-transparent" />
 
   {/* CONTENT */}
   <motion.div
@@ -100,10 +100,10 @@ function Landing() {
   >
     <h1 className="text-4xl md:text-6xl font-light leading-tight max-w-4xl tracking-tight">
       Reinventing{" "}
-      <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] via-[#FDE68A] to-[#F97316] bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite]">Agri Trade</span>
+      <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-[#1660C1] via-[#C7DFF7] to-[#1660C1] bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite]">Agri Trade</span>
       <br />
       <span className="font-semibold text-white">Smarter Supply Chains,</span>{" "}
-      <span className="text-[#FCD34D]">Smarter Capital</span>
+      <span className="text-[#A6CAF0]">Smarter Capital</span>
     </h1>
 
     <p className="mt-6 max-w-2xl text-white/70 text-base leading-relaxed">
@@ -118,7 +118,7 @@ function Landing() {
     <div
       className="relative overflow-hidden rounded-2xl p-[10px]
              bg-[#1C1917]/80 backdrop-blur-md
-             border border-[#F97316]/30 ring-1 ring-[#F97316]/15
+             border border-[#1660C1]/30 ring-1 ring-[#1660C1]/15
              shadow-2xl"
     >
       {/* subtle inner sheen */}
@@ -129,14 +129,14 @@ function Landing() {
         <Link
           to="/contact"
           className="group inline-flex items-center gap-3 rounded-xl px-4 py-3
-                     bg-[#F97316] text-white
-                     border border-[#EA580C]/40
-                     shadow-lg shadow-[#F97316]/20
+                     bg-[#1660C1] text-white
+                     border border-[#0A246A]/40
+                     shadow-lg shadow-[#1660C1]/20
                      text-sm font-bold tracking-wide
                      transition-all duration-200
                      hover:-translate-y-0.5 hover:shadow-xl hover:brightness-110
                      active:translate-y-0
-                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F97316]/70"
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#1660C1]/70"
         >
           <span className="w-2.5 h-2.5 rounded-full bg-white" />
           Become a Member
@@ -146,14 +146,14 @@ function Landing() {
         <Link
           to="/services#trade-connect"
           className="group inline-flex items-center gap-3 rounded-xl px-4 py-3
-                     bg-[#EAB308] text-[#1C1917]
-                     border border-[#F59E0B]/30
-                     shadow-lg shadow-[#EAB308]/30
+                     bg-[#5BA9E1] text-[#1C1917]
+                     border border-[#3A7BD5]/30
+                     shadow-lg shadow-[#5BA9E1]/30
                      text-sm font-bold tracking-wide
                      transition-all duration-200
                      hover:-translate-y-0.5 hover:shadow-xl hover:brightness-110
                      active:translate-y-0
-                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#F59E0B]/70"
+                     focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#3A7BD5]/70"
         >
           <span className="relative flex h-2.5 w-2.5">
             <span className="absolute inline-flex h-full w-full rounded-full bg-white/40 animate-pulse" />
@@ -167,13 +167,13 @@ function Landing() {
 </section>
 
      {/* TRANSITION DIVIDER */}
-<div className="relative w-full h-8 bg-gradient-to-b from-[#FFE4A0] to-[#FFFBF2]" />
+<div className="relative w-full h-8 bg-gradient-to-b from-[#D0E8F8] to-[#F0F7FF]" />
 {/* DRIBBBLE-STYLE AGRI INSIGHTS SECTION */}
-<section className="relative w-full min-h-screen overflow-hidden bg-[#FFFBF2]">
+<section className="relative w-full min-h-screen overflow-hidden bg-[#F0F7FF]">
   {/* BACKGROUND BLOBS */}
-  <div className="absolute -top-40 -left-32 w-[520px] h-[520px] bg-[#F97316]/15 rounded-full blur-[140px]" />
-  <div className="absolute top-1/3 -right-40 w-[620px] h-[620px] bg-[#EAB308]/10 rounded-full blur-[160px]" />
-  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#FFF3D6]/30 rounded-full blur-[160px]" />
+  <div className="absolute -top-40 -left-32 w-[520px] h-[520px] bg-[#1660C1]/15 rounded-full blur-[140px]" />
+  <div className="absolute top-1/3 -right-40 w-[620px] h-[620px] bg-[#5BA9E1]/10 rounded-full blur-[160px]" />
+  <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[700px] h-[400px] bg-[#E8F2FC]/30 rounded-full blur-[160px]" />
 
   <div className="relative max-w-7xl mx-auto  pl-12 mr-0  ">
     {/* EYEBROW */}
@@ -182,7 +182,7 @@ function Landing() {
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={{ duration: 1, ease: "easeOut" }}
-      className="text-lg text-emerald-700"
+      className="text-lg text-[#0A246A]"
     >
      
     </motion.div>
@@ -200,13 +200,13 @@ function Landing() {
   Empowering Farmers with <br />
       Precision Agriculture
         <h2 className="text-5xl md:text-6xl leading-tight font-bold text-[#1C1917]">
-          <span className="italic font-normal text-[#FDE68A]">
+          <span className="italic font-normal text-[#C7DFF7]">
             Transforming India's
           </span>{" "}
           Agricultural Market with{" "}
-          <span className="relative inline-block text-[#F97316]">
+          <span className="relative inline-block text-[#1660C1]">
             Technology
-            <span className="absolute -bottom-2 left-0 w-full h-[6px] bg-[#F97316]/40 blur-sm" />
+            <span className="absolute -bottom-2 left-0 w-full h-[6px] bg-[#1660C1]/40 blur-sm" />
           </span>{" "}
           & Supply <br />
           Chain Finance
@@ -241,11 +241,11 @@ function Landing() {
               transition={{ duration: 0.8 }}
               className="relative"
             >
-              <div className="absolute -inset-2 bg-gradient-to-r from-[#F97316]/20 via-[#F59E0B]/20 to-[#F97316]/20 blur-xl opacity-0 hover:opacity-100 transition-opacity" />
+              <div className="absolute -inset-2 bg-gradient-to-r from-[#1660C1]/20 via-[#3A7BD5]/20 to-[#1660C1]/20 blur-xl opacity-0 hover:opacity-100 transition-opacity" />
               <p className="relative text-5xl font-extrabold text-[#1C1917]">
                 {value}
               </p>
-              <p className="relative text-sm text-[#FDE68A]">{label}</p>
+              <p className="relative text-sm text-[#C7DFF7]">{label}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -256,7 +256,7 @@ function Landing() {
 
 
         {/* SOFT EDGE GLOW */}
-        <div className="absolute inset-y-0 -left-10 w-32 bg-emerald-200/20 blur-3xl pointer-events-none" />
+        <div className="absolute inset-y-0 -left-10 w-32 bg-[#A6CAF0]/20 blur-3xl pointer-events-none" />
 
         <div
           className="relative h-full bg-white"
@@ -329,7 +329,7 @@ function Landing() {
 
 {/* PILLARS – DARK MODE */}
 {/* PILLARS SECTION */}
-<section className="relative py-24 overflow-hidden bg-[#FFE4A0]">
+<section className="relative py-24 overflow-hidden bg-[#D0E8F8]">
 
   {/* ================= GEOMETRIC BACKGROUND ================= */}
   <div className="absolute inset-0 pointer-events-none overflow-hidden">
@@ -345,12 +345,12 @@ function Landing() {
     />
 
     {/* AMBIENT BLOBS */}
-    <div className="absolute -top-60 -left-60 w-[700px] h-[700px] bg-emerald-500/20 rounded-full blur-[220px]" />
+    <div className="absolute -top-60 -left-60 w-[700px] h-[700px] bg-[#1660C1]/20 rounded-full blur-[220px]" />
     <div className="absolute bottom-[-300px] right-[-300px] w-[800px] h-[800px] bg-blue-500/15 rounded-full blur-[240px]" />
 
     {/* ROTATING WIREFRAME RINGS */}
     <motion.div
-      className="absolute -top-[35%] -left-[25%] w-[900px] h-[900px] rounded-full border border-emerald-400/20"
+      className="absolute -top-[35%] -left-[25%] w-[900px] h-[900px] rounded-full border border-[#5BA9E1]/20"
       animate={{ rotate: 360 }}
       transition={{ duration: 140, repeat: Infinity, ease: "linear" }}
     />
@@ -363,7 +363,7 @@ function Landing() {
 
     {/* ANGLED LIGHT PANEL */}
     <div className="absolute top-1/4 -right-[20%] w-[720px] h-[420px] 
-                    bg-gradient-to-br from-emerald-500/10 to-transparent 
+                    bg-gradient-to-br from-[#1660C1]/10 to-transparent 
                     rotate-[-18deg] rounded-3xl blur-xl" />
 
     {/* FLOATING HEX */}
@@ -415,7 +415,7 @@ function Landing() {
       <h2 className="text-7xl font-extrabold tracking-tight text-[#1C1917]">
         Our Pillars
       </h2>
-      <div className="mt-6 h-[3px] w-32 mx-auto bg-gradient-to-r from-[#F97316] via-[#F59E0B] to-[#F97316] rounded-full" />
+      <div className="mt-6 h-[3px] w-32 mx-auto bg-gradient-to-r from-[#1660C1] via-[#3A7BD5] to-[#1660C1] rounded-full" />
     </motion.div>
 
     {/* PILLARS GRID */}
@@ -453,18 +453,18 @@ function Landing() {
 
           {/* NEON AURA */}
           <div className="absolute -inset-6 rounded-3xl 
-                          bg-gradient-to-br from-emerald-400/30 via-blue-400/30 to-emerald-400/30 
+                          bg-gradient-to-br from-[#5BA9E1]/30 via-blue-400/30 to-[#5BA9E1]/30 
                           blur-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
 
           {/* CARD */}
-          <div className="relative rounded-3xl bg-[#FFF3D6]/40 p-6
-                          border border-[#F97316]/10
+          <div className="relative rounded-3xl bg-[#E8F2FC]/40 p-6
+                          border border-[#1660C1]/10
                           shadow-[0_40px_80px_-30px_rgba(0,0,0,0.6)]
                           transition-all duration-700">
 
             {/* IMAGE */}
             <div className="relative overflow-hidden rounded-2xl mb-6">
-              <div className="absolute inset-0 bg-gradient-to-t from-[#071b14] via-transparent to-transparent z-10" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#0A246A] via-transparent to-transparent z-10" />
               <motion.img
                 src={item.img}
                 alt=""
@@ -479,7 +479,7 @@ function Landing() {
               {item.title}
             </h3>
 
-            <p className="text-sm text-[#FDE68A]/70 leading-relaxed">
+            <p className="text-sm text-[#C7DFF7]/70 leading-relaxed">
               {item.desc}
             </p>
           </div>
@@ -489,7 +489,7 @@ function Landing() {
   </div>
 </section>
 
-<section className="relative overflow-hidden bg-[#FFFBF2] py-4">
+<section className="relative overflow-hidden bg-[#F0F7FF] py-4">
 
   {/* ───────────── TOP SEMI-CIRCLE ───────────── */}
   <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[130%] h-[300px] rounded-b-[100%] overflow-hidden z-0">
@@ -502,7 +502,7 @@ function Landing() {
   />
 
   {/* optional dark overlay for contrast */}
-  <div className="absolute inset-0 bg-[#FFF3D6]/80" />
+  <div className="absolute inset-0 bg-[#E8F2FC]/80" />
 
   {/* subtle dotted grid */}
   <div
@@ -518,12 +518,12 @@ function Landing() {
 
   {/* ───────────── HEADER INSIDE ARC ───────────── */}
   <div className="relative z-10 max-w-6xl mx-auto px-12 text-center pt-16 mb-44">
-    <p className="text-xs tracking-[0.4em] text-emerald-200 mb-3">
+    <p className="text-xs tracking-[0.4em] text-[#A6CAF0] mb-3">
       WHERE CAN WE HELP YOU
     </p>
 
     <h2 className="text-6xl font-extrabold text-[#1C1917] mt-0">
-      Our <span className="text-[#F97316]">Offerings</span>
+      Our <span className="text-[#1660C1]">Offerings</span>
     </h2>
 
     <p className="max-w-3xl mx-auto text-[#1C1917]/60 text-lg leading-relaxed">
@@ -535,15 +535,15 @@ function Landing() {
   {/* ───────────── LIGHT SECTION BACKGROUND DETAILS ───────────── */}
   <div className="absolute inset-0 pointer-events-none">
     {/* soft color fields */}
-    <div className="absolute top-[55%] left-20 w-[360px] h-[360px] bg-[#EAB308]/15 rounded-full blur-[120px]" />
-    <div className="absolute bottom-24 right-28 w-[420px] h-[420px] bg-[#F97316]/15 rounded-full blur-[140px]" />
+    <div className="absolute top-[55%] left-20 w-[360px] h-[360px] bg-[#5BA9E1]/15 rounded-full blur-[120px]" />
+    <div className="absolute bottom-24 right-28 w-[420px] h-[420px] bg-[#1660C1]/15 rounded-full blur-[140px]" />
 
     {/* faint diagonal line */}
     <div
       className="absolute top-[50%] left-[-20%] w-[140%] h-[1px] opacity-[0.05]"
       style={{
         background:
-          "linear-gradient(90deg, transparent, #EAB308, transparent)",
+          "linear-gradient(90deg, transparent, #5BA9E1, transparent)",
       }}
     />
   </div>
@@ -556,12 +556,12 @@ function Landing() {
 
     {[...offerings, ...offerings].map(({ title, desc, icon, hash }, i) => (
       <div key={`${title}-${i}`} className="min-w-[320px] group">
-        <div className=" relative rounded-3xl p-8 bg-[#FFF3D6]/40 border border-[#F97316]/15 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_70px_-30px_rgba(123,191,30,0.25)] " >
+        <div className=" relative rounded-3xl p-8 bg-[#E8F2FC]/40 border border-[#1660C1]/15 transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_35px_70px_-30px_rgba(22,96,193,0.25)] " >
           {/* neon accent strip */}
-          <div className="absolute top-0 left-6 w-14 h-[3px] bg-[#F97316] rounded-full shadow-[0_0_12px_rgba(123,191,30,0.6)]" />
+          <div className="absolute top-0 left-6 w-14 h-[3px] bg-[#1660C1] rounded-full shadow-[0_0_12px_rgba(22,96,193,0.6)]" />
 
           <div className="mt-2 mb-4 flex items-center gap-4">
-            <div className="w-12 h-12 rounded-2xl bg-[#F97316]/10 border border-[#F97316]/20 flex items-center justify-center">
+            <div className="w-12 h-12 rounded-2xl bg-[#1660C1]/10 border border-[#1660C1]/20 flex items-center justify-center">
               <img src={icon} alt="" className="w-7 h-7" />
             </div>
             <h3 className="text-xl font-semibold text-[#1C1917]">
@@ -569,13 +569,13 @@ function Landing() {
             </h3>
           </div>
 
-          <p className="text-sm text-[#FDE68A]/70 leading-relaxed mb-6">
+          <p className="text-sm text-[#C7DFF7]/70 leading-relaxed mb-6">
             {desc}
           </p>
 
           <Link
             to={`/services#${hash}`}
-            className="text-sm font-semibold text-[#F97316] hover:text-[#1C1917] transition-colors"
+            className="text-sm font-semibold text-[#1660C1] hover:text-[#1C1917] transition-colors"
           >
             Explore →
           </Link>
@@ -589,7 +589,7 @@ function Landing() {
 </section>
 
 
-<section className="relative bg-[#FFE4A0] py-28 overflow-hidden">
+<section className="relative bg-[#D0E8F8] py-28 overflow-hidden">
 
   {/* subtle grid */}
   <div className="absolute inset-0 opacity-[0.06] bg-[linear-gradient(#ffffff33_1px,transparent_1px),linear-gradient(90deg,#ffffff33_1px,transparent_1px)] bg-[size:48px_48px]" />
@@ -611,7 +611,7 @@ function Landing() {
       whileInView={{ width: "fit-content" }}
       transition={{ duration: 1.2, ease: "easeInOut" }}
     >
-      Technology <span className="text-[#7ccf9a]">Platforms</span>
+      Technology <span className="text-[#5BA9E1]">Platforms</span>
     </motion.h2>
 
     <motion.p
@@ -648,7 +648,7 @@ function Landing() {
         }}
         className="group bg-white/5 backdrop-blur rounded-2xl p-8
                    hover:-translate-y-3
-                   hover:shadow-[0_20px_60px_-20px_rgba(123,191,30,0.25)]
+                   hover:shadow-[0_20px_60px_-20px_rgba(22,96,193,0.25)]
                    transition-all duration-300"
       >
         <h3 className="text-xl font-semibold mb-3 text-[#1C1917]">
@@ -670,8 +670,8 @@ function Landing() {
             transition: { duration: 0.6 }
           }
         }}
-        className="group bg-gradient-to-br from-[#F97316] to-[#EA580C] text-[#1C1917] rounded-2xl p-10
-                   scale-[1.04] shadow-2xl shadow-[#F97316]/20
+        className="group bg-gradient-to-br from-[#1660C1] to-[#0A246A] text-[#1C1917] rounded-2xl p-10
+                   scale-[1.04] shadow-2xl shadow-[#1660C1]/20
                    hover:-translate-y-3
                    transition-all duration-300"
       >
@@ -696,7 +696,7 @@ function Landing() {
         }}
         className="group bg-white/5 backdrop-blur rounded-2xl p-8
                    hover:-translate-y-3
-                   hover:shadow-[0_20px_60px_-20px_rgba(123,191,30,0.25)]
+                   hover:shadow-[0_20px_60px_-20px_rgba(22,96,193,0.25)]
                    transition-all duration-300"
       >
         <h3 className="text-xl font-semibold mb-3 text-[#1C1917]">
@@ -712,13 +712,13 @@ function Landing() {
   </motion.div>
 </section>
 
-<section className="bg-[#FFF3D6] py-28">
+<section className="bg-[#E8F2FC] py-28">
   <div className="max-w-7xl mx-auto px-8 text-center">
 
     <h2 className="text-4xl font-extrabold text-[#1C1917] mb-4">
       Our Clients & Partners
     </h2>
-    <p className="text-[#FDE68A]/80 mb-16">
+    <p className="text-[#C7DFF7]/80 mb-16">
       Institutions building trust and liquidity across agri-commodity ecosystems
     </p>
 
@@ -867,13 +867,13 @@ function Landing() {
 
 <CommoditiesSection />
 
-<footer className="bg-[#FFE4A0] text-[#1C1917] pt-20">
+<footer className="bg-[#D0E8F8] text-[#1C1917] pt-20">
 
   <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
 
     {/* About */}
     <div>
-      <h4 className="font-bold text-[#F97316] mb-4">
+      <h4 className="font-bold text-[#1660C1] mb-4">
         BSE E-Agricultural Markets Limited
       </h4>
       <p className="text-[#1C1917]/60 text-sm leading-relaxed">
@@ -884,7 +884,7 @@ function Landing() {
 
     {/* Links */}
     <div>
-      <h4 className="font-bold text-[#F97316] mb-4">Company</h4>
+      <h4 className="font-bold text-[#1660C1] mb-4">Company</h4>
       <ul className="space-y-2 text-sm text-[#1C1917]/60">
         <li>About Us</li>
         <li>Platforms</li>
@@ -896,7 +896,7 @@ function Landing() {
 
     {/* Quick Links */}
     <div>
-      <h4 className="font-bold text-[#F97316] mb-4">Quick Links</h4>
+      <h4 className="font-bold text-[#1660C1] mb-4">Quick Links</h4>
       <ul className="space-y-2 text-sm text-[#1C1917]/60">
         <li>Circulars</li>
         <li>Contact</li>
@@ -907,19 +907,19 @@ function Landing() {
 
     {/* Social */}
     <div>
-      <h4 className="font-bold text-[#F97316] mb-4">Connect</h4>
+      <h4 className="font-bold text-[#1660C1] mb-4">Connect</h4>
       <div className="flex gap-4">
-        <div className="w-9 h-9 rounded-full bg-[#F97316]/20 border border-[#F97316]/30" />
-        <div className="w-9 h-9 rounded-full bg-[#F97316]/20 border border-[#F97316]/30" />
-        <div className="w-9 h-9 rounded-full bg-[#F97316]/20 border border-[#F97316]/30" />
-        <div className="w-9 h-9 rounded-full bg-[#F97316]/20 border border-[#F97316]/30" />
+        <div className="w-9 h-9 rounded-full bg-[#1660C1]/20 border border-[#1660C1]/30" />
+        <div className="w-9 h-9 rounded-full bg-[#1660C1]/20 border border-[#1660C1]/30" />
+        <div className="w-9 h-9 rounded-full bg-[#1660C1]/20 border border-[#1660C1]/30" />
+        <div className="w-9 h-9 rounded-full bg-[#1660C1]/20 border border-[#1660C1]/30" />
       </div>
     </div>
 
   </div>
 
   {/* Bottom Bar */}
-  <div className="border-t border-[#F97316]/15 py-6 text-center text-xs text-[#1C1917]/40">
+  <div className="border-t border-[#1660C1]/15 py-6 text-center text-xs text-[#1C1917]/40">
     © 2026 BSE E-Agricultural Markets Limited. All rights reserved.
   </div>
 </footer>

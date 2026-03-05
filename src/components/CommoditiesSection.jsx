@@ -1,4 +1,4 @@
-// src/components/CommoditiesSection.jsx
+﻿// src/components/CommoditiesSection.jsx
 
 import {
   PaddyIcon,
@@ -52,7 +52,7 @@ export default function CommoditiesSection() {
                   transition-all duration-300
                   group-hover:scale-110
                   group-hover:bg-hill-green-light/20
-                  group-hover:shadow-[0_0_28px_#F9731622]
+                  group-hover:shadow-[0_0_28px_#1660C122]
                 "
               >
                 <Icon
@@ -60,7 +60,7 @@ export default function CommoditiesSection() {
                     w-9 h-9 text-hill-green
                     transition-all duration-300
                     group-hover:text-sky-blue
-                    group-hover:drop-shadow-[0_0_10px_#EAB308]
+                    group-hover:drop-shadow-[0_0_10px_#5BA9E1]
                   "
                 />
               </div>

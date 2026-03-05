@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+﻿import React, { useEffect, useRef, useState } from 'react';
 import { Building2 } from 'lucide-react';
 import heroImage from "../public/img-slider-01.jpg";
 import statutoryImage from "../public/img-callback.png";
@@ -265,7 +265,7 @@ function Investors() {
 
         {/* Parallax Background */}
         <div className="absolute inset-0 z-0 select-none">
-          <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/88 via-[#78350F]/50 to-transparent z-20" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#1C1917]/88 via-[#1E3A6E]/50 to-transparent z-20" />
           <img
             src={heroImage}
             alt="Investors Relations"
@@ -275,10 +275,10 @@ function Investors() {
 
         <div className="relative z-30 max-w-6xl px-12 pb-24">
           <FadeIn>
-            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#F97316]/10 border border-[#F97316]/20 text-[#F97316] text-sm font-bold tracking-wide uppercase hover:bg-[#F97316]/20 transition-colors cursor-default mb-6">
+            <div className="inline-flex items-center gap-3 px-5 py-2 rounded-full bg-[#1660C1]/10 border border-[#1660C1]/20 text-[#1660C1] text-sm font-bold tracking-wide uppercase hover:bg-[#1660C1]/20 transition-colors cursor-default mb-6">
               <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#F97316] opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#F97316]"></span>
+                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#1660C1] opacity-75"></span>
+                <span className="relative inline-flex rounded-full h-2 w-2 bg-[#1660C1]"></span>
               </span>
               Investors Relations
             </div>
@@ -286,11 +286,11 @@ function Investors() {
 
           <FadeIn delay={200}>
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-extrabold leading-tight max-w-4xl group relative retro-title">
-              <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-[#F97316] via-[#FDE68A] to-[#F97316] bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite] relative inline-block hover:scale-105 transition-transform duration-500">
+              <span className="font-black text-transparent bg-clip-text bg-gradient-to-r from-[#1660C1] via-[#C7DFF7] to-[#1660C1] bg-[length:200%_auto] animate-[shimmer_4s_linear_infinite] relative inline-block hover:scale-105 transition-transform duration-500">
                 Investor Relations
                 {/* Glitch layers */}
-                <span className="absolute inset-0 text-[#F97316] opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(-2px, -2px)', mixBlendMode: 'screen', zIndex: -1}}>Investor Relations</span>
-                <span className="absolute inset-0 text-[#F59E0B] opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(2px, 2px)', mixBlendMode: 'screen', zIndex: -1, animationDelay: '150ms'}}>Investor Relations</span>
+                <span className="absolute inset-0 text-[#1660C1] opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(-2px, -2px)', mixBlendMode: 'screen', zIndex: -1}}>Investor Relations</span>
+                <span className="absolute inset-0 text-[#3A7BD5] opacity-0 group-hover:opacity-70 transition-opacity duration-300 animate-pulse" style={{transform: 'translate(2px, 2px)', mixBlendMode: 'screen', zIndex: -1, animationDelay: '150ms'}}>Investor Relations</span>
               </span>
             </h1>
           </FadeIn>
@@ -309,12 +309,12 @@ function Investors() {
           {[
             { label: "Growth YoY", value: "45", suffix: "%", color: "from-blue-400 to-cyan-400" },
             { label: "Market Value", value: "₹2.5", suffix: "B", color: "from-purple-400 to-pink-400" },
-            { label: "Transparency", value: "100", suffix: "%", color: "from-emerald-400 to-teal-400" },
-            { label: "SEBI", value: "✓", suffix: "Regulated", color: "from-amber-400 to-orange-400" },
+            { label: "Transparency", value: "100", suffix: "%", color: "from-[#5BA9E1] to-[#5BA9E1]" },
+            { label: "SEBI", value: "✓", suffix: "Regulated", color: "from-[#5BA9E1] to-[#0A246A]" },
           ].map((stat, i) => (
             <div key={i} className="relative group perspective-1000">
               <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-4 group-hover:translate-y-4 transition-transform duration-500" />
-              <div className="relative bg-theme-primary border-2 border-theme-highlight/20 p-8 text-center group-hover:border-theme-highlight transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2 group-hover:shadow-[0_20px_50px_rgba(124,207,154,0.3)] transform-gpu">
+              <div className="relative bg-theme-primary border-2 border-theme-highlight/20 p-8 text-center group-hover:border-theme-highlight transition-all duration-500 group-hover:scale-110 group-hover:-rotate-2 group-hover:shadow-[0_20px_50px_rgba(22,96,193,0.3)] transform-gpu">
                 <div className="absolute inset-0 bg-gradient-to-br from-theme-highlight/0 via-theme-highlight/10 to-theme-highlight/0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 animate-[shimmer_2s_linear_infinite]" />
                 <h3 className={`text-5xl font-bold mb-2 bg-gradient-to-r ${stat.color} bg-clip-text text-transparent group-hover:scale-125 transition-transform duration-500 animate-[bounce_2s_ease-in-out_infinite]`}>
                   {stat.value}<span className="text-3xl">{stat.suffix}</span>
@@ -348,7 +348,7 @@ function Investors() {
             <FadeIn delay={100}>
               <div className="group relative h-full">
                 <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
-                <div className="relative h-full bg-theme-primary p-8 border-2 border-theme-highlight/20 hover:border-theme-highlight transition-all duration-300 flex flex-col group-hover:shadow-[0_0_30px_rgba(124,207,154,0.4)] group-hover:scale-105 transform-gpu overflow-hidden">
+                <div className="relative h-full bg-theme-primary p-8 border-2 border-theme-highlight/20 hover:border-theme-highlight transition-all duration-300 flex flex-col group-hover:shadow-[0_0_30px_rgba(22,96,193,0.4)] group-hover:scale-105 transform-gpu overflow-hidden">
                   {/* Animated background gradient */}
                   <div className="absolute inset-0 bg-gradient-to-br from-theme-highlight/5 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-700" />
                   <div className="flex items-start justify-between mb-6 relative z-10">
@@ -428,8 +428,8 @@ function Investors() {
                 <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
                 <div className="relative h-full bg-theme-primary p-8 border-2 border-theme-highlight/20 hover:border-theme-highlight transition-colors duration-300 flex flex-col">
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 bg-orange-500/10 border-2 border-orange-500/30 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-orange-400" fill="currentColor" viewBox="0 0 640 512">
+                    <div className="w-12 h-12 bg-[#1660C1]/10 border-2 border-[#1660C1]/30 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-[#1660C1]" fill="currentColor" viewBox="0 0 640 512">
                       <path d="M384 32H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H398.4c-5.2 25.8-22.9 47.1-46.4 57.3V448H512c17.7 0 32 14.3 32 32s-14.3 32-32 32H320 128c-17.7 0-32-14.3-32-32s14.3-32 32-32H288V153.3c-23.5-10.3-41.2-31.6-46.4-57.3H128c-17.7 0-32-14.3-32-32s14.3-32 32-32H256c14.6-19.4 37.8-32 64-32s49.4 12.6 64 32zm55.6 288H584.4L512 195.8 439.6 320zM512 416c-62.9 0-115.2-34-126-78.9c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C627.2 382 574.9 416 512 416zM126.8 195.8L54.4 320H199.3L126.8 195.8zM.9 337.1c-2.6-11 1-22.3 6.7-32.1l95.2-163.2c5-8.6 14.2-13.8 24.1-13.8s19.1 5.3 24.1 13.8l95.2 163.2c5.7 9.8 9.3 21.1 6.7 32.1C242 382 189.7 416 126.8 416S11.7 382 .9 337.1z"/>
                     </svg>
                   </div>
@@ -480,8 +480,8 @@ function Investors() {
                 <div className="absolute inset-0 bg-theme-highlight/5 translate-x-2 translate-y-2 group-hover:translate-x-3 group-hover:translate-y-3 transition-transform" />
                 <div className="relative h-full bg-theme-primary p-8 border-2 border-theme-highlight/20 hover:border-theme-highlight transition-colors duration-300 flex flex-col">
                   <div className="flex items-start justify-between mb-6">
-                    <div className="w-12 h-12 bg-emerald-500/10 border-2 border-emerald-500/30 flex items-center justify-center">
-                      <svg className="w-6 h-6 text-emerald-400" fill="currentColor" viewBox="0 0 640 512">
+                    <div className="w-12 h-12 bg-[#1660C1]/10 border-2 border-[#1660C1]/30 flex items-center justify-center">
+                      <svg className="w-6 h-6 text-[#5BA9E1]" fill="currentColor" viewBox="0 0 640 512">
                       <path d="M323.4 85.2l-96.8 78.4c-16.1 13-19.2 36.4-7 53.1c12.9 17.8 38 21.3 55.3 7.8l99.3-77.2c7-5.4 17-4.2 22.5 2.8s4.2 17-2.8 22.5l-20.9 16.2L550.2 352H592c26.5 0 48-21.5 48-48V176c0-26.5-21.5-48-48-48H516h-4-.7l-3.9-2.5L434.8 79c-15.3-9.8-33.2-15-51.4-15c-21.8 0-43 7.5-60 21.2zm22.8 124.4l-51.7 40.2C263 274.4 217.3 268 193.7 235.6c-22.2-30.5-16.6-73.1 12.7-96.8l83.2-67.3c-11.6-4.9-24.1-7.4-36.8-7.4C234 64 215.7 69.6 200 80l-72 48H48c-26.5 0-48 21.5-48 48V304c0 26.5 21.5 48 48 48H156.2l91.4 83.4c19.6 17.9 49.9 16.5 67.8-3.1c5.5-6.1 9.2-13.2 11.1-20.6l17 15.6c19.5 17.9 49.9 16.6 67.8-2.9c4.5-4.9 7.8-10.6 9.9-16.5c19.4 13 45.8 10.3 62.1-7.5c17.9-19.5 16.6-49.9-2.9-67.8l-134.2-123z"/>
                       </svg>
                     </div>

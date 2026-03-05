@@ -1,4 +1,4 @@
-
+﻿
 import nine from "../Assets/image-9-scaled.jpg";
 import ten from "../Assets/image-10-scaled.jpg";
 import services from "../Assets/services.png";
@@ -269,7 +269,7 @@ const Services = () => {
       transition={{ duration: 0.8, ease: "easeOut" }}
       className="lg:col-span-5"
     >
-      <div className="sticky top-32 bg-[#0F3B2E] rounded-2xl overflow-hidden shadow-2xl">
+      <div className="sticky top-32 bg-[#0A2052] rounded-2xl overflow-hidden shadow-2xl">
         <motion.img
           src={ten}
           alt="Direct Procurement"
@@ -434,12 +434,12 @@ const Services = () => {
     transition={{ duration: 1 }}
   >
     <motion.div
-      className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-green-900/5 blur-3xl"
+      className="absolute -top-32 -left-32 w-[520px] h-[520px] rounded-full bg-[#0A246A]/5 blur-3xl"
       animate={{ scale: [1, 1.08, 1] }}
       transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
     />
     <motion.div
-      className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-green-700/5 blur-3xl"
+      className="absolute bottom-0 right-0 w-[420px] h-[420px] rounded-full bg-[#0F3A9B]/5 blur-3xl"
       animate={{ scale: [1, 1.1, 1] }}
       transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
     />
@@ -454,9 +454,9 @@ const Services = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <h1 className="text-5xl font-bold leading-tight text-green-900">
+      <h1 className="text-5xl font-bold leading-tight text-[#0A246A]">
         Trade <br />
-        <span className="text-green-700">Connect</span>
+        <span className="text-[#1660C1]">Connect</span>
       </h1>
 
       <p className="mt-6 text-gray-700 leading-relaxed max-w-xl">
@@ -476,8 +476,8 @@ const Services = () => {
       </p>
 
       <div className="mt-14">
-        <h3 className="text-lg font-semibold text-green-900 mb-6">
-          Key <span className="text-green-700">Features</span>
+        <h3 className="text-lg font-semibold text-[#0A246A] mb-6">
+          Key <span className="text-[#1660C1]">Features</span>
         </h3>
 
         <motion.div
@@ -526,16 +526,16 @@ const Services = () => {
               viewport={{ once: true }}
               transition={{ duration: 0.5, ease: "easeOut" }}
               whileHover={{ x: 6 }}
-              className="flex gap-5 p-5 rounded-xl bg-green-50/60 border border-green-100
-                         hover:bg-green-100/60 transition-all"
+              className="flex gap-5 p-5 rounded-xl bg-[#E8F2FC]/60 border border-[#C7DFF7]
+                         hover:bg-[#D0E8F8]/60 transition-all"
             >
-              <div className="text-green-700 mt-1">
+              <div className="text-[#1660C1] mt-1">
                 <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="2">
                   {item.icon}
                 </svg>
               </div>
               <div>
-                <h4 className="font-semibold text-green-900">{item.title}</h4>
+                <h4 className="font-semibold text-[#0A246A]">{item.title}</h4>
                 <p className="text-sm text-gray-700 mt-1">{item.desc}</p>
               </div>
             </motion.div>
@@ -553,7 +553,7 @@ const Services = () => {
       transition={{ duration: 0.9, ease: "easeOut" }}
     >
       <motion.div
-        className="sticky top-28 rounded-2xl overflow-hidden shadow-xl bg-green-900 text-theme-text-primary"
+        className="sticky top-28 rounded-2xl overflow-hidden shadow-xl bg-[#0A246A] text-theme-text-primary"
         whileHover={{ y: -8 }}
         transition={{ type: "spring", stiffness: 120 }}
       >
@@ -561,7 +561,7 @@ const Services = () => {
 
         <div className="p-10">
           <h4 className="text-lg font-semibold mb-8">
-            Who <span className="text-green-300">We Serve</span>
+            Who <span className="text-[#5BA9E1]">We Serve</span>
           </h4>
 
           <ul className="space-y-6 text-sm">
@@ -579,7 +579,7 @@ const Services = () => {
                 transition={{ delay: i * 0.1 }}
                 className="flex gap-4"
               >
-                <span className="text-green-300">●</span>
+                <span className="text-[#5BA9E1]">●</span>
                 {item}
               </motion.li>
             ))}
@@ -614,9 +614,9 @@ const Services = () => {
         {/* SERVICE ICON ROW */}
         <div className="mt-14 grid grid-cols-1 sm:grid-cols-3 gap-6">
           <div className="flex items-start gap-4 p-5 rounded-xl bg-white/80 shadow-md">
-            <BarChart3 className="w-8 h-8 text-[#1F7A5A]" />
+            <BarChart3 className="w-8 h-8 text-[#1660C1]" />
             <div>
-              <h4 className="font-semibold text-[#1F7A5A]">Strategic Consulting</h4>
+              <h4 className="font-semibold text-[#1660C1]">Strategic Consulting</h4>
               <p className="text-sm text-[#5C746C] mt-1">
                 Pricing trends, sourcing strategy, supply chain optimization
               </p>
@@ -624,9 +624,9 @@ const Services = () => {
           </div>
 
           <div className="flex items-start gap-4 p-5 rounded-xl bg-white/80 shadow-md">
-            <TrendingUp className="w-8 h-8 text-[#1F7A5A]" />
+            <TrendingUp className="w-8 h-8 text-[#1660C1]" />
             <div>
-              <h4 className="font-semibold text-[#1F7A5A]">Market Intelligence</h4>
+              <h4 className="font-semibold text-[#1660C1]">Market Intelligence</h4>
               <p className="text-sm text-[#5C746C] mt-1">
                 Commodity movements, demand shifts, policy impact
               </p>
@@ -634,9 +634,9 @@ const Services = () => {
           </div>
 
           <div className="flex items-start gap-4 p-5 rounded-xl bg-white/80 shadow-md">
-            <Laptop2 className="w-8 h-8 text-[#1F7A5A]" />
+            <Laptop2 className="w-8 h-8 text-[#1660C1]" />
             <div>
-              <h4 className="font-semibold text-[#1F7A5A]">Digital Deployment</h4>
+              <h4 className="font-semibold text-[#1660C1]">Digital Deployment</h4>
               <p className="text-sm text-[#5C746C] mt-1">
                 Analytics platforms integrated into enterprise systems
               </p>
@@ -662,7 +662,7 @@ const Services = () => {
     {/* WHO WE SERVE */}
     <div>
       <h3 className="text-6xl font-bold text-center mb-20">
-        Who We <span className="text-[#1F7A5A]">Serve</span>
+        Who We <span className="text-[#1660C1]">Serve</span>
       </h3>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-10">
@@ -679,7 +679,7 @@ const Services = () => {
               key={i}
               className="group p-8 rounded-2xl bg-theme-bg-secondary shadow-md hover:shadow-xl transition-all duration-300 text-center"
             >
-              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EAF4F1] text-[#1F7A5A]">
+              <div className="mx-auto mb-5 flex h-14 w-14 items-center justify-center rounded-xl bg-[#EAF4F1] text-[#1660C1]">
                 <Icon size={28} />
               </div>
               <p className="font-medium text-[#355E52] leading-snug">
@@ -707,7 +707,7 @@ const Services = () => {
             Trade <span className="text-[#1E8E6E]">Finance</span>
           </h2>
 
-          <p className="mt-8 text-lg leading-relaxed text-[#4B6F64] max-w-xl">
+          <p className="mt-8 text-lg leading-relaxed text-[#2E5FA3] max-w-xl">
             BeAM enables seamless liquidity for agri-value chains and MSMEs.
             Our plug-and-play platforms bridge working capital gaps, enabling
             faster procurement, timely payouts, and uninterrupted trade execution —
@@ -756,7 +756,7 @@ const Services = () => {
                     <h4 className="text-[#0B2F26] font-semibold">
                       {item.title}
                     </h4>
-                    <p className="mt-1 text-sm text-[#4B6F64]">
+                    <p className="mt-1 text-sm text-[#2E5FA3]">
                       {item.desc}
                     </p>
                   </div>
@@ -815,7 +815,7 @@ const Services = () => {
                         <h5 className="text-[#0B2F26] font-medium">
                           {item.title}
                         </h5>
-                        <p className="text-sm text-[#4B6F64]">
+                        <p className="text-sm text-[#2E5FA3]">
                           {item.desc}
                         </p>
                       </div>
@@ -832,8 +832,8 @@ const Services = () => {
   <section className="relative overflow-hidden py-40 bg-theme-bg-main">
 
       {/* Decorative blurred circles */}
-      <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-green-200/50 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute bottom-[-300px] right-[-200px] w-[620px] h-[620px] bg-emerald-300/40 rounded-full blur-[180px] pointer-events-none" />
+      <div className="absolute -top-40 -left-40 w-[520px] h-[520px] bg-[#A6CAF0]/50 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute bottom-[-300px] right-[-200px] w-[620px] h-[620px] bg-[#5BA9E1]/40 rounded-full blur-[180px] pointer-events-none" />
 
       {/* subtle green pattern */}
       <div
@@ -867,7 +867,7 @@ const Services = () => {
             <div className="mt-14 space-y-8">
 
               <div className="flex gap-5">
-                <BarChart3 className="w-7 h-7 text-green-700 mt-1" />
+                <BarChart3 className="w-7 h-7 text-[#1660C1] mt-1" />
                 <div>
                   <h4 className="font-semibold text-lg text-theme-text-primary">
                     Market Intelligence & Analytics
@@ -935,7 +935,7 @@ const Services = () => {
           <div className="mt-20 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-12">
 
             <div className="bg-theme-bg-secondary rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-              <Factory className="w-8 h-8 text-green-700 mx-auto mb-4" />
+              <Factory className="w-8 h-8 text-[#1660C1] mx-auto mb-4" />
               <h4 className="font-semibold text-black">
                 Steel Manufacturers & Processors
               </h4>
@@ -945,7 +945,7 @@ const Services = () => {
             </div>
 
             <div className="bg-theme-bg-secondary rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-              <Recycle className="w-8 h-8 text-green-700 mx-auto mb-4" />
+              <Recycle className="w-8 h-8 text-[#1660C1] mx-auto mb-4" />
               <h4 className="font-semibold text-black">
                 Scrap Aggregators & Dealers
               </h4>
@@ -955,7 +955,7 @@ const Services = () => {
             </div>
 
             <div className="bg-theme-bg-secondary rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-              <Building2 className="w-8 h-8 text-green-700 mx-auto mb-4" />
+              <Building2 className="w-8 h-8 text-[#1660C1] mx-auto mb-4" />
               <h4 className="font-semibold text-black">
                 Infrastructure & Construction
               </h4>
@@ -965,7 +965,7 @@ const Services = () => {
             </div>
 
             <div className="bg-theme-bg-secondary rounded-2xl p-8 shadow-md hover:shadow-xl transition">
-              <Landmark className="w-8 h-8 text-green-700 mx-auto mb-4" />
+              <Landmark className="w-8 h-8 text-[#1660C1] mx-auto mb-4" />
               <h4 className="font-semibold text-black">
                 Public Sector & Institutions
               </h4>
@@ -983,7 +983,7 @@ const Services = () => {
 <section className="relative bg-theme-bg-secondary py-32 overflow-hidden">
 
   {/* soft decorative geometry */}
-  <div className="absolute -top-48 -left-48 w-[520px] h-[520px] bg-emerald-400/10 rounded-full blur-[140px]" />
+  <div className="absolute -top-48 -left-48 w-[520px] h-[520px] bg-[#5BA9E1]/10 rounded-full blur-[140px]" />
   <div className="absolute bottom-[-280px] right-[-260px] w-[600px] h-[600px] bg-lime-300/15 rounded-full blur-[180px]" />
 
   {/* diagonal texture */}
@@ -999,7 +999,7 @@ const Services = () => {
 
     {/* LEFT CONTENT */}
     <div className="lg:col-span-7">
-      <h2 className="text-5xl font-semibold font-bold tracking-tight text-[#0b2f24]">
+      <h2 className="text-5xl font-semibold font-bold tracking-tight text-[#0A246A]">
         Bioenergy
       </h2>
 
@@ -1013,60 +1013,60 @@ const Services = () => {
       <div className="mt-16 space-y-10">
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <BarChart3 size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <BarChart3 size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">Smart Trading Support</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">Smart Trading Support</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Commodity-specific services tailored to the bioenergy trade lifecycle.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <ShieldCheck size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <ShieldCheck size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">Verified & Trusted Supply Base</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">Verified & Trusted Supply Base</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Onboarded network of vetted producers and aggregators.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <Factory size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <Factory size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">Price Discovery</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">Price Discovery</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Transparent pricing powered by trade data and logistics insights.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <Truck size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <Truck size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">End-to-End Logistics Coordination</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">End-to-End Logistics Coordination</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Integrated support for delivery, dispatch tracking, and payment flows.
             </p>
           </div>
         </div>
 
         <div className="flex items-start gap-5">
-          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/25">
-            <Globe2 size={22} className="text-emerald-600" />
+          <div className="mt-1 h-12 w-12 flex items-center justify-center rounded-xl bg-[#1660C1]/15 border border-[#1660C1]/25">
+            <Globe2 size={22} className="text-[#1660C1]" />
           </div>
           <div>
-            <h4 className="font-medium text-[#0b2f24]">Pan-India Access</h4>
-            <p className="text-sm text-[#4b6f64] mt-1 max-w-xl">
+            <h4 className="font-medium text-[#0A246A]">Pan-India Access</h4>
+            <p className="text-sm text-[#2E5FA3] mt-1 max-w-xl">
               Digital reach across major production and consumption zones.
             </p>
           </div>
@@ -1077,7 +1077,7 @@ const Services = () => {
 
     {/* RIGHT STICKY CARD */}
     <div className="lg:col-span-5">
-      <div className="sticky top-32 rounded-[28px] overflow-hidden bg-[#0f3b2e] shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
+      <div className="sticky top-32 rounded-[28px] overflow-hidden bg-[#0A2052] shadow-[0_30px_80px_rgba(0,0,0,0.25)]">
 
         <div className="relative h-[320px]">
           <img
@@ -1085,7 +1085,7 @@ const Services = () => {
             alt=""
             className="h-full w-full object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0f3b2e]/90 via-transparent to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-t from-[#0A2052]/90 via-transparent to-transparent" />
         </div>
 
         <div className="p-10 text-theme-text-primary">
@@ -1093,19 +1093,19 @@ const Services = () => {
 
           <div className="space-y-6 text-sm">
             <div className="flex items-center gap-4">
-              <Users size={20} className="text-emerald-300" />
+              <Users size={20} className="text-[#5BA9E1]" />
               Biomass Producers & Aggregators
             </div>
             <div className="flex items-center gap-4">
-              <Factory size={20} className="text-emerald-300" />
+              <Factory size={20} className="text-[#5BA9E1]" />
               Industrial Fuel Buyers (Cement, Textile, Steel, FMCG)
             </div>
             <div className="flex items-center gap-4">
-              <Leaf size={20} className="text-emerald-300" />
+              <Leaf size={20} className="text-[#5BA9E1]" />
               Bioenergy Project Developers & EPCs
             </div>
             <div className="flex items-center gap-4">
-              <Building2 size={20} className="text-emerald-300" />
+              <Building2 size={20} className="text-[#5BA9E1]" />
               Green Energy Investors & Policy Bodies
             </div>
           </div>

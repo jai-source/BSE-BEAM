@@ -1,4 +1,4 @@
-export default function Coil({ className = "" }) {
+﻿export default function Coil({ className = "" }) {
   return (
     <svg
       viewBox="0 0 420 70"
@@ -7,10 +7,10 @@ export default function Coil({ className = "" }) {
     >
       <defs>
         <linearGradient id="metal" x1="0" y1="0" x2="0" y2="1">
-          <stop offset="0%" stopColor="#F97316" /> {/* Hill Green Light */}
-          <stop offset="45%" stopColor="#F59E0B" /> {/* Sky Blue */}
-          <stop offset="55%" stopColor="#EAB308" /> {/* Sky Blue Dark */}
-          <stop offset="100%" stopColor="#F97316" /> {/* Hill Green Light */}
+          <stop offset="0%" stopColor="#1660C1" /> {/* Hill Green Light */}
+          <stop offset="45%" stopColor="#3A7BD5" /> {/* Sky Blue */}
+          <stop offset="55%" stopColor="#5BA9E1" /> {/* Sky Blue Dark */}
+          <stop offset="100%" stopColor="#1660C1" /> {/* Hill Green Light */}
         </linearGradient>
 
         <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
