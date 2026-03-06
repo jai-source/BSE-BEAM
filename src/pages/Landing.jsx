@@ -1,3 +1,4 @@
+import Footer from "../components/Footer";
 ﻿import heroImage from "../Assets/main.png"
 import tech from "../public/pillar1.png";
 import supply from "../public/pillar2.png";
@@ -867,62 +868,7 @@ function Landing() {
 
 <CommoditiesSection />
 
-<footer className="bg-[#D0E8F8] text-[#1C1917] pt-20">
-
-  <div className="max-w-7xl mx-auto px-8 grid md:grid-cols-4 gap-14 pb-16">
-
-    {/* About */}
-    <div>
-      <h4 className="font-bold text-[#1660C1] mb-4">
-        BSE E-Agricultural Markets Limited
-      </h4>
-      <p className="text-[#1C1917]/60 text-sm leading-relaxed">
-        Delivering value across agri-commodity ecosystems through transparent,
-        secure, and scalable market infrastructure.
-      </p>
-    </div>
-
-    {/* Links */}
-    <div>
-      <h4 className="font-bold text-[#1660C1] mb-4">Company</h4>
-      <ul className="space-y-2 text-sm text-[#1C1917]/60">
-        <li>About Us</li>
-        <li>Platforms</li>
-        <li>Services</li>
-        <li>Investors</li>
-        <li>Compliance</li>
-      </ul>
-    </div>
-
-    {/* Quick Links */}
-    <div>
-      <h4 className="font-bold text-[#1660C1] mb-4">Quick Links</h4>
-      <ul className="space-y-2 text-sm text-[#1C1917]/60">
-        <li>Circulars</li>
-        <li>Contact</li>
-        <li>Become a Member</li>
-        <li>Live Auctions</li>
-      </ul>
-    </div>
-
-    {/* Social */}
-    <div>
-      <h4 className="font-bold text-[#1660C1] mb-4">Connect</h4>
-      <div className="flex gap-4">
-        <div className="w-9 h-9 rounded-full bg-[#1660C1]/20 border border-[#1660C1]/30" />
-        <div className="w-9 h-9 rounded-full bg-[#1660C1]/20 border border-[#1660C1]/30" />
-        <div className="w-9 h-9 rounded-full bg-[#1660C1]/20 border border-[#1660C1]/30" />
-        <div className="w-9 h-9 rounded-full bg-[#1660C1]/20 border border-[#1660C1]/30" />
-      </div>
-    </div>
-
-  </div>
-
-  {/* Bottom Bar */}
-  <div className="border-t border-[#1660C1]/15 py-6 text-center text-xs text-[#1C1917]/40">
-    © 2026 BSE E-Agricultural Markets Limited. All rights reserved.
-  </div>
-</footer>
+<Footer />
 
 
  
