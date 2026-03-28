@@ -1,4 +1,4 @@
-import Footer from "../components/Footer";
+﻿import Footer from "../components/Footer";
 ﻿import heroImage from "../Assets/main.png"
 import tech from "../public/pillar1.png";
 import supply from "../public/pillar2.png";
@@ -480,7 +480,7 @@ function Landing() {
               {item.title}
             </h3>
 
-            <p className="text-sm text-[#C7DFF7]/70 leading-relaxed">
+            <p className="text-sm text-[#1C1917]/60 leading-relaxed">
               {item.desc}
             </p>
           </div>
@@ -570,7 +570,7 @@ function Landing() {
             </h3>
           </div>
 
-          <p className="text-sm text-[#C7DFF7]/70 leading-relaxed mb-6">
+          <p className="text-sm text-[#1C1917]/60 leading-relaxed mb-6">
             {desc}
           </p>
 
@@ -719,7 +719,7 @@ function Landing() {
     <h2 className="text-4xl font-extrabold text-[#1C1917] mb-4">
       Our Clients & Partners
     </h2>
-    <p className="text-[#C7DFF7]/80 mb-16">
+    <p className="text-[#1C1917]/60 mb-16">
       Institutions building trust and liquidity across agri-commodity ecosystems
     </p>
 

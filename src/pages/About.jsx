@@ -337,7 +337,7 @@ The company is engaged in facilitating agri-commodity trading, connecting stakeh
                     <div className="absolute inset-0 rounded-3xl ring-2 ring-[#1660C1]/0 group-hover:ring-[#1660C1]/60 group-hover:scale-110 transition-all duration-700" />
                   </div>
                   
-                  <h3 className="text-xl font-semibold text-[#1C1917]/90 group-hover:text-[#1660C1] transition-all duration-500 leading-snug px-4">
+                  <h3 className="text-xl font-semibold text-white/90 group-hover:text-[#C7DFF7] transition-all duration-500 leading-snug px-4">
                     {item.title}
                   </h3>
                 </div>
